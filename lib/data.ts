@@ -59,12 +59,12 @@ export const stats = [
 ] as const;
 
 export const trustedBrands = [
-  { name: "Velora", className: "tracking-[0.28em] font-light" },
-  { name: "NexPay", className: "font-extrabold" },
-  { name: "Lumora", className: "tracking-tight font-semibold" },
-  { name: "BiteKart", className: "font-bold lowercase tracking-tight" },
+  { name: "Velora", className: "tracking-[0.22em] font-light" },
+  { name: "NexPay", className: "font-extrabold tracking-tight" },
+  { name: "Lumora", className: "font-semibold tracking-tight" },
+  { name: "BiteKart", className: "font-bold lowercase tracking-tight text-[#1d4ed8]" },
   { name: "Learnly", className: "font-extrabold tracking-wide" },
-  { name: "Northstar", className: "font-semibold italic" },
+  { name: "Northstar", className: "font-black tracking-tight text-[#e11d48]" },
 ] as const;
 
 export const resultMetrics = [
