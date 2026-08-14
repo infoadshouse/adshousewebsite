@@ -34,7 +34,7 @@ export function FeaturedWork({ limit = 3 }: { limit?: number }) {
                   index === 0 ? "lg:grid-cols-[1.2fr_0.8fr]" : "lg:grid-cols-2"
                 }`}
               >
-                <div className={`img-zoom relative min-h-[280px] ${index === 0 ? "lg:min-h-[520px]" : "lg:min-h-[380px]"}`}>
+                <div className={`img-zoom relative min-h-[220px] ${index === 0 ? "lg:min-h-[520px]" : "lg:min-h-[380px]"}`}>
                   <Image
                     src={item.image}
                     alt={`${item.client} campaign by Ads House — ${item.industry} brand in ${item.location}`}
@@ -43,11 +43,11 @@ export function FeaturedWork({ limit = 3 }: { limit?: number }) {
                     className="object-cover"
                   />
                 </div>
-                <div className="flex flex-col justify-center p-8 md:p-12">
+                <div className="flex flex-col justify-center p-5 sm:p-8 md:p-12">
                   <p className="text-xs font-semibold uppercase tracking-[0.22em] text-sky">
                     {item.client} · {item.industry} · {item.location}
                   </p>
-                  <p className="mt-4 font-display text-5xl font-extrabold text-sky md:text-6xl">
+                  <p className="mt-4 break-words font-display text-4xl font-extrabold text-sky md:text-6xl">
                     {item.metric}
                   </p>
                   <p className="mt-1 text-sm uppercase tracking-[0.18em] text-muted">

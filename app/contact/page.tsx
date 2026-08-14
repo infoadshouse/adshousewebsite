@@ -59,7 +59,7 @@ export default function ContactPage() {
           <div className="rounded-3xl border border-line bg-white p-7 shadow-sm">
             <h2 className="font-display text-xl font-bold text-sky-dark">Direct</h2>
             <p className="mt-3">
-              <a className="text-sky hover:underline" href={`mailto:${siteConfig.email}`}>
+              <a className="break-all text-sky hover:underline" href={`mailto:${siteConfig.email}`}>
                 {siteConfig.email}
               </a>
             </p>

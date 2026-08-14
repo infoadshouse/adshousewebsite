@@ -160,7 +160,7 @@ export function Results() {
             Results
             <span className="h-px w-8 bg-sky" />
           </p>
-          <h2 className="font-display text-4xl font-extrabold tracking-tight text-sky-dark md:text-6xl">
+          <h2 className="font-display text-3xl font-extrabold tracking-tight text-sky-dark md:text-6xl">
             Good marketing looks creative.
             <br />
             <span className="text-sky">Great marketing moves numbers.</span>
@@ -172,7 +172,7 @@ export function Results() {
             const theme = themes[index];
             return (
               <Reveal key={metric.label} delay={index * 50}>
-                <article className="relative overflow-hidden rounded-2xl border border-line bg-white p-7 shadow-[0_12px_32px_rgba(15,23,42,0.06)]">
+                <article className="relative min-h-[240px] overflow-hidden rounded-2xl border border-line bg-white p-6 pb-20 shadow-[0_12px_32px_rgba(15,23,42,0.06)] sm:p-7">
                   <span className={`flex h-10 w-10 items-center justify-center rounded-full ${theme.iconWrap}`}>
                     {theme.icon}
                   </span>

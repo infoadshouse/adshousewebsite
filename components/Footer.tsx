@@ -5,7 +5,7 @@ import { navLinks, siteConfig } from "@/lib/site";
 
 export function Footer() {
   return (
-    <footer className="relative mt-8 bg-navy text-white">
+    <footer className="relative mt-8 bg-navy pb-24 text-white md:pb-0">
       <div className="mx-auto grid max-w-7xl gap-12 px-5 py-16 md:grid-cols-4 md:px-8">
         <div className="md:col-span-1">
           <BrandMark variant="light" />
@@ -51,7 +51,7 @@ export function Footer() {
           <p className="text-xs font-semibold uppercase tracking-[0.22em] text-white/60">Contact</p>
           <ul className="mt-4 space-y-2 text-sm text-white/80">
             <li>
-              <a href={`mailto:${siteConfig.email}`} className="hover:text-white">
+              <a href={`mailto:${siteConfig.email}`} className="break-all hover:text-white">
                 {siteConfig.email}
               </a>
             </li>

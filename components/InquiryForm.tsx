@@ -7,7 +7,7 @@ import { siteConfig } from "@/lib/site";
 const budgets = ["₹2–5L / month", "₹5–15L / month", "₹15–40L / month", "₹40L+ / month", "Project-based"];
 
 const fieldClass =
-  "rounded-2xl border border-line bg-white px-4 py-3 text-[var(--text)] outline-none focus:border-sky";
+  "w-full min-w-0 rounded-2xl border border-line bg-white px-4 py-3 text-base text-[var(--text)] outline-none focus:border-sky";
 
 export function InquiryForm({ compact = false }: { compact?: boolean }) {
   const [status, setStatus] = useState<"idle" | "loading" | "ok" | "error">("idle");

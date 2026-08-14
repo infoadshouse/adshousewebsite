@@ -4,7 +4,7 @@ import { testimonials } from "@/lib/data";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-white pt-32 md:pt-40">
+    <section className="relative overflow-hidden bg-white pt-24 md:pt-40">
       <div className="hero-blob -left-24 top-16 h-72 w-72 bg-pink/25" />
       <div className="hero-blob right-0 top-32 h-80 w-80 bg-sky/20" />
       <div className="hero-blob bottom-0 left-1/3 h-64 w-64 bg-purple/15" />
@@ -14,7 +14,7 @@ export function Hero() {
           <p className="mb-5 inline-flex items-center rounded-full bg-sky/10 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.18em] text-sky">
             Digital growth agency · India
           </p>
-          <h1 className="font-display text-[2.75rem] font-extrabold leading-[1.05] tracking-tight text-sky-dark sm:text-6xl lg:text-[4.25rem]">
+          <h1 className="font-display text-[2.15rem] font-extrabold leading-[1.08] tracking-tight text-sky-dark sm:text-5xl lg:text-[4.25rem]">
             We Build <span className="text-gradient">Brands.</span>
             <br />
             <span className="relative inline-block">
@@ -46,12 +46,12 @@ export function Hero() {
             ambitious Indian businesses into growth stories. Your brand deserves more than
             impressions. It deserves impact.
           </p>
-          <div className="mt-8 flex flex-wrap items-center gap-3">
-            <ButtonLink href="/contact">
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+            <ButtonLink href="/contact" className="w-full sm:w-auto">
               Start a Project
               <ArrowIcon />
             </ButtonLink>
-            <ButtonLink href="/work" variant="ghost">
+            <ButtonLink href="/work" variant="ghost" className="w-full sm:w-auto">
               <span className="flex h-7 w-7 items-center justify-center rounded-full border border-sky/30 text-sky">
                 <svg className="h-3 w-3" viewBox="0 0 12 12" fill="currentColor" aria-hidden>
                   <path d="M3.2 1.6v8.8L10.4 6 3.2 1.6Z" />

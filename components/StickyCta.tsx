@@ -8,10 +8,10 @@ export function StickyCta() {
   if (pathname === "/contact") return null;
 
   return (
-    <div className="fixed bottom-5 right-5 z-40 md:bottom-8 md:right-8">
+    <div className="fixed inset-x-0 bottom-0 z-30 border-t border-line bg-white/95 p-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] backdrop-blur md:inset-x-auto md:bottom-8 md:right-8 md:border-0 md:bg-transparent md:p-0 md:backdrop-blur-none">
       <Link
         href="/contact"
-        className="btn-primary flex items-center gap-2 rounded-full px-5 py-3 text-sm font-semibold shadow-lg"
+        className="btn-primary flex w-full items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-semibold shadow-lg md:w-auto"
       >
         Start a Project
         <span aria-hidden>→</span>

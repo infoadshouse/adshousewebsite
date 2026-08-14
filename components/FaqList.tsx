@@ -14,14 +14,14 @@ export function FaqList({ items = faqs }: { items?: { q: string; a: string }[] }
           <div key={item.q}>
             <button
               type="button"
-              className="flex w-full items-start justify-between gap-6 px-6 py-5 text-left"
+              className="flex w-full items-start justify-between gap-4 px-4 py-4 text-left md:gap-6 md:px-6 md:py-5"
               aria-expanded={isOpen}
               onClick={() => setOpen(isOpen ? -1 : index)}
             >
-              <span className="font-display text-lg font-semibold text-sky-dark md:text-xl">{item.q}</span>
+              <span className="min-w-0 font-display text-base font-semibold text-sky-dark md:text-xl">{item.q}</span>
               <span className="mt-1 text-sky">{isOpen ? "–" : "+"}</span>
             </button>
-            {isOpen ? <p className="px-6 pb-5 text-sm leading-relaxed text-muted md:text-base">{item.a}</p> : null}
+            {isOpen ? <p className="px-4 pb-4 text-sm leading-relaxed text-muted md:px-6 md:pb-5 md:text-base">{item.a}</p> : null}
           </div>
         );
       })}

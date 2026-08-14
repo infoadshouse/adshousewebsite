@@ -32,27 +32,27 @@ export function Header() {
   return (
     <>
       <header
-        className={`fixed inset-x-0 top-0 z-40 bg-white text-sky-dark transition-shadow duration-300 ${
+        className={`fixed inset-x-0 top-0 z-50 bg-white text-sky-dark transition-shadow duration-300 ${
           scrolled || open ? "border-b border-line shadow-sm" : "border-b border-transparent"
         }`}
       >
         <div className="hidden border-b border-line bg-surface md:block">
-          <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-2.5 md:px-8">
-            <div className="flex items-center gap-6 text-[13px] text-muted">
-              <a href={siteConfig.phoneHref} className="inline-flex items-center gap-2.5 hover:text-sky">
+          <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 px-4 py-2 md:px-8">
+            <div className="flex min-w-0 flex-wrap items-center gap-x-5 gap-y-2 text-[13px] text-muted">
+              <a href={siteConfig.phoneHref} className="inline-flex items-center gap-2 hover:text-sky">
                 <IconCircle>
                   <PhoneIcon />
                 </IconCircle>
-                {siteConfig.phone}
+                <span className="whitespace-nowrap">{siteConfig.phone}</span>
               </a>
               <a
                 href={`mailto:${siteConfig.email}`}
-                className="inline-flex items-center gap-2.5 hover:text-sky"
+                className="inline-flex min-w-0 max-w-full items-center gap-2 hover:text-sky"
               >
                 <IconCircle>
                   <MailIcon />
                 </IconCircle>
-                {siteConfig.email}
+                <span className="truncate">{siteConfig.email}</span>
               </a>
             </div>
             <div className="flex items-center gap-3">
@@ -72,19 +72,19 @@ export function Header() {
           </div>
         </div>
 
-        <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 md:px-8">
-          <Link href="/" className="relative z-50 flex items-center" aria-label="Ads House home">
+        <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-3 px-4 md:h-20 md:px-8">
+          <Link href="/" className="relative z-50 min-w-0" aria-label="Ads House home">
             <BrandMark priority />
           </Link>
 
-          <nav className="hidden items-center gap-7 lg:flex xl:gap-9" aria-label="Primary">
+          <nav className="hidden items-center gap-5 lg:flex xl:gap-8" aria-label="Primary">
             {navLinks.map((link) => {
               const active = pathname === link.href;
               return (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`relative pb-1 text-[12px] font-medium uppercase tracking-[0.18em] transition-colors ${
+                  className={`relative pb-1 text-[11px] font-medium uppercase tracking-[0.16em] transition-colors xl:text-[12px] xl:tracking-[0.18em] ${
                     active ? "text-sky-dark" : "text-muted hover:text-sky"
                   }`}
                 >
@@ -97,7 +97,7 @@ export function Header() {
             })}
           </nav>
 
-          <div className="hidden lg:block">
+          <div className="hidden shrink-0 lg:block">
             <Link
               href="/contact"
               className="btn-primary inline-flex items-center rounded-full px-5 py-2.5 text-[12px] font-bold uppercase tracking-[0.16em]"
@@ -108,8 +108,9 @@ export function Header() {
 
           <button
             type="button"
-            className="relative z-50 flex h-11 w-11 items-center justify-center rounded-full border border-line bg-white lg:hidden"
+            className="relative z-50 flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-line bg-white lg:hidden"
             aria-expanded={open}
+            aria-controls="mobile-nav"
             aria-label={open ? "Close menu" : "Open menu"}
             onClick={() => setOpen((v) => !v)}
           >
@@ -128,35 +129,57 @@ export function Header() {
       </header>
 
       {open ? (
-        <div className="fixed inset-0 z-30 flex flex-col justify-end bg-white px-6 pb-10 pt-36 lg:hidden">
-          <div className="mb-8 space-y-3 text-sm text-muted">
-            <a href={siteConfig.phoneHref} className="flex items-center gap-3 hover:text-sky">
+        <div
+          id="mobile-nav"
+          className="fixed inset-0 z-40 overflow-y-auto bg-white px-5 pb-10 pt-20 md:pt-36 lg:hidden"
+        >
+          <nav className="flex flex-col" aria-label="Mobile">
+            {navLinks.map((link) => {
+              const active = pathname === link.href;
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`border-b border-line py-4 text-2xl font-semibold tracking-tight ${
+                    active ? "text-sky" : "text-sky-dark"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
+          </nav>
+          <div className="mt-8 space-y-3 text-sm text-muted">
+            <a href={siteConfig.phoneHref} className="flex items-center gap-3 break-all hover:text-sky">
               <IconCircle>
                 <PhoneIcon />
               </IconCircle>
               {siteConfig.phone}
             </a>
-            <a href={`mailto:${siteConfig.email}`} className="flex items-center gap-3 hover:text-sky">
+            <a href={`mailto:${siteConfig.email}`} className="flex items-center gap-3 break-all hover:text-sky">
               <IconCircle>
                 <MailIcon />
               </IconCircle>
               {siteConfig.email}
             </a>
           </div>
-          <nav className="flex flex-col gap-3" aria-label="Mobile">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="text-3xl font-semibold uppercase tracking-[0.12em] text-sky-dark"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </nav>
+          <div className="mt-6 flex gap-4">
+            <SocialLink href={siteConfig.social.instagram} label="Instagram">
+              <InstagramIcon />
+            </SocialLink>
+            <SocialLink href={siteConfig.social.linkedin} label="LinkedIn">
+              <LinkedInIcon />
+            </SocialLink>
+            <SocialLink href={siteConfig.social.x} label="X">
+              <XIcon />
+            </SocialLink>
+            <SocialLink href={siteConfig.social.youtube} label="YouTube">
+              <YouTubeIcon />
+            </SocialLink>
+          </div>
           <Link
             href="/contact"
-            className="btn-primary mt-10 inline-flex items-center justify-center rounded-full px-6 py-4 text-sm font-bold uppercase tracking-[0.16em]"
+            className="btn-primary mt-8 inline-flex w-full items-center justify-center rounded-full px-6 py-4 text-sm font-bold uppercase tracking-[0.16em]"
           >
             Get in Touch
           </Link>
@@ -189,7 +212,7 @@ function SocialLink({
       aria-label={label}
       target="_blank"
       rel="noreferrer"
-      className="inline-flex h-7 w-7 items-center justify-center text-sky transition hover:text-sky-dark"
+      className="inline-flex h-9 w-9 items-center justify-center text-sky transition hover:text-sky-dark"
     >
       {children}
     </a>

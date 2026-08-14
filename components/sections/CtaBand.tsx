@@ -27,7 +27,7 @@ export function CtaBand({ withForm = true }: { withForm?: boolean }) {
             </div>
           </div>
           {withForm ? (
-            <div className="rounded-[2rem] border border-white/20 bg-white p-6 text-[var(--text)] md:p-10">
+            <div className="rounded-[1.4rem] border border-white/20 bg-white p-4 text-[var(--text)] sm:p-6 md:p-10">
               <InquiryForm />
             </div>
           ) : null}

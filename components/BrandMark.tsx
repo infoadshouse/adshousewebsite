@@ -9,29 +9,29 @@ export function BrandMark({
   size?: "sm" | "md";
   priority?: boolean;
 }) {
-  const mark = size === "sm" ? "h-10 w-10" : "h-11 w-11";
-  const title = size === "sm" ? "text-[13px]" : "text-[15px]";
+  const mark = size === "sm" ? "h-9 w-9 md:h-10 md:w-10" : "h-9 w-9 md:h-11 md:w-11";
+  const title = size === "sm" ? "text-[12px] md:text-[13px]" : "text-[12px] sm:text-[14px] md:text-[15px]";
 
   return (
-    <span className="flex items-center gap-2.5">
+    <span className="flex min-w-0 items-center gap-2 md:gap-2.5">
       <Image
         src="/mark.png"
         alt=""
         width={88}
         height={88}
-        className={`${mark} object-contain`}
+        className={`${mark} shrink-0 object-contain`}
         priority={priority}
       />
-      <span className="leading-none">
+      <span className="min-w-0 leading-none">
         <span
-          className={`block font-extrabold tracking-[0.14em] ${title} ${
+          className={`block truncate font-extrabold tracking-[0.12em] md:tracking-[0.14em] ${title} ${
             variant === "light" ? "text-white" : "text-sky-dark"
           }`}
         >
           ADS HOUSE
         </span>
         <span
-          className={`mt-1 block text-[9px] font-semibold tracking-[0.22em] ${
+          className={`mt-1 hidden text-[8px] font-semibold tracking-[0.18em] sm:block md:text-[9px] md:tracking-[0.22em] ${
             variant === "light" ? "text-white/65" : "text-muted"
           }`}
         >

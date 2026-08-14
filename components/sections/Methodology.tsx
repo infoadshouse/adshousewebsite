@@ -81,14 +81,14 @@ export function Methodology() {
           <span className="mt-5 block h-[3px] w-28 rounded-full bg-gradient-to-r from-sky to-purple" />
         </div>
 
-        <div className="mt-12 grid gap-4 md:grid-cols-5">
+        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
           {methodology.map((item, index) => {
             const theme = themes[index];
             return (
               <Reveal key={item.step} delay={index * 80} className="relative">
                 {index < methodology.length - 1 ? (
                   <span
-                    className="pointer-events-none absolute top-10 -right-3 z-10 hidden h-6 w-6 items-center justify-center rounded-full border border-line bg-white text-slate-400 md:flex"
+                    className="pointer-events-none absolute top-10 -right-3 z-10 hidden h-6 w-6 items-center justify-center rounded-full border border-line bg-white text-slate-400 lg:flex"
                     aria-hidden
                   >
                     <svg className="h-3 w-3" viewBox="0 0 12 12" fill="none">
