@@ -4,13 +4,11 @@ import { JsonLd } from "@/components/JsonLd";
 import { PageHero } from "@/components/PageHero";
 import { CtaBand } from "@/components/sections/CtaBand";
 import { caseStudies } from "@/lib/data";
-import { breadcrumbSchema } from "@/lib/schema";
+import { breadcrumbSchema, itemListSchema } from "@/lib/schema";
 import { createMetadata } from "@/lib/seo";
 
-export const dynamic = "force-dynamic";
-
 export const metadata = createMetadata({
-  title: "Our Work | Digital Marketing Case Studies in India",
+  title: "Digital Marketing Case Studies in India",
   description:
     "See Ads House case studies: fashion, fintech, skincare, food, and edtech brands across India. Real metrics — leads, ROAS, revenue, CAC, and organic growth.",
   path: "/work",
@@ -27,15 +25,25 @@ export default function WorkPage() {
   return (
     <>
       <JsonLd
-        data={breadcrumbSchema([
-          { name: "Home", path: "/" },
-          { name: "Work", path: "/work" },
-        ])}
+        data={[
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Work", path: "/work" },
+          ]),
+          itemListSchema({
+            name: "Ads House case studies",
+            path: "/work",
+            items: caseStudies.map((item) => ({
+              name: item.title,
+              path: `/work/${item.slug}`,
+            })),
+          }),
+        ]}
       />
       <PageHero
         eyebrow="Work"
-        title="Campaigns that moved the P&L."
-        description="Large visuals. Honest numbers. The work we put our name on — across fashion, fintech, beauty, food, and education in India."
+        title="Digital marketing case studies from India"
+        description="Fashion, fintech, skincare, food, and edtech. Honest numbers — leads, ROAS, revenue, CAC, and organic growth from Ads House campaigns."
         image="/images/work-fashion.png"
         imageAlt="Fashion campaign produced by Ads House for an Indian D2C brand"
       />

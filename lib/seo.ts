@@ -8,6 +8,10 @@ type SeoInput = {
   image?: string;
   keywords?: string[];
   noIndex?: boolean;
+  absolute?: boolean;
+  type?: "website" | "article";
+  publishedTime?: string;
+  modifiedTime?: string;
 };
 
 export function createMetadata({
@@ -17,6 +21,10 @@ export function createMetadata({
   image = "/images/hero-visual.png",
   keywords = [...siteConfig.keywords],
   noIndex = false,
+  absolute = false,
+  type = "website",
+  publishedTime,
+  modifiedTime,
 }: SeoInput): Metadata {
   const url = new URL(path, siteConfig.url).toString();
   const imageUrl = image.startsWith("http")
@@ -24,7 +32,7 @@ export function createMetadata({
     : new URL(image, siteConfig.url).toString();
 
   return {
-    title,
+    title: absolute ? { absolute: title } : title,
     description,
     keywords,
     alternates: {
@@ -48,7 +56,7 @@ export function createMetadata({
           },
         },
     openGraph: {
-      type: "website",
+      type,
       locale: siteConfig.locale,
       url,
       siteName: siteConfig.name,
@@ -62,6 +70,14 @@ export function createMetadata({
           alt: title,
         },
       ],
+      ...(type === "article"
+        ? {
+            publishedTime,
+            modifiedTime: modifiedTime || publishedTime,
+            authors: [siteConfig.name],
+            section: "Insights",
+          }
+        : {}),
     },
     twitter: {
       card: "summary_large_image",

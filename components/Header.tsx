@@ -77,7 +77,7 @@ export function Header() {
             <BrandMark priority />
           </Link>
 
-          <nav className="hidden items-center gap-5 lg:flex xl:gap-8" aria-label="Primary">
+          <nav className="hidden items-center gap-3 lg:flex xl:gap-6" aria-label="Primary">
             {navLinks.map((link) => {
               const active = pathname === link.href;
               return (

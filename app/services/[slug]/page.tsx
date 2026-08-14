@@ -7,11 +7,9 @@ import { Breadcrumbs } from "@/components/PageHero";
 import { CtaBand } from "@/components/sections/CtaBand";
 import { ArrowIcon, ButtonLink } from "@/components/ui";
 import { getService, methodology, services } from "@/lib/data";
-import { breadcrumbSchema, serviceSchema } from "@/lib/schema";
+import { breadcrumbSchema, faqSchema, serviceSchema } from "@/lib/schema";
 import { createMetadata } from "@/lib/seo";
 import { serviceThemes } from "@/lib/service-themes";
-
-export const dynamic = "force-dynamic";
 
 export function generateStaticParams() {
   return services.map((service) => ({ slug: service.slug }));
@@ -67,6 +65,7 @@ export default async function ServiceDetailPage({ params }: PageProps<"/services
             path: `/services/${service.slug}`,
             image: service.image,
           }),
+          faqSchema(service.faqs),
         ]}
       />
       <Breadcrumbs
@@ -84,7 +83,7 @@ export default async function ServiceDetailPage({ params }: PageProps<"/services
               Service
             </p>
             <h1 className="mt-4 font-display text-4xl font-extrabold tracking-tight text-sky-dark md:text-6xl">
-              {service.title}
+              {service.h1}
             </h1>
             <p className="mt-5 text-xl text-muted">{service.outcome}</p>
             <p className="mt-6 leading-relaxed text-muted">{service.intro}</p>

@@ -5,6 +5,7 @@ import { CtaBand } from "@/components/sections/CtaBand";
 import { FeaturedWork } from "@/components/sections/FeaturedWork";
 import { Hero } from "@/components/sections/Hero";
 import { InsightsTeaser } from "@/components/sections/InsightsTeaser";
+import { LocationsTeaser } from "@/components/sections/LocationsTeaser";
 import { Methodology } from "@/components/sections/Methodology";
 import { Results } from "@/components/sections/Results";
 import { ServicesGrid } from "@/components/sections/ServicesGrid";
@@ -13,23 +14,32 @@ import { TrustBar } from "@/components/sections/TrustBar";
 import { VisualStudio } from "@/components/sections/VisualStudio";
 import { SectionEyebrow } from "@/components/ui";
 import { faqs } from "@/lib/data";
-import { faqSchema } from "@/lib/schema";
+import { faqSchema, webPageSchema } from "@/lib/schema";
 import { createMetadata } from "@/lib/seo";
 
-export const dynamic = "force-dynamic";
-
 export const metadata = createMetadata({
-  title: "Ads House | Digital Marketing & Advertising Agency in India",
+  title: "Digital Marketing Agency in India | Ads House",
   description:
-    "Ads House is a digital marketing and advertising agency in India. We build brands, run performance campaigns, and ship websites and software that grow revenue across Mumbai, Delhi, Bengaluru and beyond.",
+    "Ads House is a digital marketing agency in Rohtak, Haryana. SEO, Google Ads, Meta ads, branding, and websites for Indian brands in Mumbai, Delhi NCR, Bengaluru, and beyond.",
   path: "/",
   image: "/images/hero-visual.png",
+  absolute: true,
 });
 
 export default function HomePage() {
   return (
     <>
-      <JsonLd data={faqSchema(faqs)} />
+      <JsonLd
+        data={[
+          webPageSchema({
+            name: "Digital Marketing Agency in India | Ads House",
+            description:
+              "Rohtak-based digital marketing agency for SEO, Google Ads, branding, and websites across India.",
+            path: "/",
+          }),
+          faqSchema(faqs),
+        ]}
+      />
       <Hero />
       <TrustBar />
       <ServicesGrid />
@@ -38,6 +48,7 @@ export default function HomePage() {
       <VisualStudio />
       <Results />
       <Testimonials />
+      <LocationsTeaser />
       <AboutTeaser />
       <InsightsTeaser />
       <section className="mx-auto max-w-7xl px-5 pb-8 md:px-8">

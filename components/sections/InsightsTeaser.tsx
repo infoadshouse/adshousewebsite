@@ -14,7 +14,7 @@ export function InsightsTeaser() {
         </h2>
       </div>
       <div className="grid gap-6 lg:grid-cols-3">
-        {insights.map((post, index) => (
+        {insights.slice(0, 3).map((post, index) => (
           <Reveal key={post.slug} delay={index * 70}>
             <Link href={`/insights/${post.slug}`} className="group block overflow-hidden rounded-[1.6rem] border border-line bg-card shadow-sm">
               <div className="img-zoom relative h-52">
@@ -37,6 +37,9 @@ export function InsightsTeaser() {
           </Reveal>
         ))}
       </div>
+      <Link href="/insights" className="mt-10 inline-flex text-sm font-semibold text-sky hover:text-sky-dark">
+        All insights →
+      </Link>
     </section>
   );
 }

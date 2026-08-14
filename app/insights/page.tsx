@@ -4,13 +4,11 @@ import { JsonLd } from "@/components/JsonLd";
 import { PageHero } from "@/components/PageHero";
 import { CtaBand } from "@/components/sections/CtaBand";
 import { insights } from "@/lib/data";
-import { breadcrumbSchema } from "@/lib/schema";
+import { breadcrumbSchema, itemListSchema } from "@/lib/schema";
 import { createMetadata } from "@/lib/seo";
 
-export const dynamic = "force-dynamic";
-
 export const metadata = createMetadata({
-  title: "Insights | Digital Marketing Strategy for Indian Brands",
+  title: "Digital Marketing Insights for Indian Brands",
   description:
     "Practical thinking from Ads House on SEO in India, brand building vs discounting, and performance marketing for D2C. Insights for founders and marketing leaders.",
   path: "/insights",
@@ -27,15 +25,25 @@ export default function InsightsPage() {
   return (
     <>
       <JsonLd
-        data={breadcrumbSchema([
-          { name: "Home", path: "/" },
-          { name: "Insights", path: "/insights" },
-        ])}
+        data={[
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Insights", path: "/insights" },
+          ]),
+          itemListSchema({
+            name: "Ads House insights",
+            path: "/insights",
+            items: insights.map((item) => ({
+              name: item.title,
+              path: `/insights/${item.slug}`,
+            })),
+          }),
+        ]}
       />
       <PageHero
         eyebrow="Insights"
-        title="Notes from the growth floor."
-        description="No recycled 'top 10 tips'. These are the playbooks we use on live Indian accounts — SEO, brand, and performance."
+        title="Digital marketing insights for Indian brands"
+        description="Playbooks from live accounts: SEO in India, hiring an agency in Rohtak, Google Ads vs organic, brand building, and performance marketing."
         image="/images/insight-seo.png"
         imageAlt="Editorial visual for Ads House insights on ranking Indian brands on Google"
       />

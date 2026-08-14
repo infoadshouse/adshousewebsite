@@ -3,13 +3,12 @@ import { notFound } from "next/navigation";
 import { JsonLd } from "@/components/JsonLd";
 import { Breadcrumbs } from "@/components/PageHero";
 import { CtaBand } from "@/components/sections/CtaBand";
+import Link from "next/link";
 import { ButtonLink } from "@/components/ui";
-import { caseStudies, getCaseStudy } from "@/lib/data";
+import { caseStudies, getCaseStudy, services } from "@/lib/data";
 import { breadcrumbSchema } from "@/lib/schema";
 import { createMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site";
-
-export const dynamic = "force-dynamic";
 
 export function generateStaticParams() {
   return caseStudies.map((item) => ({ slug: item.slug }));
@@ -112,7 +111,24 @@ export default async function CaseStudyPage({ params }: PageProps<"/work/[slug]"
           ))}
         </div>
 
-        <p className="mt-10 text-sm text-muted">Services: {item.services.join(" · ")}</p>
+        <p className="mt-10 text-sm text-muted">
+          Services:{" "}
+          {item.services.map((name, index) => {
+            const match = services.find((service) => service.title === name);
+            return (
+              <span key={name}>
+                {index > 0 ? " · " : null}
+                {match ? (
+                  <Link href={`/services/${match.slug}`} className="text-sky hover:underline">
+                    {name}
+                  </Link>
+                ) : (
+                  name
+                )}
+              </span>
+            );
+          })}
+        </p>
         <div className="mt-8">
           <ButtonLink href="/contact">Start a similar project</ButtonLink>
         </div>

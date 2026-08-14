@@ -61,4 +61,14 @@ export const serviceThemes: Record<string, { wrap: string; text: string; icon: R
       </svg>
     ),
   },
+  seo: {
+    wrap: "bg-[#ccfbf1] text-[#0f766e]",
+    text: "text-[#0f766e]",
+    icon: (
+      <svg className="h-5 w-5" viewBox="0 0 20 20" fill="none" aria-hidden>
+        <circle cx="8.5" cy="8.5" r="5" stroke="currentColor" strokeWidth="1.6" />
+        <path d="M12.2 12.2 16 16" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+      </svg>
+    ),
+  },
 };

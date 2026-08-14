@@ -11,40 +11,42 @@ export function Hero() {
 
       <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-5 pb-16 md:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-8 lg:pb-20">
         <div>
-          <p className="mb-5 inline-flex items-center rounded-full bg-sky/10 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.18em] text-sky">
-            Digital growth agency · India
-          </p>
-          <h1 className="font-display text-[2.15rem] font-extrabold leading-[1.08] tracking-tight text-sky-dark sm:text-5xl lg:text-[4.25rem]">
-            We Build <span className="text-gradient">Brands.</span>
-            <br />
-            <span className="relative inline-block">
-              We Drive <span className="text-gradient">Growth.</span>
-              <svg
-                className="absolute -bottom-2 left-0 w-full text-sky"
-                viewBox="0 0 320 14"
-                fill="none"
-                aria-hidden
-              >
-                <defs>
-                  <linearGradient id="wave" x1="0" x2="320" y1="0" y2="0" gradientUnits="userSpaceOnUse">
-                    <stop stopColor="#f97316" />
-                    <stop offset="0.45" stopColor="#7c3aed" />
-                    <stop offset="1" stopColor="#2563eb" />
-                  </linearGradient>
-                </defs>
-                <path
-                  d="M2 9 C 40 2, 70 13, 110 8 S 180 2, 220 9 280 14, 318 7"
-                  stroke="url(#wave)"
-                  strokeWidth="3"
-                  strokeLinecap="round"
-                />
-              </svg>
+          <h1 className="font-display font-extrabold leading-[1.08] tracking-tight text-sky-dark">
+            <span className="mb-5 block text-[11px] font-bold uppercase tracking-[0.18em] text-sky">
+              Digital marketing agency in Rohtak, India
+            </span>
+            <span className="block text-[2.15rem] sm:text-5xl lg:text-[4.25rem]">
+              We Build <span className="text-gradient">Brands.</span>
+              <br />
+              <span className="relative inline-block">
+                We Drive <span className="text-gradient">Growth.</span>
+                <svg
+                  className="absolute -bottom-2 left-0 w-full text-sky"
+                  viewBox="0 0 320 14"
+                  fill="none"
+                  aria-hidden
+                >
+                  <defs>
+                    <linearGradient id="wave" x1="0" x2="320" y1="0" y2="0" gradientUnits="userSpaceOnUse">
+                      <stop stopColor="#f97316" />
+                      <stop offset="0.45" stopColor="#7c3aed" />
+                      <stop offset="1" stopColor="#2563eb" />
+                    </linearGradient>
+                  </defs>
+                  <path
+                    d="M2 9 C 40 2, 70 13, 110 8 S 180 2, 220 9 280 14, 318 7"
+                    stroke="url(#wave)"
+                    strokeWidth="3"
+                    strokeLinecap="round"
+                  />
+                </svg>
+              </span>
             </span>
           </h1>
           <p className="mt-7 max-w-xl text-base leading-relaxed text-muted md:text-lg">
-            Ads House combines branding, advertising, technology, and digital strategy to turn
-            ambitious Indian businesses into growth stories. Your brand deserves more than
-            impressions. It deserves impact.
+            Ads House is a digital marketing and advertising agency in Rohtak, Haryana. We run SEO,
+            Google Ads, Meta ads, branding, and high-performance websites for Indian businesses —
+            from local Haryana companies to brands in Delhi NCR, Mumbai, and Bengaluru.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
             <ButtonLink href="/contact" className="w-full sm:w-auto">
@@ -93,7 +95,7 @@ export function Hero() {
         <div className="relative mx-auto w-full max-w-[560px] lg:max-w-none">
           <Image
             src="/images/heroimage.png"
-            alt="Ads House growth system — brand strategy, performance campaigns, and digital products"
+            alt="Ads House digital marketing agency in Rohtak — brand strategy, SEO, Google Ads, and websites"
             width={1200}
             height={1200}
             priority

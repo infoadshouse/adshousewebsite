@@ -1,16 +1,16 @@
 import Image from "next/image";
+import Link from "next/link";
 import { JsonLd } from "@/components/JsonLd";
 import { PageHero } from "@/components/PageHero";
 import { CtaBand } from "@/components/sections/CtaBand";
 import { teamPrinciples } from "@/lib/data";
-import { breadcrumbSchema } from "@/lib/schema";
+import { locations } from "@/lib/locations";
+import { breadcrumbSchema, webPageSchema } from "@/lib/schema";
 import { createMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site";
 
-export const dynamic = "force-dynamic";
-
 export const metadata = createMetadata({
-  title: "About Ads House | Advertising & Growth Agency in Rohtak, Haryana",
+  title: "About Ads House | Agency in Rohtak, Haryana",
   description:
     "Ads House is a Rohtak-based digital growth agency. We believe attention is rented and preference is owned. Meet the team behind brands, campaigns, and technology that scale Indian businesses.",
   path: "/about",
@@ -27,15 +27,23 @@ export default function AboutPage() {
   return (
     <>
       <JsonLd
-        data={breadcrumbSchema([
-          { name: "Home", path: "/" },
-          { name: "About", path: "/about" },
-        ])}
+        data={[
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "About", path: "/about" },
+          ]),
+          webPageSchema({
+            name: "About Ads House",
+            description: "Rohtak-based digital marketing and advertising agency serving India.",
+            path: "/about",
+            type: "AboutPage",
+          }),
+        ]}
       />
       <PageHero
         eyebrow="About"
-        title="We exist to make ambitious Indian brands impossible to ignore — and easy to buy from."
-        description="Ads House is a growth agency based in Rohtak, Haryana, working with founders and marketing leaders across India. We combine brand craft with commercial discipline."
+        title="Digital marketing agency in Rohtak, Haryana"
+        description="Ads House is an advertising and growth agency based in Rohtak. We exist to make ambitious Indian brands impossible to ignore — and easy to buy from."
         image="/images/about-team.png"
         imageAlt="Ads House team collaborating in the studio"
       />
@@ -97,6 +105,25 @@ export default function AboutPage() {
             and why we can show ₹ crores of influenced revenue instead of a wall of awards nobody
             asked for.
           </p>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-5 pb-20 md:px-8">
+        <h2 className="font-display text-3xl font-bold text-sky-dark md:text-4xl">Where we work</h2>
+        <p className="mt-4 max-w-2xl text-muted">
+          Rohtak is home. The rest of India is the brief. Explore the cities where Ads House runs
+          digital marketing, SEO, and advertising programmes.
+        </p>
+        <div className="mt-8 flex flex-wrap gap-3">
+          {locations.map((location) => (
+            <Link
+              key={location.slug}
+              href={`/locations/${location.slug}`}
+              className="rounded-full border border-line px-4 py-2 text-sm font-semibold text-sky-dark hover:border-sky hover:text-sky"
+            >
+              {location.name}
+            </Link>
+          ))}
         </div>
       </section>
       <CtaBand />

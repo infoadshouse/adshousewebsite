@@ -5,18 +5,16 @@ import { CtaBand } from "@/components/sections/CtaBand";
 import { Methodology } from "@/components/sections/Methodology";
 import { ServicesGrid } from "@/components/sections/ServicesGrid";
 import { ArrowIcon } from "@/components/ui";
-import { faqs, teamPrinciples } from "@/lib/data";
-import { breadcrumbSchema, faqSchema } from "@/lib/schema";
+import { faqs, services, teamPrinciples } from "@/lib/data";
+import { breadcrumbSchema, faqSchema, itemListSchema } from "@/lib/schema";
 import { createMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site";
 import Link from "next/link";
 
-export const dynamic = "force-dynamic";
-
 export const metadata = createMetadata({
-  title: "Digital Marketing Services in India | Brand, Ads, Web & Software",
+  title: "Digital Marketing Services in India",
   description:
-    "Explore Ads House services: brand building, performance marketing, marketing strategy, website development, custom software, and creative content — plus how we work as one growth system.",
+    "Digital marketing services from Ads House in Rohtak: SEO, Google Ads, Meta ads, brand building, website development, custom software, and creative — run as one growth system.",
   path: "/services",
   image: "/images/service-performance.png",
   keywords: [
@@ -56,12 +54,20 @@ export default function ServicesPage() {
             { name: "Services", path: "/services" },
           ]),
           faqSchema(faqs),
+          itemListSchema({
+            name: "Digital marketing services",
+            path: "/services",
+            items: services.map((service) => ({
+              name: service.title,
+              path: `/services/${service.slug}`,
+            })),
+          }),
         ]}
       />
       <PageHero
         eyebrow="Services"
-        title="What we do. How we work."
-        description="Six capabilities, one growth engine. Ads House assembles brand, media, content, web, and software around the number you need to move — then we run it as a system."
+        title="Digital marketing services in India"
+        description="SEO, ads, brand, web, and software — seven capabilities, one growth engine. Ads House in Rohtak assembles the stack around the number you need to move."
       />
 
       <ServicesGrid />

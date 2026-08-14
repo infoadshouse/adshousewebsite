@@ -5,6 +5,7 @@ export type Service = {
   outcome: string;
   image: string;
   icon: string;
+  h1: string;
   seoTitle: string;
   seoDescription: string;
   intro: string;
@@ -125,7 +126,8 @@ export const services: Service[] = [
     outcome: "A brand system that makes you look inevitable in your category.",
     image: "/images/service-brand.png",
     icon: "✦",
-    seoTitle: "Brand Building Agency in India | Brand Identity & Positioning",
+    h1: "Brand Building Agency in India",
+    seoTitle: "Brand Building Agency in India",
     seoDescription:
       "Ads House is a brand building agency in India. We create positioning, identity systems, and brand strategy that help Indian businesses stand out and command premium pricing.",
     intro:
@@ -166,7 +168,8 @@ export const services: Service[] = [
     outcome: "Predictable pipeline from Google, Meta, and high-intent Indian demand.",
     image: "/images/service-performance.png",
     icon: "▲",
-    seoTitle: "Performance Marketing Agency India | Google Ads & Meta Ads",
+    h1: "Performance Marketing Agency in India",
+    seoTitle: "Performance Marketing Agency in India",
     seoDescription:
       "Hire a performance marketing agency in India. Ads House runs Google Ads, Meta ads, and conversion campaigns that lower CAC and grow revenue across Indian metros.",
     intro:
@@ -201,13 +204,60 @@ export const services: Service[] = [
     ],
   },
   {
+    slug: "seo",
+    title: "SEO",
+    short: "Organic demand that compounds after the ads pause.",
+    outcome: "Page-one visibility for the queries that become leads and revenue.",
+    image: "/images/insight-seo.png",
+    icon: "⌕",
+    h1: "SEO Agency in India",
+    seoTitle: "SEO Agency in India | Rohtak & Pan-India",
+    seoDescription:
+      "Ads House is an SEO agency in India, based in Rohtak. Technical SEO, content clusters, local SEO, and Google Business Profile work that ranks and converts.",
+    intro:
+      "SEO in India is not a US playbook with rupees swapped in. Queries are bilingual, competition is ruthless, and a slow website is invisible. Ads House builds search architecture for Google.in: commercial keyword clusters, Core Web Vitals, schema, local pack visibility for Rohtak and other cities, and content that a practitioner could have written. If it does not create pipeline, it is a hobby.",
+    points: [
+      {
+        title: "Technical SEO & Core Web Vitals",
+        body: "Server-rendered pages, crawl budget, canonicals, schema, and performance so Google can actually rank you — Next.js is our default for marketing sites.",
+      },
+      {
+        title: "Keyword clusters that convert",
+        body: "We map high-intent Indian queries to service, city, comparison, and proof pages. Ranking for 'marketing' is a trophy. Ranking for 'digital marketing agency in Rohtak' is a pipeline.",
+      },
+      {
+        title: "Local SEO & Google Business Profile",
+        body: "NAP consistency, local pages, reviews strategy, and map-pack work for agencies, clinics, coaches, and service businesses in Haryana and beyond.",
+      },
+      {
+        title: "Content systems, not blog spam",
+        body: "Topic clusters, internal linking, and landing pages written to rank and to book a call. AI filler is easy to spot. We do not ship it.",
+      },
+    ],
+    faqs: [
+      {
+        q: "How long does SEO take in India?",
+        a: "Meaningful movement on competitive terms usually takes 4–9 months. Local Rohtak and long-tail commercial queries can move faster when the site and Google Business Profile are clean.",
+      },
+      {
+        q: "Do you guarantee #1 on Google?",
+        a: "No honest SEO agency does. We commit to the architecture, the content system, and the measurement. Rankings follow relevance, technical health, and authority — not a contract clause.",
+      },
+      {
+        q: "Is SEO still worth it versus Google Ads?",
+        a: "Paid search rents the click. SEO owns more of the demand over time. Most growing Indian brands need both: ads for harvest now, SEO so CAC does not stay rented forever.",
+      },
+    ],
+  },
+  {
     slug: "marketing-strategy",
     title: "Marketing Strategy",
     short: "The plan before the spend. The reason after the results.",
     outcome: "A growth roadmap your team can actually execute.",
     image: "/images/service-strategy.png",
     icon: "◎",
-    seoTitle: "Marketing Strategy Agency India | Growth & Go-to-Market",
+    h1: "Marketing Strategy Agency in India",
+    seoTitle: "Marketing Strategy Agency in India",
     seoDescription:
       "Ads House builds marketing strategy for Indian brands: positioning, channel mix, offers, and 90-day growth roadmaps that connect brand, performance, and product.",
     intro:
@@ -244,7 +294,8 @@ export const services: Service[] = [
     outcome: "A high-performance site that sells while you sleep.",
     image: "/images/service-web.png",
     icon: "◈",
-    seoTitle: "Website Development Company India | SEO-Ready Next.js Sites",
+    h1: "Website Development Company in India",
+    seoTitle: "Website Development Company in India",
     seoDescription:
       "Ads House builds fast, SEO-ready websites for Indian brands using Next.js. Conversion-focused web development for agencies, D2C, SaaS, and service businesses.",
     intro:
@@ -281,7 +332,8 @@ export const services: Service[] = [
     outcome: "Software that turns your process into an advantage.",
     image: "/images/service-software.png",
     icon: "▣",
-    seoTitle: "Custom Software Development Agency India | Product Engineering",
+    h1: "Custom Software Development Agency in India",
+    seoTitle: "Custom Software Development in India",
     seoDescription:
       "Custom software development in India by Ads House: CRMs, booking engines, dashboards, and digital products engineered to grow with your marketing.",
     intro:
@@ -318,7 +370,8 @@ export const services: Service[] = [
     outcome: "A content engine that feeds brand and performance.",
     image: "/images/service-creative.png",
     icon: "◈",
-    seoTitle: "Creative Agency India | Content, Films & Performance Creative",
+    h1: "Creative & Content Agency in India",
+    seoTitle: "Creative Agency in India",
     seoDescription:
       "Ads House is a creative and content agency in India producing campaign films, performance ads, social content, and brand stories that convert.",
     intro:
@@ -580,16 +633,97 @@ export const insights: Insight[] = [
       "This is the work Ads House does every week for Indian D2C, fintech, food, and education brands. If you want media that buys customers, start a project.",
     ],
   },
+  {
+    slug: "digital-marketing-agency-in-rohtak",
+    title: "How to hire a digital marketing agency in Rohtak (and not get a package)",
+    excerpt:
+      "Rohtak has no shortage of 'SEO + 30 posts' vendors. Here is how founders should actually evaluate a growth partner in Haryana.",
+    date: "2026-07-18",
+    readTime: "7 min",
+    category: "Local",
+    image: "/images/about-team.png",
+    seoDescription:
+      "How to choose a digital marketing agency in Rohtak, Haryana: SEO, Google Ads, branding, websites, and the questions that separate a growth partner from a package vendor.",
+    content: [
+      "Search 'digital marketing agency in Rohtak' and you will find the same promise on twenty sites: SEO, Google Ads, social media, 'guaranteed ranking'. Most of those pages were written to rank, not to run an account. If you are a founder in Rohtak, Hisar, Sonipat, or the NCR belt, the hire is too expensive to get wrong.",
+      "Start with the bottleneck, not the service list. If nobody can find you on Google Maps, you need local SEO and a Google Business Profile that matches your NAP — not 30 Instagram posts. If people find you and do not enquire, you need the website and the offer. If enquiries exist and sales are thin, you may need positioning, not more ads. Ads House diagnoses that before we sell a retainer.",
+      "Ask to see measurement. A serious agency in Rohtak should talk in leads, CAC, ROAS, and revenue — and show how tracking is set up. Vanity dashboards (reach, likes, 'traffic up 200%' with no conversions) are how retainers quietly die.",
+      "Ask who actually does the work. Many local vendors outsource ads to a nameless media buyer and SEO to a content mill. You want a team that can sit in Rohtak, understand the operation, and still buy Google and Meta at the same quality as a metro agency.",
+      "Do not buy '#1 on Google guaranteed'. Google does not sell positions to agencies. What you can buy is technical SEO, honest content, local pack hygiene, and paid search that harvests demand while organic compounds.",
+      "If you want a digital marketing agency in Rohtak that treats growth as a system — brand, SEO, ads, and the website together — start a project with Ads House. We are based here. We also run pan-India campaigns from this studio.",
+    ],
+  },
+  {
+    slug: "seo-vs-google-ads-india",
+    title: "SEO vs Google Ads in India: what to fund first",
+    excerpt:
+      "Rent the click or own the query? Most Indian brands need both — but not in the same week, and not with the same brief.",
+    date: "2026-05-21",
+    readTime: "6 min",
+    category: "SEO",
+    image: "/images/service-performance.png",
+    seoDescription:
+      "SEO vs Google Ads in India: when to invest in organic search, when to buy traffic, and how Ads House sequences both for CAC and pipeline.",
+    content: [
+      "Indian founders often treat SEO and Google Ads as rival religions. They are not. One owns demand over time. The other rents it this week. The mistake is funding the wrong one for the stage you are in.",
+      "Fund Google Ads first when the offer is proven, tracking works, and you need pipeline before organic can compound — launches, seasonal peaks, high-CPC categories where page-one is owned by giants. Ads House will not scale spend until the landing page and conversion event are honest.",
+      "Fund SEO first when you already have some demand, a site that can rank (speed, SSR, crawlable HTML), and a category with searchable intent you can win — local services in Rohtak and Haryana, specialised B2B, programme pages, product education. SEO is slower and cheaper per lead once it works.",
+      "The compounding model: use ads to learn which queries convert, then build SEO pages for those terms. Use SEO content to lower blended CAC so you are not rented forever. That is the sequence we run for D2C, edtech, and service brands.",
+      "If a vendor tells you to pick only one forever, they are selling the service they have, not the mix you need. Start a project and we will tell you which lever moves first.",
+    ],
+  },
+  {
+    slug: "google-ads-agency-india-brief",
+    title: "What a good Google Ads agency in India actually does",
+    excerpt:
+      "Account structure, creative, tracking, and unit economics. Not a weekly screenshot of CTR.",
+    date: "2026-02-14",
+    readTime: "7 min",
+    category: "Performance",
+    image: "/images/work-fintech.png",
+    seoDescription:
+      "What to expect from a Google Ads agency in India: account structure, Performance Max, tracking, CAC, and how Ads House runs paid search.",
+    content: [
+      "Hiring a Google Ads agency in India should not feel like buying a mystery box. You should know what happens to the account in week one, what 'good' looks like in month three, and which numbers the agency is willing to put next to their name.",
+      "Week one is hygiene: conversion tracking that a CFO would trust, search terms that match intent, negatives for the junk India always throws at a new account, and a landing page that matches the ad. If those are broken, more budget is vandalism.",
+      "Structure follows intent. High-intent search campaigns harvest. YouTube and Demand Gen create. Performance Max is a tool, not a strategy — we use it when feed, creative, and conversion quality can support it, not because the platform UI suggested it.",
+      "Reporting is spend, CAC or CPA, MER, and contribution — not CTR theatre. Indian auctions are noisy. We kill queries and ads on a weekly cadence and tell you why in business language.",
+      "Ads House runs Google Ads as part of performance marketing, not as a silo. Creative, the website, and SEO share the same brief. That is how paid search stops fighting the rest of the brand.",
+    ],
+  },
+  {
+    slug: "local-seo-india-google-business-profile",
+    title: "Local SEO in India: winning the map pack from Rohtak to the metros",
+    excerpt:
+      "Google Business Profile, NAP consistency, and city pages — the unglamorous work that still sends walk-ins and calls.",
+    date: "2026-01-20",
+    readTime: "6 min",
+    category: "SEO",
+    image: "/images/service-web.png",
+    seoDescription:
+      "Local SEO in India: Google Business Profile, NAP, reviews, and city pages. How Ads House helps Rohtak and metro service businesses rank in the map pack.",
+    content: [
+      "For clinics, coaches, dealerships, restaurants, and agencies, the local pack is the real homepage. Ranking #4 on a blue link while a competitor owns the map is how you lose the phone call in Rohtak, Gurugram, and Pune alike.",
+      "Google Business Profile is not a listing you 'set and forget'. Categories, services, photos, Q&A, products, and review responses are ranking and conversion inputs. The name, address, and phone on the profile must match the website footer and the door. That NAP consistency is still table stakes in 2026.",
+      "City pages only help when they are real. A paragraph swapped with a city name is a doorway page and Google treats it like one. Ads House writes location pages around actual service area, industries, and how we work in that market — then links them from the site like a human would.",
+      "Reviews are earned, not schema-faked. Do not put a 4.9 aggregate rating in structured data if you cannot show the reviews. Ask happy clients. Reply to the rest. In Haryana as in Mumbai, trust is local.",
+      "If you want local SEO that is tied to a website that can rank and a Google profile that can convert, that is a core Ads House programme — starting with our own city, Rohtak, and the markets we serve across India.",
+    ],
+  },
 ];
 
 export const faqs = [
   {
     q: "Which is the best digital marketing agency in India?",
-    a: "The best agency is the one that can move your numbers — leads, CAC, ROAS, revenue — not the one with the longest service list. Ads House is a Rohtak-based growth agency serving brands across India with branding, performance marketing, web, and software in one team.",
+    a: "The best agency is the one that can move your numbers — leads, CAC, ROAS, revenue — not the one with the longest service list. Ads House is a Rohtak-based growth agency serving brands across India with branding, SEO, performance marketing, web, and software in one team.",
+  },
+  {
+    q: "Is Ads House a digital marketing agency in Rohtak?",
+    a: "Yes. Ads House is headquartered in Rohtak, Haryana. We work with local businesses across Haryana and with brands in Delhi NCR, Mumbai, Bengaluru, Hyderabad, Pune, and other Indian cities.",
   },
   {
     q: "What services does Ads House offer?",
-    a: "Brand building, performance marketing (Google and Meta), marketing strategy, website development, custom software, and creative & content. We operate as an end-to-end growth partner, not a single-channel vendor.",
+    a: "Brand building, SEO, performance marketing (Google Ads and Meta ads), marketing strategy, website development, custom software, and creative & content. We operate as an end-to-end growth partner, not a single-channel vendor.",
   },
   {
     q: "How much does a digital marketing agency in India cost?",
@@ -602,6 +736,14 @@ export const faqs = [
   {
     q: "Can you build an SEO-optimised website?",
     a: "Yes. We build Next.js websites with server-side rendering, schema markup, Core Web Vitals, and content models designed to rank on Google India.",
+  },
+  {
+    q: "Do you offer SEO and Google Ads from Rohtak?",
+    a: "Yes. SEO and Google Ads are core services. Local businesses in Rohtak and Haryana, and national brands, get the same technical and media discipline.",
+  },
+  {
+    q: "Which cities does Ads House serve?",
+    a: "We are based in Rohtak and work with teams in Delhi NCR, Mumbai, Bengaluru, Hyderabad, Pune, Chennai, Ahmedabad, and Kolkata — plus nationwide campaigns.",
   },
   {
     q: "How soon can we start a project?",

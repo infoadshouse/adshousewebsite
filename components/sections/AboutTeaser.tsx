@@ -10,7 +10,7 @@ export function AboutTeaser() {
           <div className="img-zoom relative min-h-[380px] overflow-hidden rounded-[2rem] border border-line shadow-sm lg:min-h-[520px]">
             <Image
               src="/images/about-team.png"
-              alt="Ads House creative team collaborating in a Mumbai advertising studio"
+              alt="Ads House team in Rohtak, Haryana — digital marketing agency serving India"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover"
