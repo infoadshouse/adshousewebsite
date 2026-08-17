@@ -53,10 +53,10 @@ export type Insight = {
 };
 
 export const stats = [
-  { value: 150, suffix: "+", label: "Brands Scaled", detail: "From Startups to Industry Leaders", icon: "rocket" },
+  { value: 12, suffix: "+", label: "Brands Scaled", detail: "From Startups to Growing Companies", icon: "rocket" },
   { value: 6.4, suffix: "x", label: "Avg. ROAS Delivered", detail: "Performance That Speaks", decimals: 1, icon: "chart" },
-  { value: 50, suffix: "+", label: "Experts in House", detail: "Strategists, Creatives & Engineers", icon: "people" },
-  { value: 50, prefix: "₹", suffix: "Cr+", label: "Revenue Influenced", detail: "Real Impact. Real Growth.", icon: "trophy" },
+  { value: 8, suffix: "+", label: "Experts in House", detail: "Strategists, Creatives & Engineers", icon: "people" },
+  { value: 1, prefix: "₹", suffix: "Cr+", label: "Revenue Influenced", detail: "Real Impact. Real Growth.", icon: "trophy" },
 ] as const;
 
 export const trustedBrands = [
@@ -418,7 +418,7 @@ export const caseStudies: CaseStudy[] = [
     metric: "+187%",
     metricLabel: "qualified leads",
     image: "/images/work-fashion.png",
-    year: "2025",
+    year: "2026",
     services: ["Brand Building", "Web Development", "Performance Marketing"],
     stats: [
       { label: "Qualified leads", value: "+187%" },
@@ -445,7 +445,7 @@ export const caseStudies: CaseStudy[] = [
     metric: "6.4x",
     metricLabel: "campaign ROAS",
     image: "/images/work-fintech.png",
-    year: "2025",
+    year: "2026",
     services: ["Marketing Strategy", "Performance Marketing", "Custom Software"],
     stats: [
       { label: "Peak ROAS", value: "6.4x" },
@@ -472,7 +472,7 @@ export const caseStudies: CaseStudy[] = [
     metric: "+240%",
     metricLabel: "revenue growth",
     image: "/images/work-skincare.png",
-    year: "2024",
+    year: "2026",
     services: ["Brand Building", "Creative & Content", "Performance Marketing"],
     stats: [
       { label: "Revenue", value: "+240%" },
@@ -499,7 +499,7 @@ export const caseStudies: CaseStudy[] = [
     metric: "-41%",
     metricLabel: "customer acquisition cost",
     image: "/images/work-food.png",
-    year: "2025",
+    year: "2026",
     services: ["Performance Marketing", "Creative & Content", "Web Development"],
     stats: [
       { label: "CAC", value: "-41%" },
@@ -526,7 +526,7 @@ export const caseStudies: CaseStudy[] = [
     metric: "3.2x",
     metricLabel: "organic traffic",
     image: "/images/work-edtech.png",
-    year: "2024",
+    year: "2026",
     services: ["Marketing Strategy", "Web Development", "Creative & Content"],
     stats: [
       { label: "Organic traffic", value: "3.2x" },
@@ -719,7 +719,7 @@ export const faqs = [
   },
   {
     q: "Is Ads House a digital marketing agency in Rohtak?",
-    a: "Yes. Ads House is headquartered in Rohtak, Haryana. We work with local businesses across Haryana and with brands in Delhi NCR, Mumbai, Bengaluru, Hyderabad, Pune, and other Indian cities.",
+    a: "Yes. Ads House is headquartered in Rohtak, Haryana — our only office. We work with local businesses across Haryana and with brands across India from this studio.",
   },
   {
     q: "What services does Ads House offer?",
@@ -731,7 +731,7 @@ export const faqs = [
   },
   {
     q: "Do you work with startups and D2C brands?",
-    a: "Yes. A large share of our work is D2C, fintech, edtech, and founder-led companies in Mumbai, Delhi NCR, Bengaluru, Hyderabad, and Pune — plus national campaigns.",
+    a: "Yes. A large share of our work is D2C, fintech, edtech, and founder-led companies — run from our Rohtak studio, including national campaigns.",
   },
   {
     q: "Can you build an SEO-optimised website?",
@@ -743,7 +743,7 @@ export const faqs = [
   },
   {
     q: "Which cities does Ads House serve?",
-    a: "We are based in Rohtak and work with teams in Delhi NCR, Mumbai, Bengaluru, Hyderabad, Pune, Chennai, Ahmedabad, and Kolkata — plus nationwide campaigns.",
+    a: "Our office is in Rohtak, Haryana. From this studio we run campaigns for local businesses and for brands across India.",
   },
   {
     q: "How soon can we start a project?",

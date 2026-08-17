@@ -4,7 +4,6 @@ import { JsonLd } from "@/components/JsonLd";
 import { PageHero } from "@/components/PageHero";
 import { CtaBand } from "@/components/sections/CtaBand";
 import { teamPrinciples } from "@/lib/data";
-import { locations } from "@/lib/locations";
 import { breadcrumbSchema, webPageSchema } from "@/lib/schema";
 import { createMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site";
@@ -58,8 +57,8 @@ export default function AboutPage() {
             the website, the funnel, and the product after the ads started working.
           </p>
           <p className="mt-4 leading-relaxed text-muted">
-            Today we serve brands in {siteConfig.cities.slice(0, 6).join(", ")}, and nationwide
-            campaigns that need to feel local and look premium.
+            Today we serve brands from our Rohtak studio — and nationwide campaigns that need to
+            feel local and look premium.
           </p>
         </div>
         <div>
@@ -102,7 +101,7 @@ export default function AboutPage() {
           <p className="mt-4 leading-relaxed text-muted">
             Diagnose the bottleneck. Build the system. Launch with tracking. Optimise without ego.
             Scale only what the unit economics can carry. That methodology is why retainers last —
-            and why we can show ₹ crores of influenced revenue instead of a wall of awards nobody
+            and why we can show ₹1 Cr+ of influenced revenue instead of a wall of awards nobody
             asked for.
           </p>
         </div>
@@ -111,19 +110,16 @@ export default function AboutPage() {
       <section className="mx-auto max-w-7xl px-5 pb-20 md:px-8">
         <h2 className="font-display text-3xl font-bold text-sky-dark md:text-4xl">Where we work</h2>
         <p className="mt-4 max-w-2xl text-muted">
-          Rohtak is home. The rest of India is the brief. Explore the cities where Ads House runs
-          digital marketing, SEO, and advertising programmes.
+          Rohtak is our only office. Explore the studio where Ads House runs digital marketing, SEO,
+          and advertising programmes.
         </p>
         <div className="mt-8 flex flex-wrap gap-3">
-          {locations.map((location) => (
-            <Link
-              key={location.slug}
-              href={`/locations/${location.slug}`}
-              className="rounded-full border border-line px-4 py-2 text-sm font-semibold text-sky-dark hover:border-sky hover:text-sky"
-            >
-              {location.name}
-            </Link>
-          ))}
+          <Link
+            href="/locations/rohtak"
+            className="rounded-full border border-line px-4 py-2 text-sm font-semibold text-sky-dark hover:border-sky hover:text-sky"
+          >
+            Rohtak HQ
+          </Link>
         </div>
       </section>
       <CtaBand />

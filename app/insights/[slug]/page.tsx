@@ -69,7 +69,8 @@ export default async function InsightArticlePage({ params }: PageProps<"/insight
           </h1>
           <p className="mt-5 text-lg text-muted">{post.excerpt}</p>
           <p className="mt-3 text-sm text-muted">
-            By {siteConfig.name} · {siteConfig.address.locality}, {siteConfig.address.region}
+            By {siteConfig.name} · Founded {siteConfig.foundingYear} · {siteConfig.address.locality},{" "}
+            {siteConfig.address.region}
           </p>
         </header>
         <div className="img-zoom relative mt-10 h-[280px] overflow-hidden rounded-[1.8rem] border border-line shadow-sm md:h-[400px]">

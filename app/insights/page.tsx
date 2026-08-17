@@ -6,6 +6,7 @@ import { CtaBand } from "@/components/sections/CtaBand";
 import { insights } from "@/lib/data";
 import { breadcrumbSchema, itemListSchema } from "@/lib/schema";
 import { createMetadata } from "@/lib/seo";
+import { siteConfig } from "@/lib/site";
 
 export const metadata = createMetadata({
   title: "Digital Marketing Insights for Indian Brands",
@@ -60,6 +61,9 @@ export default function InsightsPage() {
             <div className="p-6">
               <p className="text-xs uppercase tracking-[0.2em] text-sky">
                 {post.category} · {post.readTime} · {post.date}
+              </p>
+              <p className="mt-2 text-xs text-muted">
+                {siteConfig.name} · Founded {siteConfig.foundingYear} · {siteConfig.address.locality}
               </p>
               <h2 className="mt-3 font-display text-2xl font-bold text-sky-dark group-hover:text-sky">{post.title}</h2>
               <p className="mt-2 text-sm text-muted">{post.excerpt}</p>

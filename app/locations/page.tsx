@@ -9,17 +9,15 @@ import { createMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site";
 
 export const metadata = createMetadata({
-  title: "Digital Marketing Agency Locations in India",
+  title: "Ads House Office in Rohtak, Haryana",
   description:
-    "Ads House is a digital marketing agency based in Rohtak, Haryana, working with brands in Delhi NCR, Mumbai, Bengaluru, Hyderabad, Pune, Chennai, Ahmedabad, and Kolkata.",
+    "Ads House is a digital marketing agency based in Rohtak, Haryana. Our only office. SEO, Google Ads, branding, and websites for local businesses and pan-India brands.",
   path: "/locations",
   image: "/images/about-team.png",
   keywords: [
     "digital marketing agency Rohtak",
-    "digital marketing agency Delhi NCR",
-    "digital marketing agency Mumbai",
-    "digital marketing agency Bengaluru",
     "advertising agency Haryana",
+    "Ads House office Rohtak",
   ],
 });
 
@@ -33,14 +31,13 @@ export default function LocationsPage() {
             { name: "Locations", path: "/locations" },
           ]),
           webPageSchema({
-            name: "Digital marketing agency locations in India",
-            description:
-              "Cities where Ads House delivers digital marketing, SEO, and advertising.",
+            name: "Ads House office in Rohtak",
+            description: "The Ads House studio in Rohtak, Haryana — our only office.",
             path: "/locations",
             type: "CollectionPage",
           }),
           itemListSchema({
-            name: "Ads House locations",
+            name: "Ads House office",
             path: "/locations",
             items: locations.map((location) => ({
               name: `Digital marketing agency in ${location.name}`,
@@ -50,9 +47,9 @@ export default function LocationsPage() {
         ]}
       />
       <PageHero
-        eyebrow="Locations"
-        title="A Rohtak digital marketing agency that works across India."
-        description={`Headquartered in ${siteConfig.address.locality}, ${siteConfig.address.region}. Campaigns, SEO, and websites for founders in India's major markets — without a bloated metro overhead.`}
+        eyebrow="Office"
+        title="Our studio is in Rohtak."
+        description={`Headquartered in ${siteConfig.address.locality}, ${siteConfig.address.region}. One office. SEO, ads, brand, and engineering under one roof.`}
         image="/images/about-team.png"
         imageAlt="Ads House studio in Rohtak, Haryana — digital marketing agency serving India"
       />
@@ -65,7 +62,7 @@ export default function LocationsPage() {
               className="group rounded-[1.6rem] border border-line bg-white p-7 shadow-[0_12px_32px_rgba(15,23,42,0.06)] transition hover:-translate-y-1"
             >
               <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-sky">
-                {location.isHq ? "Headquarters" : "We work here"}
+                Headquarters
               </p>
               <h2 className="mt-3 font-display text-2xl font-bold text-sky-dark group-hover:text-sky">
                 {location.name}
@@ -89,11 +86,11 @@ export default function LocationsPage() {
           items={[
             {
               q: "Where is Ads House based?",
-              a: `Ads House is based in ${siteConfig.address.locality}, ${siteConfig.address.region}. That is our studio and the centre of SEO, ads, brand, and engineering.`,
+              a: `Ads House is based in ${siteConfig.address.locality}, ${siteConfig.address.region}. That is our only office — the studio and the centre of SEO, ads, brand, and engineering.`,
             },
             {
-              q: "Do you travel to other cities?",
-              a: "Yes. Kickoffs, shoots, and workshops happen in Delhi NCR, Mumbai, Bengaluru, and other markets when the work needs to be in the room.",
+              q: "Do you work with brands outside Rohtak?",
+              a: "Yes. Campaigns, SEO, and websites are run from the Rohtak studio for brands across India. Kickoffs and workshops can happen remotely or in person here.",
             },
           ]}
         />

@@ -171,20 +171,22 @@ export default async function LocationDetailPage({ params }: LocationParams) {
           <FaqList items={location.faqs} />
         </section>
 
-        <section className="mt-16">
-          <h2 className="font-display text-3xl font-extrabold text-sky-dark">Other cities</h2>
-          <div className="mt-6 flex flex-wrap gap-3">
-            {others.map((item) => (
-              <Link
-                key={item.slug}
-                href={`/locations/${item.slug}`}
-                className="rounded-full border border-line px-4 py-2 text-sm font-medium text-sky-dark hover:border-sky hover:text-sky"
-              >
-                {item.name}
-              </Link>
-            ))}
-          </div>
-        </section>
+        {others.length > 0 ? (
+          <section className="mt-16">
+            <h2 className="font-display text-3xl font-extrabold text-sky-dark">Other cities</h2>
+            <div className="mt-6 flex flex-wrap gap-3">
+              {others.map((item) => (
+                <Link
+                  key={item.slug}
+                  href={`/locations/${item.slug}`}
+                  className="rounded-full border border-line px-4 py-2 text-sm font-medium text-sky-dark hover:border-sky hover:text-sky"
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </div>
+          </section>
+        ) : null}
       </article>
       <CtaBand />
     </>

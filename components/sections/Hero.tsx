@@ -46,7 +46,7 @@ export function Hero() {
           <p className="mt-7 max-w-xl text-base leading-relaxed text-muted md:text-lg">
             Ads House is a digital marketing and advertising agency in Rohtak, Haryana. We run SEO,
             Google Ads, Meta ads, branding, and high-performance websites for Indian businesses —
-            from local Haryana companies to brands in Delhi NCR, Mumbai, and Bengaluru.
+            from local Haryana companies to brands across India.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
             <ButtonLink href="/contact" className="w-full sm:w-auto">

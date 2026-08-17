@@ -6,6 +6,7 @@ import { CtaBand } from "@/components/sections/CtaBand";
 import { caseStudies } from "@/lib/data";
 import { breadcrumbSchema, itemListSchema } from "@/lib/schema";
 import { createMetadata } from "@/lib/seo";
+import { siteConfig } from "@/lib/site";
 
 export const metadata = createMetadata({
   title: "Digital Marketing Case Studies in India",
@@ -66,6 +67,9 @@ export default function WorkPage() {
             <div className="flex flex-col justify-center p-8 md:p-12">
               <p className="text-xs uppercase tracking-[0.2em] text-sky">
                 {item.client} · {item.location} · {item.year}
+              </p>
+              <p className="mt-2 text-xs text-muted">
+                {siteConfig.name} · Founded {siteConfig.foundingYear} · {siteConfig.address.locality}
               </p>
               <p className="mt-4 font-display text-5xl font-extrabold text-sky">{item.metric}</p>
               <p className="text-sm uppercase tracking-widest text-muted">{item.metricLabel}</p>

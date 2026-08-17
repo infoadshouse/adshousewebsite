@@ -20,6 +20,7 @@ export function GET() {
 
 - Website: ${siteConfig.url}
 - Studio: ${siteConfig.address.locality}, ${siteConfig.address.region}, India
+- Founded: ${siteConfig.foundingYear}
 - Email: ${siteConfig.email}
 - Phone: ${siteConfig.phone}
 

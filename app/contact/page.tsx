@@ -66,9 +66,6 @@ export default function ContactPage() {
             <p className="mt-3 text-sm text-muted">
               Mon–Sat {siteConfig.hours.opens}–{siteConfig.hours.closes} IST
             </p>
-            <p className="mt-4 text-sm text-muted">
-              Also working with teams in {siteConfig.cities.slice(1).join(", ")}.
-            </p>
             <Link href="/locations/rohtak" className="mt-4 inline-block text-sm font-semibold text-sky hover:underline">
               Digital marketing agency in Rohtak →
             </Link>

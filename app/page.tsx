@@ -20,7 +20,7 @@ import { createMetadata } from "@/lib/seo";
 export const metadata = createMetadata({
   title: "Digital Marketing Agency in India | Ads House",
   description:
-    "Ads House is a digital marketing agency in Rohtak, Haryana. SEO, Google Ads, Meta ads, branding, and websites for Indian brands in Mumbai, Delhi NCR, Bengaluru, and beyond.",
+    "Ads House is a digital marketing agency in Rohtak, Haryana. SEO, Google Ads, Meta ads, branding, and websites for Indian brands — from our Rohtak studio.",
   path: "/",
   image: "/images/hero-visual.png",
   absolute: true,

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Reveal } from "@/components/Reveal";
 import { ButtonLink, SectionEyebrow } from "@/components/ui";
 import { caseStudies } from "@/lib/data";
+import { siteConfig } from "@/lib/site";
 
 export function FeaturedWork({ limit = 3 }: { limit?: number }) {
   const items = caseStudies.slice(0, limit);
@@ -45,7 +46,10 @@ export function FeaturedWork({ limit = 3 }: { limit?: number }) {
                 </div>
                 <div className="flex flex-col justify-center p-5 sm:p-8 md:p-12">
                   <p className="text-xs font-semibold uppercase tracking-[0.22em] text-sky">
-                    {item.client} · {item.industry} · {item.location}
+                    {item.client} · {item.industry} · {item.year}
+                  </p>
+                  <p className="mt-2 text-xs text-muted">
+                    {siteConfig.name} · Founded {siteConfig.foundingYear} · {siteConfig.address.locality}
                   </p>
                   <p className="mt-4 break-words font-display text-4xl font-extrabold text-sky md:text-6xl">
                     {item.metric}

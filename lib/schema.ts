@@ -1,4 +1,3 @@
-import { locations } from "./locations";
 import { siteConfig } from "./site";
 
 export function organizationSchema() {
@@ -21,11 +20,11 @@ export function organizationSchema() {
     slogan: siteConfig.tagline,
     areaServed: [
       { "@type": "Country", name: "India" },
-      ...siteConfig.cities.map((city) => ({
+      {
         "@type": "City",
-        name: city,
-        containedInPlace: { "@type": "Country", name: "India" },
-      })),
+        name: siteConfig.address.locality,
+        containedInPlace: { "@type": "State", name: siteConfig.address.region },
+      },
     ],
     address: {
       "@type": "PostalAddress",
@@ -114,10 +113,10 @@ export function localBusinessSchema() {
       opens: siteConfig.hours.opens,
       closes: siteConfig.hours.closes,
     })),
-    areaServed: locations.map((location) => ({
-      "@type": "City",
-      name: location.name,
-    })),
+    areaServed: [
+      { "@type": "Country", name: "India" },
+      { "@type": "City", name: siteConfig.address.locality },
+    ],
   };
 }
 

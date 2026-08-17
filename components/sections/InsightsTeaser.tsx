@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Reveal } from "@/components/Reveal";
 import { SectionEyebrow } from "@/components/ui";
 import { insights } from "@/lib/data";
+import { siteConfig } from "@/lib/site";
 
 export function InsightsTeaser() {
   return (
@@ -28,7 +29,10 @@ export function InsightsTeaser() {
               </div>
               <div className="p-6">
                 <p className="text-xs uppercase tracking-[0.2em] text-sky">
-                  {post.category} · {post.readTime}
+                  {post.category} · {post.readTime} · {post.date}
+                </p>
+                <p className="mt-2 text-xs text-muted">
+                  {siteConfig.name} · Founded {siteConfig.foundingYear} · {siteConfig.address.locality}
                 </p>
                 <h3 className="mt-3 font-display text-xl font-bold text-sky-dark group-hover:text-sky">{post.title}</h3>
                 <p className="mt-2 text-sm text-muted">{post.excerpt}</p>

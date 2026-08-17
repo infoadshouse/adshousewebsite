@@ -8,6 +8,23 @@ const nextConfig: NextConfig = {
     deviceSizes: [640, 768, 1024, 1280, 1536, 1920],
     imageSizes: [64, 96, 128, 256, 384],
   },
+  async redirects() {
+    const retiredOffices = [
+      "delhi-ncr",
+      "mumbai",
+      "bengaluru",
+      "hyderabad",
+      "pune",
+      "chennai",
+      "ahmedabad",
+      "kolkata",
+    ];
+    return retiredOffices.map((slug) => ({
+      source: `/locations/${slug}`,
+      destination: "/locations/rohtak",
+      permanent: true,
+    }));
+  },
   async headers() {
     return [
       {

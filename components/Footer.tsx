@@ -49,7 +49,7 @@ export function Footer() {
         </div>
 
         <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-white/60">Locations</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-white/60">Office</p>
           <ul className="mt-4 space-y-2">
             {locations.map((location) => (
               <li key={location.slug}>

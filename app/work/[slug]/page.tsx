@@ -63,6 +63,9 @@ export default async function CaseStudyPage({ params }: PageProps<"/work/[slug]"
           <p className="text-xs uppercase tracking-[0.22em] text-sky">
             {item.industry} · {item.location} · {item.year}
           </p>
+          <p className="mt-2 text-sm text-muted">
+            By {siteConfig.name} · Founded {siteConfig.foundingYear} · {siteConfig.address.locality}
+          </p>
           <h1 className="mt-4 max-w-4xl font-display text-4xl font-extrabold tracking-tight text-sky-dark md:text-6xl">
             {item.title}
           </h1>
