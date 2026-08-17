@@ -65,6 +65,9 @@ export function Header() {
               <SocialLink href={siteConfig.social.x} label="X">
                 <XIcon />
               </SocialLink>
+              <SocialLink href={siteConfig.social.threads} label="Threads">
+                <ThreadsIcon />
+              </SocialLink>
               <SocialLink href={siteConfig.social.youtube} label="YouTube">
                 <YouTubeIcon />
               </SocialLink>
@@ -173,6 +176,9 @@ export function Header() {
             <SocialLink href={siteConfig.social.x} label="X">
               <XIcon />
             </SocialLink>
+            <SocialLink href={siteConfig.social.threads} label="Threads">
+              <ThreadsIcon />
+            </SocialLink>
             <SocialLink href={siteConfig.social.youtube} label="YouTube">
               <YouTubeIcon />
             </SocialLink>
@@ -263,6 +269,14 @@ function XIcon() {
   return (
     <svg className="h-3.5 w-3.5" viewBox="0 0 16 16" fill="currentColor" aria-hidden>
       <path d="M9.4 6.8 14.2 1.5h-1.1L8.9 6l-3.4-4.5H2l5.1 6.7L2 14.5h1.1L7.3 9l3.7 5.5H14L9.4 6.8Zm-1.5 1.7-.5-.7-4-5.4h1.7l3.2 4.4.5.7 4.2 5.7h-1.7L7.9 8.5Z" />
+    </svg>
+  );
+}
+
+function ThreadsIcon() {
+  return (
+    <svg className="h-4 w-4" viewBox="0 0 16 16" fill="currentColor" aria-hidden>
+      <path d="M11.18 7.05c-.12-2.05-1.24-3.32-3.3-3.32-2.36 0-3.72 1.74-3.72 4.62s1.36 4.62 3.72 4.62c1.66 0 2.7-.77 3.2-1.96.2.64.27 1.35.27 1.96 0 3.07-1.74 4.63-4.3 4.63-1.26 0-2.37-.36-3.26-.97l-.56 1.35c1.05.7 2.34 1.1 3.82 1.1 3.3 0 5.57-1.97 5.57-5.9V8c.82.55 1.45 1.4 1.8 2.38l1.42-.5c-.48-1.4-1.4-2.52-2.57-3.2.07-.55.1-1.1 0-1.66h-1.47c.08.36.12.74.12 1.12 0 .36-.03.7-.1.98h-.64Zm-3.3 5.5c-1.6 0-2.52-1.26-2.52-3.35s.92-3.35 2.52-3.35c1.55 0 2.3.98 2.5 2.24-.7.28-1.18.86-1.18 1.54 0 .72.55 1.4 1.26 1.57-.36.82-1.1 1.35-2.58 1.35Z" />
     </svg>
   );
 }

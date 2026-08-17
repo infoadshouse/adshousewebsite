@@ -31,11 +31,13 @@ export const siteConfig = {
     timezone: "Asia/Kolkata",
   },
   social: {
-    instagram: "https://www.instagram.com/adshouse",
-    linkedin: "https://www.linkedin.com/company/adshouse",
-    x: "https://x.com/adshouse",
+    instagram: "https://www.instagram.com/adshouse.in/",
+    linkedin: "https://www.linkedin.com/company/ads_house",
+    x: "https://x.com/adshouserohtak",
+    threads: "https://www.threads.com/@adshouse.in",
     youtube: "https://www.youtube.com/@adshouse",
   },
+  twitterHandle: "@adshouserohtak",
   cities: [
     "Rohtak",
     "Delhi NCR",

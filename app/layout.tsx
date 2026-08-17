@@ -59,6 +59,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
+    site: siteConfig.twitterHandle,
+    creator: siteConfig.twitterHandle,
     title: "Digital Marketing Agency in India | Ads House",
     description: siteConfig.description,
     images: ["/images/hero-visual.png"],
