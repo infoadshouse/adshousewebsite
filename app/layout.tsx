@@ -5,8 +5,8 @@ import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { JsonLd } from "@/components/JsonLd";
 import { StickyCta } from "@/components/StickyCta";
-import { localBusinessSchema, organizationSchema, websiteSchema } from "@/lib/schema";
-import { siteConfig } from "@/lib/site";
+import { brandSchema, localBusinessSchema, organizationSchema, websiteSchema } from "@/lib/schema";
+import { defaultTitle, siteConfig } from "@/lib/site";
 import "./globals.css";
 
 const jakarta = Plus_Jakarta_Sans({
@@ -25,7 +25,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: "Digital Marketing Agency in India | Ads House",
+    default: defaultTitle,
     template: "%s | Ads House",
   },
   description: siteConfig.description,
@@ -46,14 +46,14 @@ export const metadata: Metadata = {
     locale: siteConfig.locale,
     url: siteConfig.url,
     siteName: siteConfig.name,
-    title: "Digital Marketing Agency in India | Ads House",
+    title: defaultTitle,
     description: siteConfig.description,
     images: [
       {
         url: "/images/hero-visual.png",
         width: 1200,
         height: 675,
-        alt: "Ads House digital marketing agency India",
+        alt: "Ads House — ads agency and digital marketing agency in Rohtak",
       },
     ],
   },
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: siteConfig.twitterHandle,
     creator: siteConfig.twitterHandle,
-    title: "Digital Marketing Agency in India | Ads House",
+    title: defaultTitle,
     description: siteConfig.description,
     images: ["/images/hero-visual.png"],
   },
@@ -97,7 +97,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang={siteConfig.language} className={`${jakarta.variable} ${jakarta.className} h-full antialiased`}>
       <body className="min-h-full flex flex-col bg-bg text-[var(--text)]">
-        <JsonLd data={[organizationSchema(), localBusinessSchema(), websiteSchema()]} />
+        <JsonLd data={[brandSchema(), organizationSchema(), localBusinessSchema(), websiteSchema()]} />
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-sky focus:px-4 focus:py-2 focus:text-white"

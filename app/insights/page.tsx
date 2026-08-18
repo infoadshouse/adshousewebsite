@@ -16,9 +16,10 @@ export const metadata = createMetadata({
   image: "/images/insight-seo.png",
   keywords: [
     "digital marketing blog India",
+    "ads agency in Rohtak",
+    "Ads House insights",
     "SEO India 2026",
     "D2C marketing insights",
-    "performance marketing playbook",
   ],
 });
 

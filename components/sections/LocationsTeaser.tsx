@@ -7,11 +7,11 @@ export function LocationsTeaser() {
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <SectionEyebrow>Office</SectionEyebrow>
         <h2 className="max-w-3xl font-display text-4xl font-extrabold tracking-tight text-sky-dark md:text-5xl">
-          Based in Rohtak. One studio.
+          Ads House is based in Rohtak. One studio.
         </h2>
         <p className="mt-4 max-w-2xl text-lg text-muted">
-          Ads House has a single office in Rohtak, Haryana. Sit with the team here — then get
-          metro-grade SEO, ads, and websites shipped from the same studio.
+          Ads House (adshouse.in) has a single office in Rohtak, Haryana. Sit with the ads agency
+          team here — then get metro-grade SEO, ads, and websites shipped from the same studio.
         </p>
         <div className="mt-10">
           <Link

@@ -3,8 +3,9 @@ export const siteConfig = {
   legalName: "Ads House",
   tagline: "Growth. By Design.",
   description:
-    "Ads House is a digital marketing and advertising agency in Rohtak, Haryana, serving brands across India. SEO, Google Ads, Meta ads, branding, websites, and software that turn attention into revenue.",
+    "Ads House (adshouse.in) is a digital marketing and ads agency in Rohtak, Haryana. SEO, Google Ads, Meta ads, branding, websites, and software for Indian brands.",
   url: "https://www.adshouse.in",
+  domain: "adshouse.in",
   locale: "en_IN",
   language: "en-IN",
   email: "info.adshouse@gmail.com",
@@ -12,6 +13,16 @@ export const siteConfig = {
   phoneHref: "tel:+918708892875",
   whatsapp: "https://wa.me/918708892875",
   foundingYear: 2026,
+  alternateNames: [
+    "Adshouse",
+    "AdsHouse",
+    "ads house",
+    "Ads House Agency",
+    "adshouse.in",
+    "Ads House Rohtak",
+    "Ads House ads agency",
+    "Ads House digital marketing",
+  ],
   address: {
     street: "",
     locality: "Rohtak",
@@ -40,22 +51,25 @@ export const siteConfig = {
   twitterHandle: "@adshouserohtak",
   cities: ["Rohtak"],
   keywords: [
+    "Ads House",
+    "adshouse",
+    "ads house",
+    "adshouse.in",
+    "ads house agency",
+    "ads agency in Rohtak",
+    "adshouse ads agency",
+    "digital marketing ads house",
     "digital marketing agency in Rohtak",
-    "digital marketing agency India",
     "advertising agency Rohtak",
     "SEO agency Rohtak",
-    "SEO agency India",
-    "Google Ads agency India",
-    "performance marketing agency India",
-    "brand building agency India",
-    "website development company India",
-    "Meta ads agency",
+    "Google Ads agency Rohtak",
+    "Meta ads agency Rohtak",
     "digital marketing company Haryana",
-    "growth marketing agency India",
-    "D2C marketing agency",
-    "social media marketing agency India",
+    "performance marketing agency India",
   ],
 } as const;
+
+export const defaultTitle = "Ads House | Ads Agency in Rohtak | Digital Marketing";
 
 export const navLinks = [
   { href: "/", label: "Home" },

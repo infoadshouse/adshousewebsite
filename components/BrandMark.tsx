@@ -16,7 +16,7 @@ export function BrandMark({
     <span className="flex min-w-0 items-center gap-2 md:gap-2.5">
       <Image
         src="/mark.png"
-        alt=""
+        alt="Ads House logo"
         width={88}
         height={88}
         className={`${mark} shrink-0 object-contain`}

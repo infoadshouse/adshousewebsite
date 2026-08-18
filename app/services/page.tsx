@@ -12,17 +12,17 @@ import { siteConfig } from "@/lib/site";
 import Link from "next/link";
 
 export const metadata = createMetadata({
-  title: "Digital Marketing Services in India",
+  title: "Ads House Services | Digital Marketing & Ads Agency",
   description:
-    "Digital marketing services from Ads House in Rohtak: SEO, Google Ads, Meta ads, brand building, website development, custom software, and creative — run as one growth system.",
+    "Ads House ads agency services in Rohtak: SEO, Google Ads, Meta ads, brand building, websites, custom software, and creative — run as one growth system.",
   path: "/services",
   image: "/images/service-performance.png",
   keywords: [
+    "Ads House services",
+    "ads agency in Rohtak",
     "digital marketing services India",
+    "Google Ads agency Rohtak",
     "advertising services Rohtak",
-    "performance marketing services",
-    "branding agency services",
-    "website development services India",
   ],
 });
 
@@ -66,8 +66,8 @@ export default function ServicesPage() {
       />
       <PageHero
         eyebrow="Services"
-        title="Digital marketing services in India"
-        description="SEO, ads, brand, web, and software — seven capabilities, one growth engine. Ads House in Rohtak assembles the stack around the number you need to move."
+        title="Ads House digital marketing services"
+        description="SEO, ads, brand, web, and software — seven capabilities, one growth engine. Ads House, the ads agency in Rohtak, assembles the stack around the number you need to move."
       />
 
       <ServicesGrid />

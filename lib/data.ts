@@ -168,10 +168,10 @@ export const services: Service[] = [
     outcome: "Predictable pipeline from Google, Meta, and high-intent Indian demand.",
     image: "/images/service-performance.png",
     icon: "▲",
-    h1: "Performance Marketing Agency in India",
-    seoTitle: "Performance Marketing Agency in India",
+    h1: "Ads Agency for Google Ads & Meta in India",
+    seoTitle: "Ads Agency | Google Ads & Meta Ads in India",
     seoDescription:
-      "Hire a performance marketing agency in India. Ads House runs Google Ads, Meta ads, and conversion campaigns that lower CAC and grow revenue across Indian metros.",
+      "Hire Ads House as your ads agency in India. Google Ads, Meta ads, and conversion campaigns from our Rohtak studio that lower CAC and grow revenue.",
     intro:
       "India is one of the most competitive paid-media markets in the world. Cheap traffic is easy. Profitable traffic is a craft. We plan, buy, and creative-test campaigns around unit economics — CAC, ROAS, LTV — so every rupee has a job.",
     points: [
@@ -573,6 +573,26 @@ export const testimonials: Testimonial[] = [
 
 export const insights: Insight[] = [
   {
+    slug: "ads-agency-in-rohtak",
+    title: "Ads agency in Rohtak: what Ads House (adshouse.in) actually does",
+    excerpt:
+      "Searching ads agency in Rohtak, Ads House, or adshouse.in? Here is how the Rohtak ads agency works — and how to tell a growth partner from a posting package.",
+    date: "2026-08-18",
+    readTime: "7 min",
+    category: "Local",
+    image: "/images/service-performance.png",
+    seoDescription:
+      "Ads House is an ads agency in Rohtak. Learn what adshouse.in does: Google Ads, Meta ads, SEO, branding, and how to hire Ads House agency for real pipeline.",
+    content: [
+      "If you searched for an ads agency in Rohtak and landed on Ads House, you are in the right place. Ads House (adshouse.in) is a Rohtak-based digital marketing and ads agency. People also find us as Adshouse, ads house, Ads House agency, and Ads House ads agency — those names all point to this studio.",
+      "An ads agency in Rohtak should do more than boost a Facebook post. The job is to buy customers — on Google, on Meta, and through organic search — then land them on a website that converts. Ads House runs that as one system: creative, tracking, landing pages, and reporting in leads, CAC, and ROAS.",
+      "Local businesses in Rohtak, Hisar, Sonipat, and the NCR belt often hire the first vendor who promises '#1 on Google'. That is not how Ads House works. We will tell you if you need Google Ads this month, local SEO and a Google Business Profile, a faster website, or a clearer offer. The Ads House ads agency is useful when you want that diagnosis before you spend.",
+      "What we actually run: Google Search and Performance Max for high-intent queries, Meta ads for demand and retargeting, SEO so you are not rented forever, and brand work so the ads do not look like every other Haryana carousel. Websites are built on Next.js so they can rank and load.",
+      "There are similarly named firms (Ad House in other countries, Digi Ads House in Delhi). Ads House is the Rohtak agency. The official site is adshouse.in. Social is @adshouse.in on Instagram and Ads House on LinkedIn. If the NAP does not say Rohtak, Haryana, it is not this studio.",
+      "To hire Ads House, start a project on this site or call the Rohtak studio. Bring the number you need to move. We will tell you whether ads, SEO, or the website is the first lever — then we run it.",
+    ],
+  },
+  {
     slug: "rank-on-google-india-2026",
     title: "How Indian brands actually rank on Google in 2026",
     excerpt:
@@ -713,6 +733,18 @@ export const insights: Insight[] = [
 ];
 
 export const faqs = [
+  {
+    q: "What is Ads House (adshouse.in)?",
+    a: "Ads House is a digital marketing and ads agency in Rohtak, Haryana. The official website is adshouse.in. People also search for us as Adshouse, ads house, Ads House agency, Ads House ads agency, and digital marketing Ads House — those all point to this studio.",
+  },
+  {
+    q: "Is Ads House an ads agency in Rohtak?",
+    a: "Yes. Ads House is an ads agency in Rohtak offering Google Ads, Meta ads, SEO, branding, and websites. If you searched ads agency in Rohtak or adshouse ads agency, this is the team.",
+  },
+  {
+    q: "Are Adshouse, ads house, and adshouse.in the same company?",
+    a: "Yes. Ads House, Adshouse, ads house, Ads House agency, and adshouse.in all refer to the same Rohtak-based digital marketing agency. There is one office, in Rohtak, Haryana.",
+  },
   {
     q: "Which is the best digital marketing agency in India?",
     a: "The best agency is the one that can move your numbers — leads, CAC, ROAS, revenue — not the one with the longest service list. Ads House is a Rohtak-based growth agency serving brands across India with branding, SEO, performance marketing, web, and software in one team.",

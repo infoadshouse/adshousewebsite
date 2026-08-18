@@ -7,15 +7,17 @@ import { siteConfig } from "@/lib/site";
 import Link from "next/link";
 
 export const metadata = createMetadata({
-  title: "Contact Ads House | Digital Marketing Agency in Rohtak",
+  title: "Contact Ads House | Ads Agency in Rohtak",
   description:
-    "Start a project with Ads House, a digital marketing agency in Rohtak, Haryana. Branding, SEO, Google Ads, websites, or software — we reply within one business day.",
+    "Contact Ads House (adshouse.in), an ads agency in Rohtak, Haryana. Start a project for SEO, Google Ads, Meta ads, branding, or websites — we reply within one business day.",
   path: "/contact",
   image: "/images/cta-studio.png",
   keywords: [
-    "contact advertising agency Rohtak",
+    "contact Ads House",
+    "ads agency in Rohtak contact",
+    "hire Ads House",
+    "adshouse.in contact",
     "hire digital marketing agency India",
-    "digital marketing agency Rohtak contact",
   ],
 });
 
@@ -32,16 +34,16 @@ export default function ContactPage() {
           ]),
           webPageSchema({
             name: "Contact Ads House",
-            description: "Contact the Ads House digital marketing agency in Rohtak, Haryana.",
+            description: "Contact Ads House, the ads agency and digital marketing studio in Rohtak, Haryana.",
             path: "/contact",
             type: "ContactPage",
           }),
         ]}
       />
       <PageHero
-        eyebrow="Contact"
-        title="Contact a digital marketing agency in Rohtak"
-        description="Share the brand, the market, and the number you want to move. A strategist at Ads House replies within one business day — usually sooner."
+        eyebrow="Contact Ads House"
+        title="Contact Ads House, ads agency in Rohtak"
+        description="Share the brand, the market, and the number you want to move. A strategist at Ads House (adshouse.in) replies within one business day — usually sooner."
         image="/images/cta-studio.png"
         imageAlt="Ads House studio in Rohtak ready for a new campaign briefing"
       />

@@ -19,11 +19,25 @@ const nextConfig: NextConfig = {
       "ahmedabad",
       "kolkata",
     ];
-    return retiredOffices.map((slug) => ({
-      source: `/locations/${slug}`,
-      destination: "/locations/rohtak",
-      permanent: true,
-    }));
+    return [
+      {
+        source: "/",
+        has: [{ type: "host", value: "adshouse.in" }],
+        destination: "https://www.adshouse.in/",
+        permanent: true,
+      },
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "adshouse.in" }],
+        destination: "https://www.adshouse.in/:path*",
+        permanent: true,
+      },
+      ...retiredOffices.map((slug) => ({
+        source: `/locations/${slug}`,
+        destination: "/locations/rohtak",
+        permanent: true,
+      })),
+    ];
   },
   async headers() {
     return [

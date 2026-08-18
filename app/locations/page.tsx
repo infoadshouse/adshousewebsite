@@ -4,20 +4,21 @@ import { JsonLd } from "@/components/JsonLd";
 import { PageHero } from "@/components/PageHero";
 import { CtaBand } from "@/components/sections/CtaBand";
 import { locations } from "@/lib/locations";
-import { breadcrumbSchema, itemListSchema, webPageSchema } from "@/lib/schema";
+import { breadcrumbSchema, faqSchema, itemListSchema, webPageSchema } from "@/lib/schema";
 import { createMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site";
 
 export const metadata = createMetadata({
-  title: "Ads House Office in Rohtak, Haryana",
+  title: "Ads House Office in Rohtak | Ads Agency Haryana",
   description:
-    "Ads House is a digital marketing agency based in Rohtak, Haryana. Our only office. SEO, Google Ads, branding, and websites for local businesses and pan-India brands.",
+    "Visit Ads House in Rohtak, Haryana — the ads agency studio behind adshouse.in. SEO, Google Ads, branding, and websites from our only office.",
   path: "/locations",
   image: "/images/about-team.png",
   keywords: [
+    "Ads House Rohtak",
+    "ads agency in Rohtak",
     "digital marketing agency Rohtak",
-    "advertising agency Haryana",
-    "Ads House office Rohtak",
+    "adshouse.in office",
   ],
 });
 
@@ -40,16 +41,30 @@ export default function LocationsPage() {
             name: "Ads House office",
             path: "/locations",
             items: locations.map((location) => ({
-              name: `Digital marketing agency in ${location.name}`,
+              name: `Ads House ads agency in ${location.name}`,
               path: `/locations/${location.slug}`,
             })),
           }),
+          faqSchema([
+            {
+              q: "Where is Ads House based?",
+              a: `Ads House is based in ${siteConfig.address.locality}, ${siteConfig.address.region}. That is our only office — the ads agency studio and the centre of SEO, ads, brand, and engineering at adshouse.in.`,
+            },
+            {
+              q: "Is Ads House an ads agency in Rohtak?",
+              a: "Yes. Ads House is an ads agency in Rohtak. Searches for Adshouse, ads house, Ads House agency, and adshouse.in all refer to this studio.",
+            },
+            {
+              q: "Do you work with brands outside Rohtak?",
+              a: "Yes. Campaigns, SEO, and websites are run from the Rohtak studio for brands across India. Kickoffs and workshops can happen remotely or in person here.",
+            },
+          ]),
         ]}
       />
       <PageHero
         eyebrow="Office"
-        title="Our studio is in Rohtak."
-        description={`Headquartered in ${siteConfig.address.locality}, ${siteConfig.address.region}. One office. SEO, ads, brand, and engineering under one roof.`}
+        title="Ads House studio in Rohtak"
+        description={`Ads House (adshouse.in) is headquartered in ${siteConfig.address.locality}, ${siteConfig.address.region}. One office. SEO, ads, brand, and engineering under one roof.`}
         image="/images/about-team.png"
         imageAlt="Ads House studio in Rohtak, Haryana — digital marketing agency serving India"
       />
@@ -86,7 +101,11 @@ export default function LocationsPage() {
           items={[
             {
               q: "Where is Ads House based?",
-              a: `Ads House is based in ${siteConfig.address.locality}, ${siteConfig.address.region}. That is our only office — the studio and the centre of SEO, ads, brand, and engineering.`,
+              a: `Ads House is based in ${siteConfig.address.locality}, ${siteConfig.address.region}. That is our only office — the ads agency studio and the centre of SEO, ads, brand, and engineering at adshouse.in.`,
+            },
+            {
+              q: "Is Ads House an ads agency in Rohtak?",
+              a: "Yes. Ads House is an ads agency in Rohtak. Searches for Adshouse, ads house, Ads House agency, and adshouse.in all refer to this studio.",
             },
             {
               q: "Do you work with brands outside Rohtak?",

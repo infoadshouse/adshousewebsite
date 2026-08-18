@@ -9,16 +9,18 @@ import { createMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site";
 
 export const metadata = createMetadata({
-  title: "About Ads House | Agency in Rohtak, Haryana",
+  title: "About Ads House | Ads Agency in Rohtak",
   description:
-    "Ads House is a Rohtak-based digital growth agency. We believe attention is rented and preference is owned. Meet the team behind brands, campaigns, and technology that scale Indian businesses.",
+    "About Ads House (adshouse.in): a Rohtak ads agency and digital marketing studio. Meet the team behind Ads House agency work — branding, SEO, Google Ads, and websites.",
   path: "/about",
   image: "/images/about-team.png",
   keywords: [
-    "advertising agency Rohtak",
     "about Ads House",
+    "adshouse",
+    "ads house agency",
+    "advertising agency Rohtak",
+    "ads agency in Rohtak",
     "digital marketing company India",
-    "growth agency Haryana",
   ],
 });
 
@@ -33,16 +35,16 @@ export default function AboutPage() {
           ]),
           webPageSchema({
             name: "About Ads House",
-            description: "Rohtak-based digital marketing and advertising agency serving India.",
+            description: "Ads House is an ads agency and digital marketing studio in Rohtak, Haryana.",
             path: "/about",
             type: "AboutPage",
           }),
         ]}
       />
       <PageHero
-        eyebrow="About"
-        title="Digital marketing agency in Rohtak, Haryana"
-        description="Ads House is an advertising and growth agency based in Rohtak. We exist to make ambitious Indian brands impossible to ignore — and easy to buy from."
+        eyebrow="About Ads House"
+        title="Ads House — ads agency in Rohtak, Haryana"
+        description="Ads House (adshouse.in) is a digital marketing and ads agency based in Rohtak. We exist to make ambitious Indian brands impossible to ignore — and easy to buy from."
         image="/images/about-team.png"
         imageAlt="Ads House team collaborating in the studio"
       />
@@ -53,8 +55,9 @@ export default function AboutPage() {
           <p className="mt-4 leading-relaxed text-muted">
             We are strategists, designers, media operators, engineers, and filmmakers who refuse to
             treat those jobs as separate companies. Founded in {siteConfig.foundingYear}, Ads House
-            grew from campaign work into a full growth stack because clients kept asking us to fix
-            the website, the funnel, and the product after the ads started working.
+            (also searched as Adshouse and ads house) grew from campaign work into a full growth
+            stack because clients kept asking us to fix the website, the funnel, and the product
+            after the ads started working.
           </p>
           <p className="mt-4 leading-relaxed text-muted">
             Today we serve brands from our Rohtak studio — and nationwide campaigns that need to

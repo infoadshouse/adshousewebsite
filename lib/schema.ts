@@ -1,16 +1,33 @@
 import { siteConfig } from "./site";
 
+export function brandSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Brand",
+    "@id": `${siteConfig.url}/#brand`,
+    name: siteConfig.name,
+    alternateName: [...siteConfig.alternateNames],
+    url: siteConfig.url,
+    logo: `${siteConfig.url}/logo.png`,
+    slogan: siteConfig.tagline,
+    description: siteConfig.description,
+  };
+}
+
 export function organizationSchema() {
   return {
     "@context": "https://schema.org",
     "@type": ["Organization", "ProfessionalService", "AdvertisingAgency"],
     "@id": `${siteConfig.url}/#organization`,
     name: siteConfig.name,
+    alternateName: [...siteConfig.alternateNames],
     legalName: siteConfig.legalName,
     url: siteConfig.url,
     logo: {
       "@type": "ImageObject",
       url: `${siteConfig.url}/logo.png`,
+      contentUrl: `${siteConfig.url}/logo.png`,
+      caption: "Ads House",
     },
     image: `${siteConfig.url}/images/hero-visual.png`,
     description: siteConfig.description,
@@ -18,6 +35,14 @@ export function organizationSchema() {
     telephone: siteConfig.phone,
     foundingDate: String(siteConfig.foundingYear),
     slogan: siteConfig.tagline,
+    brand: { "@id": `${siteConfig.url}/#brand` },
+    naics: "541810",
+    identifier: {
+      "@type": "PropertyValue",
+      name: "domain",
+      value: siteConfig.domain,
+    },
+    hasMap: `https://www.google.com/maps/search/?api=1&query=${siteConfig.geo.latitude},${siteConfig.geo.longitude}`,
     areaServed: [
       { "@type": "Country", name: "India" },
       {
@@ -51,6 +76,8 @@ export function organizationSchema() {
     ],
     knowsAbout: [
       "Digital marketing",
+      "Ads agency",
+      "Advertising agency",
       "Search engine optimisation",
       "Google Ads",
       "Meta ads",
@@ -89,12 +116,15 @@ export function localBusinessSchema() {
     "@type": "AdvertisingAgency",
     "@id": `${siteConfig.url}/#localbusiness`,
     name: siteConfig.name,
+    alternateName: [...siteConfig.alternateNames],
     url: siteConfig.url,
     image: `${siteConfig.url}/images/hero-visual.png`,
     telephone: siteConfig.phone,
     email: siteConfig.email,
     priceRange: "₹₹₹",
     parentOrganization: { "@id": `${siteConfig.url}/#organization` },
+    brand: { "@id": `${siteConfig.url}/#brand` },
+    hasMap: `https://www.google.com/maps/search/?api=1&query=${siteConfig.geo.latitude},${siteConfig.geo.longitude}`,
     address: {
       "@type": "PostalAddress",
       addressLocality: siteConfig.address.locality,
@@ -127,8 +157,11 @@ export function websiteSchema() {
     "@id": `${siteConfig.url}/#website`,
     url: siteConfig.url,
     name: siteConfig.name,
+    alternateName: [...siteConfig.alternateNames],
+    description: siteConfig.description,
     inLanguage: "en-IN",
     publisher: { "@id": `${siteConfig.url}/#organization` },
+    about: { "@id": `${siteConfig.url}/#brand` },
   };
 }
 
@@ -148,7 +181,9 @@ export function webPageSchema(input: {
     inLanguage: "en-IN",
     isPartOf: { "@id": `${siteConfig.url}/#website` },
     about: { "@id": `${siteConfig.url}/#organization` },
-    breadcrumb: { "@id": `${siteConfig.url}${input.path}#breadcrumb` },
+    ...(input.path !== "/"
+      ? { breadcrumb: { "@id": `${siteConfig.url}${input.path}#breadcrumb` } }
+      : {}),
   };
 }
 

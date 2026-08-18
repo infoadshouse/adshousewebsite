@@ -22,12 +22,12 @@ export const locations: LocationPage[] = [
     state: "Haryana",
     region: "Rohtak, Haryana",
     isHq: true,
-    seoTitle: "Digital Marketing Agency in Rohtak, Haryana",
+    seoTitle: "Ads House | Ads Agency in Rohtak, Haryana",
     seoDescription:
-      "Ads House is a digital marketing agency in Rohtak, Haryana. SEO, Google Ads, Meta ads, branding, and websites for local businesses and pan-India brands.",
-    h1: "Digital Marketing Agency in Rohtak",
+      "Ads House is an ads agency and digital marketing agency in Rohtak, Haryana. Hire Ads House (adshouse.in) for SEO, Google Ads, Meta ads, branding, and websites.",
+    h1: "Ads House — Ads Agency in Rohtak",
     intro:
-      "Ads House is headquartered in Rohtak — our only office. If you are searching for a digital marketing agency in Rohtak, Haryana, you get a full growth team — not a freelancer who disappears after a logo, and not a Delhi retainer that treats Haryana as a satellite. We run SEO, Google Ads, Meta ads, brand building, and website development from this studio for companies across Rohtak, Haryana, and the rest of India.",
+      "Ads House is headquartered in Rohtak — our only office. If you searched ads agency in Rohtak, Ads House agency, or digital marketing Ads House, you get a full growth team: SEO, Google Ads, Meta ads, brand building, and website development from this studio for companies across Rohtak, Haryana, and the rest of India.",
     market:
       "Rohtak businesses compete in two markets at once. Local search still decides who gets the clinic appointment, the coaching enquiry, the real-estate walk-in, and the wedding-season order. National search and paid social decide who scales beyond the ring road. Most agencies here sell posts and packages. We sell pipeline: ranked pages, tracked ads, and a site that converts the click.",
     approach:
@@ -43,8 +43,12 @@ export const locations: LocationPage[] = [
     nearby: ["Hisar", "Sonipat", "Panipat", "Jhajjar", "Bahadurgarh", "Bhiwani"],
     faqs: [
       {
-        q: "Is Ads House a digital marketing agency in Rohtak?",
-        a: "Yes. Ads House is based in Rohtak, Haryana — our only office — and offers SEO, Google Ads, Meta ads, branding, web development, and custom software for local and national brands.",
+        q: "Is Ads House an ads agency in Rohtak?",
+        a: "Yes. Ads House (adshouse.in) is an ads agency in Rohtak, Haryana — our only office — offering Google Ads, Meta ads, SEO, branding, web development, and custom software.",
+      },
+      {
+        q: "Is Ads House the same as Adshouse or ads house agency?",
+        a: "Yes. Ads House, Adshouse, ads house, Ads House agency, and adshouse.in are the same digital marketing agency in Rohtak.",
       },
       {
         q: "Do you only work with Rohtak companies?",
