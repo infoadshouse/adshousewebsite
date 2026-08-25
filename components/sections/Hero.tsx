@@ -5,19 +5,7 @@ import { testimonials } from "@/lib/data";
 export function Hero() {
   return (
     <section className="relative overflow-hidden pt-24 md:pt-40">
-      <video
-        className="absolute inset-0 w-full"
-        autoPlay
-        muted
-        loop
-        playsInline
-        aria-hidden
-      >
-        <source src="/herovedio.mp4" type="video/mp4" />
-      </video>
-      <div className="absolute inset-0 " />
-
-      <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-5 pb-16 md:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-8 lg:pb-20">
+      <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-10 px-5 pb-10 md:px-8 md:pb-16 lg:grid-cols-[1.05fr_0.95fr] lg:gap-8 lg:pb-20">
         <div>
           <h1 className="font-display font-extrabold leading-[1.08] tracking-tight text-sky-dark">
             <span className="mb-4 block text-[11px] font-bold uppercase tracking-[0.18em] text-sky">
@@ -94,10 +82,10 @@ export function Hero() {
               </span>
             </div>
             <div>
-              <p className="text-sm font-bold text-white">50+ Brands Trust Us</p>
-              <p className="mt-0.5 flex items-center gap-1.5 text-sm text-white/80">
+              <p className="text-sm font-bold text-sky-dark md:text-white">50+ Brands Trust Us</p>
+              <p className="mt-0.5 flex items-center gap-1.5 text-sm text-muted md:text-white/80">
                 <span className="tracking-tight text-orange">★★★★★</span>
-                <span className="font-semibold text-white">4.9/5</span>
+                <span className="font-semibold text-sky-dark md:text-white">4.9/5</span>
               </p>
             </div>
           </div>
@@ -114,6 +102,17 @@ export function Hero() {
           />
         </div> */}
       </div>
+
+      <video
+        className="relative w-full md:pointer-events-none md:absolute md:inset-0 md:h-full md:object-cover"
+        autoPlay
+        muted
+        loop
+        playsInline
+        aria-hidden
+      >
+        <source src="/herovedio.mp4" type="video/mp4" />
+      </video>
     </section>
   );
 }
