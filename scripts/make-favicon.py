@@ -77,7 +77,7 @@ print("processed corner", src.getpixel((0, 0)))
 save_png(src, PUBLIC / "icon-512.png", 512)
 save_png(src, PUBLIC / "icon-192.png", 192)
 save_png(src, PUBLIC / "apple-icon.png", 180)
-save_png(src, PUBLIC / "icon.png", 32)
+save_png(src, PUBLIC / "icon.png", 512)
 save_png(src, APP / "icon.png", 512)
 save_png(src, APP / "apple-icon.png", 180)
 
