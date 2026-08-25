@@ -22,7 +22,7 @@ import { defaultTitle } from "@/lib/site";
 export const metadata = createMetadata({
   title: defaultTitle,
   description:
-    "Ads House (adshouse.in) is a digital marketing and ads agency in Rohtak, Haryana. Hire Ads House for SEO, Google Ads, Meta ads, branding, and websites.",
+    "Ads House (adshouse.in) is a digital marketing and ads agency in Rohtak, Haryana. Hire Ads House for SEO, Google Ads, Meta ads, branding, websites, and the Influencer Marketplace.",
   path: "/",
   image: "/images/hero-visual.png",
   absolute: true,
@@ -36,6 +36,7 @@ export const metadata = createMetadata({
     "adshouse ads agency",
     "digital marketing ads house",
     "digital marketing agency in Rohtak",
+    "influencer marketplace Rohtak",
   ],
 });
 
@@ -47,7 +48,7 @@ export default function HomePage() {
           webPageSchema({
             name: defaultTitle,
             description:
-              "Ads House is a digital marketing and ads agency in Rohtak, Haryana — SEO, Google Ads, branding, and websites.",
+              "Ads House is a digital marketing and ads agency in Rohtak, Haryana — SEO, Google Ads, branding, websites, and a local Influencer Marketplace.",
             path: "/",
           }),
           faqSchema(faqs),

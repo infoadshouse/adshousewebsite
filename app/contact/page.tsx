@@ -9,7 +9,7 @@ import Link from "next/link";
 export const metadata = createMetadata({
   title: "Contact Ads House | Ads Agency in Rohtak",
   description:
-    "Contact Ads House (adshouse.in), an ads agency in Rohtak, Haryana. Start a project for SEO, Google Ads, Meta ads, branding, or websites — we reply within one business day.",
+    "Contact Ads House (adshouse.in), an ads agency in Rohtak, Haryana. Start a project for SEO, Google Ads, Meta ads, branding, websites, or Influencer Marketplace campaigns — we reply within one business day.",
   path: "/contact",
   image: "/images/cta-studio.png",
   keywords: [
@@ -18,6 +18,7 @@ export const metadata = createMetadata({
     "hire Ads House",
     "adshouse.in contact",
     "hire digital marketing agency India",
+    "influencer marketplace Rohtak",
   ],
 });
 

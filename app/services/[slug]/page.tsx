@@ -34,7 +34,12 @@ export default async function ServiceDetailPage({ params }: PageProps<"/services
   if (!service) notFound();
 
   const theme = serviceThemes[service.slug] ?? serviceThemes["brand-building"];
-  const related = services.filter((item) => item.slug !== service.slug).slice(0, 3);
+  const related =
+    service.slug === "influencer-marketplace"
+      ? services.filter((item) =>
+          ["performance-marketing", "creative-content", "marketing-strategy"].includes(item.slug),
+        )
+      : services.filter((item) => item.slug !== service.slug).slice(0, 3);
 
   const delivery = methodology.map((step) => ({
     ...step,
@@ -88,13 +93,30 @@ export default async function ServiceDetailPage({ params }: PageProps<"/services
             <p className="mt-5 text-xl text-muted">{service.outcome}</p>
             <p className="mt-6 leading-relaxed text-muted">{service.intro}</p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <ButtonLink href="/contact">
-                Start a Project
-                <ArrowIcon />
-              </ButtonLink>
-              <ButtonLink href="/services" variant="ghost">
-                All services
-              </ButtonLink>
+              {service.slug === "influencer-marketplace" ? (
+                <>
+                  <ButtonLink href="/marketplace">
+                    Open Marketplace
+                    <ArrowIcon />
+                  </ButtonLink>
+                  <ButtonLink href="/marketplace/agencies/ads-house" variant="ghost">
+                    Hire Ads House
+                  </ButtonLink>
+                  <ButtonLink href="/contact" variant="ghost">
+                    Start a Project
+                  </ButtonLink>
+                </>
+              ) : (
+                <>
+                  <ButtonLink href="/contact">
+                    Start a Project
+                    <ArrowIcon />
+                  </ButtonLink>
+                  <ButtonLink href="/services" variant="ghost">
+                    All services
+                  </ButtonLink>
+                </>
+              )}
             </div>
           </div>
           <div className="img-zoom relative h-[320px] overflow-hidden rounded-[2rem] border border-line shadow-sm md:h-[460px]">

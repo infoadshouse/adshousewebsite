@@ -4,10 +4,18 @@ import { testimonials } from "@/lib/data";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-white pt-24 md:pt-40">
-      <div className="hero-blob -left-24 top-16 h-72 w-72 bg-pink/25" />
-      <div className="hero-blob right-0 top-32 h-80 w-80 bg-sky/20" />
-      <div className="hero-blob bottom-0 left-1/3 h-64 w-64 bg-purple/15" />
+    <section className="relative overflow-hidden pt-24 md:pt-40">
+      <video
+        className="absolute inset-0 w-full"
+        autoPlay
+        muted
+        loop
+        playsInline
+        aria-hidden
+      >
+        <source src="/herovedio.mp4" type="video/mp4" />
+      </video>
+      <div className="absolute inset-0 " />
 
       <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-5 pb-16 md:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-8 lg:pb-20">
         <div>
@@ -46,7 +54,7 @@ export function Hero() {
               </span>
             </span>
           </h1>
-          <p className="mt-7 max-w-xl text-base leading-relaxed text-muted md:text-lg">
+          <p className="mt-7 max-w-xl text-base leading-relaxed text-sky-dark md:text-lg">
             Ads House (adshouse.in) is a digital marketing and ads agency in Rohtak, Haryana. We run
             SEO, Google Ads, Meta ads, branding, and high-performance websites for Indian businesses
             — from local Haryana companies to brands across India.
@@ -86,16 +94,16 @@ export function Hero() {
               </span>
             </div>
             <div>
-              <p className="text-sm font-bold text-sky-dark">50+ Brands Trust Us</p>
-              <p className="mt-0.5 flex items-center gap-1.5 text-sm text-muted">
+              <p className="text-sm font-bold text-white">50+ Brands Trust Us</p>
+              <p className="mt-0.5 flex items-center gap-1.5 text-sm text-white/80">
                 <span className="tracking-tight text-orange">★★★★★</span>
-                <span className="font-semibold text-sky-dark">4.9/5</span>
+                <span className="font-semibold text-white">4.9/5</span>
               </p>
             </div>
           </div>
         </div>
 
-        <div className="relative mx-auto w-full max-w-[560px] lg:max-w-none">
+        {/* <div className="relative mx-auto w-full max-w-[560px] lg:max-w-none">
           <Image
             src="/images/heroimage.png"
             alt="Ads House ads agency in Rohtak — brand strategy, SEO, Google Ads, and websites"
@@ -104,7 +112,7 @@ export function Hero() {
             priority
             className="h-auto w-full object-contain"
           />
-        </div>
+        </div> */}
       </div>
     </section>
   );

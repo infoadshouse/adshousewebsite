@@ -71,4 +71,20 @@ export const serviceThemes: Record<string, { wrap: string; text: string; icon: R
       </svg>
     ),
   },
+  "influencer-marketplace": {
+    wrap: "bg-[#fce7f3] text-[#db2777]",
+    text: "text-[#db2777]",
+    icon: (
+      <svg className="h-5 w-5" viewBox="0 0 20 20" fill="none" aria-hidden>
+        <circle cx="7" cy="8" r="2.4" stroke="currentColor" strokeWidth="1.6" />
+        <circle cx="13.2" cy="8" r="2.4" stroke="currentColor" strokeWidth="1.6" />
+        <path
+          d="M3.5 15.2c.6-2 2.2-3.2 3.5-3.2s2.9 1.2 3.5 3.2M9.5 15.2c.6-2 2.2-3.2 3.7-3.2s2.9 1.2 3.5 3.2"
+          stroke="currentColor"
+          strokeWidth="1.6"
+          strokeLinecap="round"
+        />
+      </svg>
+    ),
+  },
 };

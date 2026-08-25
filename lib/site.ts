@@ -3,7 +3,7 @@ export const siteConfig = {
   legalName: "Ads House",
   tagline: "Growth. By Design.",
   description:
-    "Ads House (adshouse.in) is a digital marketing and ads agency in Rohtak, Haryana. SEO, Google Ads, Meta ads, branding, websites, and software for Indian brands.",
+    "Ads House (adshouse.in) is a digital marketing and ads agency in Rohtak, Haryana. SEO, Google Ads, Meta ads, branding, websites, software, and an Influencer Marketplace for Indian brands.",
   url: "https://www.adshouse.in",
   domain: "adshouse.in",
   locale: "en_IN",

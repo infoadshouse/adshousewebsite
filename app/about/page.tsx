@@ -11,7 +11,7 @@ import { siteConfig } from "@/lib/site";
 export const metadata = createMetadata({
   title: "About Ads House | Ads Agency in Rohtak",
   description:
-    "About Ads House (adshouse.in): a Rohtak ads agency and digital marketing studio. Meet the team behind Ads House agency work — branding, SEO, Google Ads, and websites.",
+    "About Ads House (adshouse.in): a Rohtak ads agency and digital marketing studio. Branding, SEO, Google Ads, websites, and the Influencer Marketplace for local creator ads.",
   path: "/about",
   image: "/images/about-team.png",
   keywords: [
@@ -21,6 +21,7 @@ export const metadata = createMetadata({
     "advertising agency Rohtak",
     "ads agency in Rohtak",
     "digital marketing company India",
+    "influencer marketplace Rohtak",
   ],
 });
 
@@ -60,8 +61,8 @@ export default function AboutPage() {
             after the ads started working.
           </p>
           <p className="mt-4 leading-relaxed text-muted">
-            Today we serve brands from our Rohtak studio — and nationwide campaigns that need to
-            feel local and look premium.
+            Today we serve brands from our Rohtak studio — nationwide campaigns, and the Influencer
+            Marketplace that matches local creators with businesses by city, niche, and budget.
           </p>
         </div>
         <div>
@@ -112,18 +113,24 @@ export default function AboutPage() {
 
       <section className="mx-auto max-w-7xl px-5 pb-20 md:px-8">
         <h2 className="font-display text-3xl font-bold text-sky-dark md:text-4xl">Where we work</h2>
-        <p className="mt-4 max-w-2xl text-muted">
-          Rohtak is our only office. Explore the studio where Ads House runs digital marketing, SEO,
-          and advertising programmes.
-        </p>
-        <div className="mt-8 flex flex-wrap gap-3">
-          <Link
-            href="/locations/rohtak"
-            className="rounded-full border border-line px-4 py-2 text-sm font-semibold text-sky-dark hover:border-sky hover:text-sky"
-          >
-            Rohtak HQ
-          </Link>
-        </div>
+          <p className="mt-4 max-w-2xl text-muted">
+            Rohtak is our only office. Explore the studio where Ads House runs digital marketing, SEO,
+            advertising programmes, and the creator marketplace.
+          </p>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <Link
+              href="/locations/rohtak"
+              className="rounded-full border border-line px-4 py-2 text-sm font-semibold text-sky-dark hover:border-sky hover:text-sky"
+            >
+              Rohtak HQ
+            </Link>
+            <Link
+              href="/marketplace"
+              className="rounded-full border border-line px-4 py-2 text-sm font-semibold text-sky-dark hover:border-sky hover:text-sky"
+            >
+              Influencer Marketplace
+            </Link>
+          </div>
       </section>
       <CtaBand />
     </>

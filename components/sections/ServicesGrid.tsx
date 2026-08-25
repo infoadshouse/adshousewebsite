@@ -15,11 +15,11 @@ export function ServicesGrid({ heading = true }: { heading?: boolean }) {
           </p>
           <h2 className="font-display text-4xl font-extrabold tracking-tight text-sky-dark md:text-5xl">
             An end-to-end <span className="text-gradient">growth</span> partner. The ads agency
-            that also owns brand, SEO, and the website.
+            that also owns brand, SEO, the website, and local creator ads.
           </h2>
           <p className="mt-4 text-lg text-muted">
-            Ads House in Rohtak runs brand, performance, product, and engineering in one team — so
-            the work compounds instead of colliding.
+            Ads House in Rohtak runs brand, performance, product, engineering, and the Influencer
+            Marketplace in one team — so the work compounds instead of colliding.
           </p>
         </div>
       ) : null}

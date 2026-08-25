@@ -14,7 +14,7 @@ import Link from "next/link";
 export const metadata = createMetadata({
   title: "Ads House Services | Digital Marketing & Ads Agency",
   description:
-    "Ads House ads agency services in Rohtak: SEO, Google Ads, Meta ads, brand building, websites, custom software, and creative — run as one growth system.",
+    "Ads House ads agency services in Rohtak: SEO, Google Ads, Meta ads, brand building, websites, custom software, creative, and the Influencer Marketplace for local creator ads.",
   path: "/services",
   image: "/images/service-performance.png",
   keywords: [
@@ -23,6 +23,7 @@ export const metadata = createMetadata({
     "digital marketing services India",
     "Google Ads agency Rohtak",
     "advertising services Rohtak",
+    "influencer marketplace Rohtak",
   ],
 });
 
@@ -40,7 +41,7 @@ const engagement = [
   {
     step: "03",
     title: "One system, not six vendors",
-    body: "Brand, media, content, web, and software get scoped as a single plan with owners, timelines, and commercial KPIs.",
+    body: "Brand, media, content, web, software, and creator ads get scoped as a single plan with owners, timelines, and commercial KPIs.",
   },
 ];
 
@@ -67,7 +68,7 @@ export default function ServicesPage() {
       <PageHero
         eyebrow="Services"
         title="Ads House digital marketing services"
-        description="SEO, ads, brand, web, and software — seven capabilities, one growth engine. Ads House, the ads agency in Rohtak, assembles the stack around the number you need to move."
+        description="SEO, ads, brand, web, software, and the Influencer Marketplace — eight capabilities, one growth engine. Ads House, the ads agency in Rohtak, assembles the stack around the number you need to move."
       />
 
       <ServicesGrid />

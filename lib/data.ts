@@ -401,6 +401,52 @@ export const services: Service[] = [
       },
     ],
   },
+  {
+    slug: "influencer-marketplace",
+    title: "Influencer Marketplace",
+    short: "Local creators and campaigns — matched by city, niche, and budget.",
+    outcome: "The right influencer for the right business, in the right location.",
+    image: "/images/service-marketplace.png",
+    icon: "◉",
+    h1: "Influencer Marketplace for Ads in India",
+    seoTitle: "Influencer Marketplace | Local Creator Ads in India",
+    seoDescription:
+      "Ads House Marketplace connects businesses with local influencers by city, niche, followers, and budget. Post campaigns, apply, collaborate — or hire Ads House to run influencer ads for you.",
+    intro:
+      "Paid search and Meta ads are not the only way to buy attention in India. Local creators move footfall, orders, and trust — if you can find the right ones. Ads House Marketplace is our two-sided platform for influencer ads: businesses and agencies post campaigns; creators apply by location, niche, and budget; everyone collaborates in one place. Prefer not to manage it yourself? Hire Ads House as the agency on the platform.",
+    points: [
+      {
+        title: "Local creator discovery",
+        body: "Search influencers by city, niche, followers, engagement, platforms, and budget — starting with Rohtak and Haryana, built to scale across India.",
+      },
+      {
+        title: "Campaign board",
+        body: "Post open campaigns with clear briefs, location, and creator requirements. Creators apply; you shortlist and accept in one workflow.",
+      },
+      {
+        title: "Collaborate & review",
+        body: "Messaging, collaborations, and reviews keep briefs, deliverables, and reputation on the platform — not lost in WhatsApp threads.",
+      },
+      {
+        title: "Ads House managed campaigns",
+        body: "Do not want to brief and coordinate creators yourself? Hire Ads House to run influencer ads end-to-end for your brand or clients.",
+      },
+    ],
+    faqs: [
+      {
+        q: "Is the marketplace separate from agency services?",
+        a: "It is a product of Ads House, listed alongside our agency services. You can self-serve on the marketplace or hire Ads House to manage influencer campaigns for you.",
+      },
+      {
+        q: "Who can join?",
+        a: "Creators, businesses, and agencies. Creators build profiles and apply to campaigns. Businesses and agencies post campaigns and hire talent. Ads House is the featured agency on the platform.",
+      },
+      {
+        q: "Where does it work today?",
+        a: "Discovery is strongest around Rohtak and Haryana first, with national reach as more creators and brands join. Location filters are core to how matching works.",
+      },
+    ],
+  },
 ];
 
 export const caseStudies: CaseStudy[] = [
@@ -739,7 +785,7 @@ export const faqs = [
   },
   {
     q: "Is Ads House an ads agency in Rohtak?",
-    a: "Yes. Ads House is an ads agency in Rohtak offering Google Ads, Meta ads, SEO, branding, and websites. If you searched ads agency in Rohtak or adshouse ads agency, this is the team.",
+    a: "Yes. Ads House is an ads agency in Rohtak offering Google Ads, Meta ads, SEO, branding, websites, and the Influencer Marketplace. If you searched ads agency in Rohtak or adshouse ads agency, this is the team.",
   },
   {
     q: "Are Adshouse, ads house, and adshouse.in the same company?",
@@ -755,7 +801,11 @@ export const faqs = [
   },
   {
     q: "What services does Ads House offer?",
-    a: "Brand building, SEO, performance marketing (Google Ads and Meta ads), marketing strategy, website development, custom software, and creative & content. We operate as an end-to-end growth partner, not a single-channel vendor.",
+    a: "Brand building, SEO, performance marketing (Google Ads and Meta ads), marketing strategy, website development, custom software, creative & content, and the Influencer Marketplace for local creator ads. We operate as an end-to-end growth partner, not a single-channel vendor.",
+  },
+  {
+    q: "What is the Ads House Influencer Marketplace?",
+    a: "It is our platform to find local influencers by city, niche, followers, and budget — then post campaigns, apply, and collaborate. Businesses can self-serve or hire Ads House to run influencer ads for them.",
   },
   {
     q: "How much does a digital marketing agency in India cost?",

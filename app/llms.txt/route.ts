@@ -36,6 +36,13 @@ Ads House is a digital marketing and ads agency in Rohtak, Haryana. Searches for
 - Web development: ${siteConfig.url}/services/web-development
 - Custom software: ${siteConfig.url}/services/custom-software
 - Creative and content: ${siteConfig.url}/services/creative-content
+- Influencer marketplace: ${siteConfig.url}/services/influencer-marketplace
+
+## Marketplace
+- Creator marketplace: ${siteConfig.url}/marketplace
+- Find creators: ${siteConfig.url}/marketplace/creators
+- Campaigns: ${siteConfig.url}/marketplace/campaigns
+- Ads House agency on marketplace: ${siteConfig.url}/marketplace/agencies/ads-house
 
 ## Primary location
 - Digital marketing agency in Rohtak: ${siteConfig.url}/locations/rohtak
