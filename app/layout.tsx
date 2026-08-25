@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import { Analytics } from "@/components/Analytics";
-import { Footer } from "@/components/Footer";
+import { FooterGate } from "@/components/FooterGate";
 import { Header } from "@/components/Header";
 import { JsonLd } from "@/components/JsonLd";
 import { StickyCta } from "@/components/StickyCta";
@@ -110,7 +110,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <main id="main-content" className="flex-1">
           {children}
         </main>
-        <Footer />
+        <FooterGate />
         <StickyCta />
         <Analytics />
       </body>

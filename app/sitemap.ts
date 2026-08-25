@@ -13,6 +13,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${siteConfig.url}/about`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${siteConfig.url}/insights`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
     { url: `${siteConfig.url}/contact`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${siteConfig.url}/marketplace`, lastModified: now, changeFrequency: "weekly", priority: 0.85 },
+    { url: `${siteConfig.url}/marketplace/creators`, lastModified: now, changeFrequency: "daily", priority: 0.8 },
+    { url: `${siteConfig.url}/marketplace/campaigns`, lastModified: now, changeFrequency: "daily", priority: 0.8 },
+    { url: `${siteConfig.url}/marketplace/agencies/ads-house`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${siteConfig.url}/privacy`, lastModified: now, changeFrequency: "yearly", priority: 0.3 },
     { url: `${siteConfig.url}/terms`, lastModified: now, changeFrequency: "yearly", priority: 0.3 },
   ];

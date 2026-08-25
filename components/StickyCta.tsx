@@ -5,7 +5,9 @@ import { usePathname } from "next/navigation";
 
 export function StickyCta() {
   const pathname = usePathname();
-  if (pathname === "/contact") return null;
+  if (pathname === "/contact" || pathname.startsWith("/dashboard") || pathname.startsWith("/marketplace")) {
+    return null;
+  }
 
   return (
     <div className="fixed inset-x-0 bottom-0 z-30 border-t border-line bg-white/95 p-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] backdrop-blur md:inset-x-auto md:bottom-8 md:right-8 md:border-0 md:bg-transparent md:p-0 md:backdrop-blur-none">

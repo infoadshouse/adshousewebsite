@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { BrandMark } from "@/components/BrandMark";
+import { HeaderAuth } from "@/components/marketplace/HeaderAuth";
 import { navLinks, siteConfig } from "@/lib/site";
 
 export function Header() {
@@ -28,6 +29,8 @@ export function Header() {
       document.body.style.overflow = "";
     };
   }, [open]);
+
+  if (pathname.startsWith("/dashboard")) return null;
 
   return (
     <>
@@ -82,7 +85,8 @@ export function Header() {
 
           <nav className="hidden items-center gap-3 lg:flex xl:gap-6" aria-label="Primary">
             {navLinks.map((link) => {
-              const active = pathname === link.href;
+              const active =
+                link.href === "/marketplace" ? pathname.startsWith("/marketplace") : pathname === link.href;
               return (
                 <Link
                   key={link.href}
@@ -100,7 +104,8 @@ export function Header() {
             })}
           </nav>
 
-          <div className="hidden shrink-0 lg:block">
+          <div className="hidden shrink-0 items-center gap-3 lg:flex">
+            <HeaderAuth />
             <Link
               href="/contact"
               className="btn-primary inline-flex items-center rounded-full px-5 py-2.5 text-[12px] font-bold uppercase tracking-[0.16em]"
@@ -138,7 +143,8 @@ export function Header() {
         >
           <nav className="flex flex-col" aria-label="Mobile">
             {navLinks.map((link) => {
-              const active = pathname === link.href;
+              const active =
+                link.href === "/marketplace" ? pathname.startsWith("/marketplace") : pathname === link.href;
               return (
                 <Link
                   key={link.href}
@@ -189,6 +195,9 @@ export function Header() {
           >
             Get in Touch
           </Link>
+          <div className="mt-3 flex justify-center">
+            <HeaderAuth />
+          </div>
         </div>
       ) : null}
     </>
