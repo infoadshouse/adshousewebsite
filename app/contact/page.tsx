@@ -3,7 +3,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { PageHero } from "@/components/PageHero";
 import { breadcrumbSchema, businessEntities, webPageSchema } from "@/lib/schema";
 import { createMetadata } from "@/lib/seo";
-import { officeAddressLines, siteConfig } from "@/lib/site";
+import { googleMapsSearchUrl, officeAddressLines, siteConfig } from "@/lib/site";
 import Link from "next/link";
 
 export const metadata = createMetadata({
@@ -68,6 +68,14 @@ export default function ContactPage() {
             <Link href="/locations/rohtak" className="mt-4 inline-block text-sm font-semibold text-sky hover:underline">
               Digital marketing agency in Rohtak →
             </Link>
+            <a
+              href={googleMapsSearchUrl()}
+              className="mt-3 block text-sm font-semibold text-sky hover:underline"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Open studio in Google Maps →
+            </a>
           </div>
           <div className="rounded-3xl border border-line bg-white p-7 shadow-sm">
             <h2 className="font-display text-xl font-bold text-sky-dark">Direct</h2>

@@ -9,6 +9,7 @@ export type Service = {
   seoTitle: string;
   seoDescription: string;
   intro: string;
+  intent: string;
   points: { title: string; body: string }[];
   delivery: { step: string; title: string; body: string }[];
   faqs: { q: string; a: string }[];
@@ -133,6 +134,8 @@ export const services: Service[] = [
       "Positioning, identity systems, and brand strategy for Indian businesses that need to stand out and charge more.",
     intro:
       "Most Indian brands are louder than they are clearer. We fix that. Brand building at Ads House is commercial work: category positioning, visual identity, verbal identity, and a story the market can repeat. If it does not help you win deals, raise prices, or earn loyalty, it is decoration.",
+    intent:
+      "This page is for Indian brands looking for a brand building or branding agency — positioning, identity, and a launch, not a logo-only package.",
     points: [
       {
         title: "Category positioning",
@@ -182,6 +185,8 @@ export const services: Service[] = [
       "Google Ads, Meta ads, and social media campaigns for Indian brands — planned around CAC, ROAS, and revenue.",
     intro:
       "India is one of the most competitive paid-media markets in the world. Cheap traffic is easy. Profitable traffic is a craft. We plan, buy, and creative-test Google Ads, Meta ads, and social campaigns around unit economics — CAC, ROAS, LTV — so every rupee has a job.",
+    intent:
+      "This page is for Google Ads, Meta ads, and social media marketing in India — campaigns planned around CAC, ROAS, and revenue, not a 30-posts package.",
     points: [
       {
         title: "Google Ads & Performance Max",
@@ -234,11 +239,13 @@ export const services: Service[] = [
     image: "/images/insight-seo.png",
     icon: "⌕",
     h1: "SEO Agency in India",
-    seoTitle: "SEO Agency in India | Rohtak & Pan-India",
+    seoTitle: "SEO Agency in India",
     seoDescription:
-      "Technical SEO, content clusters, local SEO, and Google Business Profile work from Rohtak that ranks and converts.",
+      "Technical SEO, content clusters, local SEO, and Google Business Profile work for Indian brands — planned to rank and convert.",
     intro:
       "SEO in India is not a US playbook with rupees swapped in. Queries are bilingual, competition is ruthless, and a slow website is invisible. Ads House builds search architecture for Google.in: commercial keyword clusters, Core Web Vitals, schema, local pack visibility for Rohtak and other cities, and content that a practitioner could have written. If it does not create pipeline, it is a hobby.",
+    intent:
+      "This page is for brands searching an SEO agency in India: technical SEO, content, and local-pack work meant to produce enquiries — not vanity traffic.",
     points: [
       {
         title: "Technical SEO & Core Web Vitals",
@@ -292,6 +299,8 @@ export const services: Service[] = [
       "Positioning, channel mix, offers, and 90-day growth roadmaps that connect brand, performance, and product.",
     intro:
       "Strategy is not a 90-slide workshop. It is a set of choices: who you serve, what you say, where you show up, and what you will not do. We build marketing strategy that sales, product, and founders can run without us in the room.",
+    intent:
+      "This page is for marketing strategy in India — channel mix, offer, and a 90-day plan sales can run, not a slide deck that dies in Drive.",
     points: [
       {
         title: "Growth diagnostics",
@@ -345,6 +354,8 @@ export const services: Service[] = [
       "Fast, SEO-ready Next.js websites for Indian brands — conversion-focused development for D2C, SaaS, and service businesses.",
     intro:
       "A website is not a brochure. It is your hardest-working salesperson. We design and engineer sites on Next.js with server-side rendering, Core Web Vitals discipline, and SEO architecture built for Google.in — then we wire every page to a conversion goal.",
+    intent:
+      "This page is for Next.js marketing websites in India that need to rank, load, and convert — not a brochure template with a contact form.",
     points: [
       {
         title: "SSR & Core Web Vitals",
@@ -398,6 +409,8 @@ export const services: Service[] = [
       "CRMs, booking engines, dashboards, and digital products engineered to grow with your marketing.",
     intro:
       "Campaigns stall when the product or the ops stack cannot keep up. We build the software around the growth motion — lead systems, client portals, booking engines, dashboards — so marketing is not pouring demand into a leaky bucket.",
+    intent:
+      "This page is for custom software that supports growth in India: funnels, portals, and tools tied to the same commercial brief as the ads.",
     points: [
       {
         title: "Growth-aligned products",
@@ -451,6 +464,8 @@ export const services: Service[] = [
       "Campaign films, performance ads, social content, and brand stories made to stop the thumb and move a number.",
     intro:
       "Creative is not a moodboard. In paid social, creative is the targeting. We produce brand films, statics, UGC-style ads, and always-on content with a simple brief: stop the thumb, then move the number.",
+    intent:
+      "This page is for creative and content in India that brand and performance can both use — films, statics, and social assets with a conversion job.",
     points: [
       {
         title: "Performance creative",
@@ -504,6 +519,8 @@ export const services: Service[] = [
       "Find local influencers by city, niche, followers, and budget. Post campaigns, apply, collaborate — or hire Ads House to run them.",
     intro:
       "Paid search and Meta ads are not the only way to buy attention in India. Local creators move footfall, orders, and trust — if you can find the right ones. Ads House Marketplace is our two-sided platform for influencer ads: businesses and agencies post campaigns; creators apply by location, niche, and budget; everyone collaborates in one place. Prefer not to manage it yourself? Hire Ads House as the agency on the platform.",
+    intent:
+      "This page is for influencer marketing in India: find creators by city and niche, or hire Ads House to run the campaign.",
     points: [
       {
         title: "Local creator discovery",
@@ -716,6 +733,45 @@ export const testimonials: Testimonial[] = [
 
 export const insights: Insight[] = [
   {
+    slug: "digital-marketing-agency-in-india",
+    title: "How to hire a digital marketing agency in India",
+    excerpt:
+      "What Indian founders should ask before signing a retainer — and how to tell a growth partner from a package vendor.",
+    date: "2026-09-17",
+    readTime: "8 min",
+    category: "Agency",
+    image: "/images/about-team.png",
+    seoDescription:
+      "How to hire a digital marketing agency in India: SEO, Google Ads, Meta, branding, and websites. Questions that separate a growth partner from a package.",
+    content: [
+      "Search 'digital marketing agency in India' and you will get the same list: SEO, Google Ads, social media, 'guaranteed ranking'. Most of those pages were written to rank, not to run an account. The hire is too expensive to get wrong.",
+      "Start with the bottleneck, not the service menu. If people cannot find you, you need SEO or paid search — and a page that converts. If they find you and do not enquire, you need the website and the offer. If enquiries exist and revenue is thin, you may need positioning, not more ads. Ads House diagnoses that before we sell a retainer.",
+      "Ask to see measurement. A serious ads agency in India should talk in leads, CAC, ROAS, and revenue — and show how tracking is set up. Vanity dashboards (reach, likes, 'traffic up 200%' with no conversions) are how retainers quietly die.",
+      "Ask who does the work. Many vendors outsource ads to a nameless media buyer and SEO to a content mill. You want a team that can sit with you — our studio is in Rohtak, Haryana — and still buy Google and Meta at metro quality for brands anywhere in India.",
+      "Do not buy '#1 on Google guaranteed'. Google does not sell positions to agencies. What you can buy is technical SEO, honest content, a Google Business Profile that matches your NAP, and paid search that harvests demand while organic compounds.",
+      "If you want a digital marketing agency in India that treats growth as a system — brand, SEO, ads, and the website together — start a project with Ads House. Campaigns run nationwide. Kickoffs can happen in Rohtak when you want the team in the room.",
+    ],
+  },
+  {
+    slug: "social-media-marketing-india",
+    title: "Social media marketing in India: Meta ads, not posting packages",
+    excerpt:
+      "What SMM should mean for Indian brands in 2026 — acquisition creative, tracking, and a conversion job. Not 30 posts and a boost.",
+    date: "2026-09-16",
+    readTime: "7 min",
+    category: "Performance",
+    image: "/images/service-performance.png",
+    seoDescription:
+      "Social media marketing in India: Meta ads, Instagram, Facebook, and Reels with a CAC job. How Ads House runs SMM versus a posting package.",
+    content: [
+      "When an Indian founder asks for social media marketing, they usually mean one of two jobs: buy customers on Instagram and Facebook, or look busy on the grid. Those are not the same retainer. Ads House runs the first.",
+      "Meta ads are social media marketing with a number. Creative in the first second is the targeting. We test UGC-style hooks, product proof, founder, and offer — then kill losers weekly. Always-on organic creative supports the ads; it is not a substitute for them.",
+      "A posting package with no conversion event is a mood. If the pixel is broken, the landing page is slow, or the offer is unclear, more Reels will not save the account. We fix the path from click to lead before we scale spend.",
+      "Google Ads still harvests high-intent search. Social creates and retargets. The two sit in the same performance programme at Ads House so blended CAC is honest. If a vendor only sells '30 posts + stories', they are not running SMM as acquisition.",
+      "This is the work on our Google Ads and Meta ads service page. If you want social media marketing in India that a CFO can read, start a project — from the Rohtak studio, for brands nationwide.",
+    ],
+  },
+  {
     slug: "ads-agency-in-rohtak",
     title: "Ads agency in Rohtak: what the studio actually does",
     excerpt:
@@ -915,6 +971,10 @@ export const faqs = [
 ];
 
 export const serviceHubFaqs = [
+  {
+    q: "Are you only a Rohtak agency?",
+    a: "No. Ads House is a digital marketing and ads agency in India. Rohtak is the studio where the team sits. Campaigns, SEO, and websites run for brands nationwide.",
+  },
   {
     q: "Can we hire you for one service only?",
     a: "Yes. Many retainers start with ads, SEO, or the website. We still diagnose the bottleneck so a single service is not asked to fix a different problem.",

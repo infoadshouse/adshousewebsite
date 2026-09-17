@@ -43,6 +43,13 @@ export default function WorkPage() {
         image="/images/work-fashion.png"
         imageAlt="Fashion campaign produced by Ads House for an Indian D2C brand"
       />
+      <section className="mx-auto max-w-7xl px-5 pb-10 md:px-8">
+        <p className="max-w-3xl text-lg leading-relaxed text-muted">
+          Case studies below are Ads House programmes for Indian brands — fashion, fintech, skincare,
+          food, and edtech. Metrics are leads, ROAS, revenue, CAC, and organic growth. To brief a live
+          account, start a project; we will tell you if the first lever is ads, SEO, or the website.
+        </p>
+      </section>
       <section className="mx-auto grid max-w-7xl gap-8 px-5 pb-20 md:px-8">
         {caseStudies.map((item) => (
           <Link

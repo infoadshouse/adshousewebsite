@@ -11,7 +11,7 @@ import { siteConfig } from "@/lib/site";
 export const metadata = createMetadata({
   title: "Digital Marketing Insights for Indian Brands",
   description:
-    "Practical thinking from Ads House on SEO in India, brand building vs discounting, and performance marketing for D2C. Insights for founders and marketing leaders.",
+    "Playbooks from Ads House: hiring a digital marketing agency in India, SEO vs Google Ads, social media marketing, and how to hire in Rohtak.",
   path: "/insights",
   image: "/images/insight-seo.png",
   keywords: ["digital marketing blog India", "SEO India", "D2C marketing insights"],
@@ -39,7 +39,7 @@ export default function InsightsPage() {
       <PageHero
         eyebrow="Insights"
         title="Digital marketing insights for Indian brands"
-        description="Playbooks from live accounts: SEO in India, hiring an agency in Rohtak, Google Ads vs organic, brand building, and performance marketing."
+        description="Playbooks from live work: hiring an agency in India, SEO vs ads, social media marketing, brand building, and the Rohtak studio."
         image="/images/insight-seo.png"
         imageAlt="Editorial visual for Ads House insights on ranking Indian brands on Google"
       />

@@ -97,10 +97,13 @@ export default async function InsightArticlePage({ params }: PageProps<"/insight
           </ul>
           <div className="mt-6 flex flex-wrap gap-3 text-sm">
             <Link href="/services/seo" className="text-sky hover:underline">
-              SEO services
+              SEO agency in India
             </Link>
             <Link href="/services/performance-marketing" className="text-sky hover:underline">
-              Performance marketing
+              Google Ads & social media marketing
+            </Link>
+            <Link href="/insights/digital-marketing-agency-in-india" className="text-sky hover:underline">
+              Hire an agency in India
             </Link>
             <Link href="/locations/rohtak" className="text-sky hover:underline">
               Agency in Rohtak

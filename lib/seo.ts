@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { siteConfig } from "./site";
+import { canonicalUrl, siteConfig } from "./site";
 
 type SeoInput = {
   title: string;
@@ -26,7 +26,7 @@ export function createMetadata({
   publishedTime,
   modifiedTime,
 }: SeoInput): Metadata {
-  const url = new URL(path, `${siteConfig.url}/`).toString();
+  const url = canonicalUrl(path);
   const imageUrl = image.startsWith("http")
     ? image
     : new URL(image, siteConfig.url).toString();

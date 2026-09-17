@@ -1,4 +1,4 @@
-import { postalAddress, siteConfig } from "./site";
+import { canonicalUrl, googleMapsSearchUrl, postalAddress, siteConfig } from "./site";
 
 export function brandSchema() {
   return {
@@ -44,7 +44,7 @@ export function organizationSchema() {
       name: "domain",
       value: siteConfig.domain,
     },
-    hasMap: `https://www.google.com/maps/search/?api=1&query=${siteConfig.geo.latitude},${siteConfig.geo.longitude}`,
+    hasMap: googleMapsSearchUrl(),
     areaServed: [
       { "@type": "Country", name: "India" },
       {
@@ -118,7 +118,7 @@ export function localBusinessSchema() {
     priceRange: "₹₹₹",
     parentOrganization: { "@id": `${siteConfig.url}/#organization` },
     brand: { "@id": `${siteConfig.url}/#brand` },
-    hasMap: `https://www.google.com/maps/search/?api=1&query=${siteConfig.geo.latitude},${siteConfig.geo.longitude}`,
+    hasMap: googleMapsSearchUrl(),
     address: postalAddress(),
     geo: {
       "@type": "GeoCoordinates",
@@ -174,15 +174,15 @@ export function webPageSchema(input: {
   return {
     "@context": "https://schema.org",
     "@type": input.type || "WebPage",
-    "@id": `${siteConfig.url}${input.path}#webpage`,
-    url: `${siteConfig.url}${input.path}`,
+    "@id": `${canonicalUrl(input.path)}#webpage`,
+    url: canonicalUrl(input.path),
     name: input.name,
     description: input.description,
     inLanguage: "en-IN",
     isPartOf: { "@id": `${siteConfig.url}/#website` },
     about: { "@id": `${siteConfig.url}/#organization` },
     ...(input.path !== "/"
-      ? { breadcrumb: { "@id": `${siteConfig.url}${input.path}#breadcrumb` } }
+      ? { breadcrumb: { "@id": `${canonicalUrl(input.path)}#breadcrumb` } }
       : {}),
   };
 }
@@ -204,12 +204,12 @@ export function breadcrumbSchema(items: { name: string; path: string }[]) {
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    "@id": `${siteConfig.url}${lastPath}#breadcrumb`,
+    "@id": `${canonicalUrl(lastPath)}#breadcrumb`,
     itemListElement: items.map((item, index) => ({
       "@type": "ListItem",
       position: index + 1,
       name: item.name,
-      item: `${siteConfig.url}${item.path}`,
+      item: canonicalUrl(item.path),
     })),
   };
 }
@@ -223,11 +223,11 @@ export function serviceSchema(input: {
   return {
     "@context": "https://schema.org",
     "@type": "Service",
-    "@id": `${siteConfig.url}${input.path}#service`,
+    "@id": `${canonicalUrl(input.path)}#service`,
     name: input.name,
     description: input.description,
     image: `${siteConfig.url}${input.image}`,
-    url: `${siteConfig.url}${input.path}`,
+    url: canonicalUrl(input.path),
     provider: { "@id": `${siteConfig.url}/#organization` },
     areaServed: { "@type": "Country", name: "India" },
     serviceType: input.name,
@@ -250,9 +250,14 @@ export function articleSchema(input: {
     image: `${siteConfig.url}${input.image}`,
     datePublished: input.date,
     dateModified: input.modified || input.date,
-    author: { "@id": `${siteConfig.url}/#organization` },
+    author: {
+      "@type": "Organization",
+      "@id": `${siteConfig.url}/#organization`,
+      name: siteConfig.name,
+      url: siteConfig.url,
+    },
     publisher: { "@id": `${siteConfig.url}/#organization` },
-    mainEntityOfPage: `${siteConfig.url}${input.path}`,
+    mainEntityOfPage: canonicalUrl(input.path),
     inLanguage: "en-IN",
   };
 }
@@ -262,13 +267,13 @@ export function itemListSchema(input: { name: string; path: string; items: { nam
     "@context": "https://schema.org",
     "@type": "ItemList",
     name: input.name,
-    url: `${siteConfig.url}${input.path}`,
+    url: canonicalUrl(input.path),
     numberOfItems: input.items.length,
     itemListElement: input.items.map((item, index) => ({
       "@type": "ListItem",
       position: index + 1,
       name: item.name,
-      url: `${siteConfig.url}${item.path}`,
+      url: canonicalUrl(item.path),
     })),
   };
 }
@@ -283,15 +288,15 @@ export function profilePageSchema(input: {
   return {
     "@context": "https://schema.org",
     "@type": "ProfilePage",
-    "@id": `${siteConfig.url}${input.path}#profile`,
-    url: `${siteConfig.url}${input.path}`,
+    "@id": `${canonicalUrl(input.path)}#profile`,
+    url: canonicalUrl(input.path),
     name: input.name,
     isPartOf: { "@id": `${siteConfig.url}/#website` },
     mainEntity: {
       "@type": "Person",
       name: input.name,
       description: input.description,
-      url: `${siteConfig.url}${input.path}`,
+      url: canonicalUrl(input.path),
       ...(input.image ? { image: input.image.startsWith("http") ? input.image : `${siteConfig.url}${input.image}` } : {}),
       ...(input.location
         ? {

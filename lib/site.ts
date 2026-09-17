@@ -54,6 +54,17 @@ export const siteConfig = {
 
 export const defaultTitle = "Ads House | Ads Agency in India | Digital Marketing";
 
+/** Absolute URL with no trailing slash on the homepage (matches Next metadata canonical). */
+export function canonicalUrl(path = "/"): string {
+  const origin = siteConfig.url.replace(/\/$/, "");
+  if (!path || path === "/") return origin;
+  return `${origin}${path.startsWith("/") ? path : `/${path}`}`;
+}
+
+export function googleMapsSearchUrl() {
+  return `https://www.google.com/maps/search/?api=1&query=${siteConfig.geo.latitude},${siteConfig.geo.longitude}`;
+}
+
 export function postalAddress() {
   const { street, locality, region, postalCode, country } = siteConfig.address;
   return {

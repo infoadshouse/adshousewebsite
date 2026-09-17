@@ -6,7 +6,7 @@ import { CtaBand } from "@/components/sections/CtaBand";
 import { teamPrinciples } from "@/lib/data";
 import { breadcrumbSchema, webPageSchema } from "@/lib/schema";
 import { createMetadata } from "@/lib/seo";
-import { siteConfig } from "@/lib/site";
+import { officeAddressLines, siteConfig } from "@/lib/site";
 
 export const metadata = createMetadata({
   title: "About Ads House | Ads Agency in India",
@@ -122,6 +122,50 @@ export default function AboutPage() {
               Influencer Marketplace
             </Link>
           </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-5 pb-20 md:px-8">
+        <h2 className="font-display text-3xl font-bold text-sky-dark md:text-4xl">Business details</h2>
+        <p className="mt-4 max-w-2xl text-muted">
+          Use this NAP on Google Business Profile and citations. It should match the footer and the
+          Rohtak office page.
+        </p>
+        <dl className="mt-8 grid gap-6 sm:grid-cols-2">
+          <div>
+            <dt className="text-xs font-bold uppercase tracking-[0.18em] text-sky">Legal name</dt>
+            <dd className="mt-1 text-sky-dark">{siteConfig.legalName}</dd>
+          </div>
+          <div>
+            <dt className="text-xs font-bold uppercase tracking-[0.18em] text-sky">Founded</dt>
+            <dd className="mt-1 text-sky-dark">{siteConfig.foundingYear}</dd>
+          </div>
+          <div>
+            <dt className="text-xs font-bold uppercase tracking-[0.18em] text-sky">Studio</dt>
+            <dd className="mt-1 text-sky-dark">{officeAddressLines().join(", ")}</dd>
+          </div>
+          <div>
+            <dt className="text-xs font-bold uppercase tracking-[0.18em] text-sky">Hours</dt>
+            <dd className="mt-1 text-sky-dark">
+              Mon–Sat {siteConfig.hours.opens}–{siteConfig.hours.closes} IST
+            </dd>
+          </div>
+          <div>
+            <dt className="text-xs font-bold uppercase tracking-[0.18em] text-sky">Email</dt>
+            <dd className="mt-1">
+              <a className="text-sky hover:underline" href={`mailto:${siteConfig.email}`}>
+                {siteConfig.email}
+              </a>
+            </dd>
+          </div>
+          <div>
+            <dt className="text-xs font-bold uppercase tracking-[0.18em] text-sky">Phone</dt>
+            <dd className="mt-1">
+              <a className="text-sky hover:underline" href={siteConfig.phoneHref}>
+                {siteConfig.phone}
+              </a>
+            </dd>
+          </div>
+        </dl>
       </section>
       <CtaBand />
     </>

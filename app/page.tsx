@@ -1,3 +1,4 @@
+import { SearchPaths } from "@/components/SearchPaths";
 import { FaqList } from "@/components/FaqList";
 import { JsonLd } from "@/components/JsonLd";
 import { AboutTeaser } from "@/components/sections/AboutTeaser";
@@ -53,6 +54,7 @@ export default function HomePage() {
           when you want the team in the room.
         </p>
       </section>
+      <SearchPaths />
       <ServicesGrid />
       <FeaturedWork />
       <Methodology />

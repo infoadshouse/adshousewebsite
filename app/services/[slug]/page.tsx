@@ -78,6 +78,7 @@ export default async function ServiceDetailPage({ params }: PageProps<"/services
             </h1>
             <p className="mt-5 text-xl text-muted">{service.outcome}</p>
             <p className="mt-6 leading-relaxed text-muted">{service.intro}</p>
+            <p className="mt-4 text-sm leading-relaxed text-sky-dark">{service.intent}</p>
             <div className="mt-8 flex flex-wrap gap-3">
               {service.slug === "influencer-marketplace" ? (
                 <>

@@ -1,3 +1,4 @@
+import { SearchPaths } from "@/components/SearchPaths";
 import { FaqList } from "@/components/FaqList";
 import { JsonLd } from "@/components/JsonLd";
 import { PageHero } from "@/components/PageHero";
@@ -12,12 +13,12 @@ import { siteConfig } from "@/lib/site";
 import Link from "next/link";
 
 export const metadata = createMetadata({
-  title: "Digital Marketing Services | SEO, Ads, Brand, Web",
+  title: "Digital Marketing Services in India | SEO, Ads, Brand, Web",
   description:
-    "Ads House services from Rohtak: SEO, Google Ads, Meta ads, brand building, websites, custom software, creative, and a local influencer marketplace.",
+    "Ads House digital marketing services in India: SEO, Google Ads, Meta ads, brand building, websites, custom software, creative, and an influencer marketplace. Studio in Rohtak.",
   path: "/services",
   image: "/images/service-performance.png",
-  keywords: ["digital marketing services India", "SEO agency Rohtak", "Google Ads agency Haryana"],
+  keywords: ["digital marketing services India", "SEO agency India", "Google Ads agency India"],
 });
 
 const engagement = [
@@ -60,9 +61,11 @@ export default function ServicesPage() {
       />
       <PageHero
         eyebrow="Services"
-        title="Eight capabilities. One growth engine."
-        description="SEO, ads, brand, web, software, and the Influencer Marketplace — assembled around the number you need to move, not a menu of packages."
+        title="Digital marketing services in India"
+        description="SEO, Google Ads, Meta ads, brand, web, software, and the Influencer Marketplace — assembled around the number you need to move, not a menu of packages."
       />
+
+      <SearchPaths />
 
       <ServicesGrid />
 
