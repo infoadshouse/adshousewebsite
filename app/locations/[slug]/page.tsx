@@ -7,9 +7,9 @@ import { CtaBand } from "@/components/sections/CtaBand";
 import { ArrowIcon, ButtonLink } from "@/components/ui";
 import { services } from "@/lib/data";
 import { getLocation, locations } from "@/lib/locations";
-import { breadcrumbSchema, faqSchema, webPageSchema } from "@/lib/schema";
+import { breadcrumbSchema, faqSchema, localBusinessSchema, webPageSchema } from "@/lib/schema";
 import { createMetadata } from "@/lib/seo";
-import { siteConfig } from "@/lib/site";
+import { canonicalUrl, siteConfig } from "@/lib/site";
 
 type LocationParams = { params: Promise<{ slug: string }> };
 
@@ -29,7 +29,9 @@ export async function generateMetadata({ params }: LocationParams) {
     keywords: [
       `ads agency in ${location.name}`,
       `digital marketing agency in ${location.name}`,
-      `SEO agency ${location.name}`,
+      `SEO agency in ${location.name}`,
+      `Google Ads agency in ${location.name}`,
+      `Meta Ads agency in ${location.name}`,
     ],
   });
 }
@@ -56,12 +58,13 @@ export default async function LocationDetailPage({ params }: LocationParams) {
             path: `/locations/${location.slug}`,
           }),
           faqSchema(location.faqs),
+          ...(location.isHq ? [localBusinessSchema()] : []),
           {
             "@context": "https://schema.org",
             "@type": "Service",
             name: `Digital marketing in ${location.name}`,
             description: location.seoDescription,
-            url: `${siteConfig.url}/locations/${location.slug}`,
+            url: canonicalUrl(`/locations/${location.slug}`),
             provider: { "@id": `${siteConfig.url}/#organization` },
             areaServed: {
               "@type": "City",
@@ -69,6 +72,18 @@ export default async function LocationDetailPage({ params }: LocationParams) {
               containedInPlace: { "@type": "State", name: location.state },
             },
             serviceType: "Digital marketing",
+            hasOfferCatalog: {
+              "@type": "OfferCatalog",
+              name: `Ads House in ${location.name}`,
+              itemListElement: location.localOffers.map((offer) => ({
+                "@type": "Offer",
+                itemOffered: {
+                  "@type": "Service",
+                  name: offer.title,
+                  url: canonicalUrl(offer.href),
+                },
+              })),
+            },
           },
         ]}
       />
@@ -109,6 +124,31 @@ export default async function LocationDetailPage({ params }: LocationParams) {
           <div className="rounded-[1.6rem] border border-line bg-white p-8 shadow-sm">
             <h2 className="font-display text-2xl font-bold text-sky-dark">How we work here</h2>
             <p className="mt-4 leading-relaxed text-muted">{location.approach}</p>
+          </div>
+        </section>
+
+        <section className="mt-16">
+          <h2 className="font-display text-3xl font-extrabold text-sky-dark">
+            Local search in {location.name}
+          </h2>
+          <p className="mt-4 max-w-2xl text-muted">
+            These are the {location.name} queries we built this page for. The programmes themselves
+            are the India service pages — run from this studio.
+          </p>
+          <div className="mt-8 grid gap-4 md:grid-cols-2">
+            {location.localOffers.map((offer) => (
+              <article
+                key={offer.id}
+                id={offer.id}
+                className="scroll-mt-28 rounded-2xl border border-line bg-white p-6 shadow-sm"
+              >
+                <h3 className="font-display text-xl font-bold text-sky-dark">{offer.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-muted">{offer.body}</p>
+                <Link href={offer.href} className="mt-4 inline-block text-sm font-semibold text-sky hover:underline">
+                  {offer.title.replace(` in ${location.name}`, " in India")} →
+                </Link>
+              </article>
+            ))}
           </div>
         </section>
 

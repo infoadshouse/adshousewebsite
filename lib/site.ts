@@ -46,9 +46,13 @@ export const siteConfig = {
     "Ads House",
     "ads agency in India",
     "digital marketing agency in India",
-    "performance marketing agency India",
-    "SEO agency India",
-    "Google Ads agency India",
+    "SEO agency in India",
+    "Google Ads agency in India",
+    "Meta Ads agency in India",
+    "ads agency in Rohtak",
+    "digital marketing agency in Rohtak",
+    "SEO agency in Rohtak",
+    "Google Ads agency in Rohtak",
   ],
 } as const;
 

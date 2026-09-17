@@ -962,7 +962,7 @@ export const faqs = [
   },
   {
     q: "Where are you based?",
-    a: "The office is in Rohtak, Haryana. From this studio we run work for brands across India.",
+    a: "The office is in Rohtak, Haryana. If you want an ads agency, SEO agency, Google Ads agency, or Meta ads agency in Rohtak, that is this studio. The same team runs digital marketing for brands across India.",
   },
   {
     q: "How soon can we start a project?",

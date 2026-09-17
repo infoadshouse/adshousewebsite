@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowIcon, ButtonLink } from "@/components/ui";
 import { testimonials } from "@/lib/data";
 
@@ -47,6 +48,12 @@ export function Hero() {
             We run SEO, Google Ads, Meta ads, branding, and high-performance websites for Indian
             brands nationwide. The team sits in Rohtak, Haryana — in-person when you want it, metro-grade
             work everywhere else.
+          </p>
+          <p className="mt-3 max-w-xl text-sm md:text-base">
+            <Link href="/locations/rohtak" className="font-semibold text-sky hover:underline">
+              Ads agency in Rohtak
+            </Link>
+            <span className="text-sky-dark"> — our only office.</span>
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
             <ButtonLink href="/contact" className="w-full sm:w-auto">

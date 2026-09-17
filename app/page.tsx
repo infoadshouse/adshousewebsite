@@ -19,6 +19,7 @@ import { faqs } from "@/lib/data";
 import { businessEntities, faqSchema, webPageSchema } from "@/lib/schema";
 import { createMetadata } from "@/lib/seo";
 import { defaultTitle } from "@/lib/site";
+import Link from "next/link";
 
 export const metadata = createMetadata({
   title: defaultTitle,
@@ -27,7 +28,15 @@ export const metadata = createMetadata({
   path: "/",
   image: "/images/hero-visual.png",
   absolute: true,
-  keywords: ["Ads House", "ads agency in India", "digital marketing agency in India"],
+  keywords: [
+    "Ads House",
+    "ads agency in India",
+    "digital marketing agency in India",
+    "SEO agency in India",
+    "Google Ads agency in India",
+    "ads agency in Rohtak",
+    "digital marketing agency in Rohtak",
+  ],
 });
 
 export default function HomePage() {
@@ -50,8 +59,11 @@ export default function HomePage() {
       <section className="mx-auto max-w-7xl px-5 pb-4 md:px-8">
         <p className="max-w-3xl text-base leading-relaxed text-muted md:text-lg">
           <span className="font-semibold text-sky-dark">Who we serve.</span> Indian brands
-          nationwide — D2C, services, and founder-led companies. In-person from our Rohtak studio
-          when you want the team in the room.
+          nationwide — D2C, services, and founder-led companies. Local operators hire us as an{" "}
+          <Link href="/locations/rohtak" className="font-semibold text-sky hover:underline">
+            ads agency in Rohtak
+          </Link>
+          ; everyone else gets the same team remotely.
         </p>
       </section>
       <SearchPaths />

@@ -79,6 +79,13 @@ export default async function ServiceDetailPage({ params }: PageProps<"/services
             <p className="mt-5 text-xl text-muted">{service.outcome}</p>
             <p className="mt-6 leading-relaxed text-muted">{service.intro}</p>
             <p className="mt-4 text-sm leading-relaxed text-sky-dark">{service.intent}</p>
+            <p className="mt-3 text-sm text-muted">
+              Based in Rohtak.{" "}
+              <Link href="/locations/rohtak" className="font-semibold text-sky hover:underline">
+                Ads agency in Rohtak
+              </Link>{" "}
+              if you want the local office; this page is the India programme.
+            </p>
             <div className="mt-8 flex flex-wrap gap-3">
               {service.slug === "influencer-marketplace" ? (
                 <>

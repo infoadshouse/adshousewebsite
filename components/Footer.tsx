@@ -57,7 +57,7 @@ export function Footer() {
                   href={`/locations/${location.slug}`}
                   className="text-sm text-white/80 hover:text-white"
                 >
-                  {location.name}
+                  Ads agency in {location.name}
                 </Link>
               </li>
             ))}
