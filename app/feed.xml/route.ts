@@ -26,12 +26,14 @@ export function GET() {
     .join("\n");
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>${escapeXml(siteConfig.name)} Insights</title>
     <link>${siteConfig.url}/insights</link>
+    <atom:link href="${siteConfig.url}/feed.xml" rel="self" type="application/rss+xml"/>
     <description>${escapeXml("Digital marketing, SEO, and performance thinking for Indian brands.")}</description>
     <language>en-in</language>
+    <lastBuildDate>${new Date(siteConfig.contentUpdated).toUTCString()}</lastBuildDate>
 ${items}
   </channel>
 </rss>`;

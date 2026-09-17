@@ -14,12 +14,7 @@ export const metadata = createMetadata({
     "See Ads House case studies: fashion, fintech, skincare, food, and edtech brands across India. Real metrics — leads, ROAS, revenue, CAC, and organic growth.",
   path: "/work",
   image: "/images/work-fashion.png",
-  keywords: [
-    "digital marketing case studies India",
-    "advertising campaign examples",
-    "D2C marketing case study",
-    "performance marketing results",
-  ],
+  keywords: ["digital marketing case studies India", "performance marketing results"],
 });
 
 export default function WorkPage() {

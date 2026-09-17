@@ -14,13 +14,7 @@ export const metadata = createMetadata({
     "Practical thinking from Ads House on SEO in India, brand building vs discounting, and performance marketing for D2C. Insights for founders and marketing leaders.",
   path: "/insights",
   image: "/images/insight-seo.png",
-  keywords: [
-    "digital marketing blog India",
-    "ads agency in Rohtak",
-    "Ads House insights",
-    "SEO India 2026",
-    "D2C marketing insights",
-  ],
+  keywords: ["digital marketing blog India", "SEO India", "D2C marketing insights"],
 });
 
 export default function InsightsPage() {

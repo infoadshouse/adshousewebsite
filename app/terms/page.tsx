@@ -2,7 +2,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { PageHero } from "@/components/PageHero";
 import { breadcrumbSchema, webPageSchema } from "@/lib/schema";
 import { createMetadata } from "@/lib/seo";
-import { siteConfig } from "@/lib/site";
+import { officeAddressLines, siteConfig } from "@/lib/site";
 
 export const metadata = createMetadata({
   title: "Terms of Use",
@@ -32,7 +32,7 @@ export default function TermsPage() {
         description="The ground rules for using adshouse.in and sending us a brief."
       />
       <article className="mx-auto max-w-3xl space-y-6 px-5 pb-24 text-muted md:px-8">
-        <p>Last updated: 14 August 2026. Operated by {siteConfig.name}, {siteConfig.address.locality}, India.</p>
+        <p>Last updated: 14 August 2026. Operated by {siteConfig.name}, {officeAddressLines().join(", ")}.</p>
         <h2 className="font-display text-2xl font-bold text-sky-dark">The website</h2>
         <p>
           Content on this site is for information. Case studies and metrics describe client work;

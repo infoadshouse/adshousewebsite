@@ -6,16 +6,23 @@ import { CreatorCard, type CreatorCardData } from "@/components/marketplace/Crea
 import { api } from "@/lib/marketplace/client";
 import {
   CREATOR_CATEGORIES,
+  DEFAULT_CREATOR_QUERY,
   PRICE_RANGES,
   ROHTAK_GEO,
   SOCIAL_PLATFORMS,
 } from "@/lib/marketplace/constants";
 
-export function CreatorSearch() {
+export function CreatorSearch({
+  initialCreators = [],
+  initialQuery = DEFAULT_CREATOR_QUERY,
+}: {
+  initialCreators?: CreatorCardData[];
+  initialQuery?: string;
+}) {
   const router = useRouter();
   const params = useSearchParams();
-  const [creators, setCreators] = useState<CreatorCardData[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [creators, setCreators] = useState<CreatorCardData[]>(initialCreators);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
   const query = useMemo(() => {
@@ -48,6 +55,11 @@ export function CreatorSearch() {
   }, [params]);
 
   useEffect(() => {
+    if (query === initialQuery) {
+      setCreators(initialCreators);
+      setLoading(false);
+      return;
+    }
     let cancelled = false;
     setLoading(true);
     setError("");
@@ -64,7 +76,7 @@ export function CreatorSearch() {
     return () => {
       cancelled = true;
     };
-  }, [query]);
+  }, [query, initialQuery, initialCreators]);
 
   function update(name: string, value: string) {
     const next = new URLSearchParams(params.toString());

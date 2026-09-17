@@ -3,23 +3,18 @@ import { FaqList } from "@/components/FaqList";
 import { JsonLd } from "@/components/JsonLd";
 import { PageHero } from "@/components/PageHero";
 import { CtaBand } from "@/components/sections/CtaBand";
-import { locations } from "@/lib/locations";
+import { locationHubFaqs, locations } from "@/lib/locations";
 import { breadcrumbSchema, faqSchema, itemListSchema, webPageSchema } from "@/lib/schema";
 import { createMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site";
 
 export const metadata = createMetadata({
-  title: "Ads House Office in Rohtak | Ads Agency Haryana",
+  title: "Rohtak Office | Ads House Studio",
   description:
-    "Visit Ads House in Rohtak, Haryana — the ads agency studio behind adshouse.in. SEO, Google Ads, branding, and websites from our only office.",
+    "Visit Ads House in Rohtak, Haryana — our only office. SEO, Google Ads, branding, and websites from this studio.",
   path: "/locations",
   image: "/images/about-team.png",
-  keywords: [
-    "Ads House Rohtak",
-    "ads agency in Rohtak",
-    "digital marketing agency Rohtak",
-    "adshouse.in office",
-  ],
+  keywords: ["Ads House Rohtak office", "digital marketing agency Rohtak"],
 });
 
 export default function LocationsPage() {
@@ -45,26 +40,13 @@ export default function LocationsPage() {
               path: `/locations/${location.slug}`,
             })),
           }),
-          faqSchema([
-            {
-              q: "Where is Ads House based?",
-              a: `Ads House is based in ${siteConfig.address.locality}, ${siteConfig.address.region}. That is our only office — the ads agency studio and the centre of SEO, ads, brand, and engineering at adshouse.in.`,
-            },
-            {
-              q: "Is Ads House an ads agency in Rohtak?",
-              a: "Yes. Ads House is an ads agency in Rohtak. Searches for Adshouse, ads house, Ads House agency, and adshouse.in all refer to this studio.",
-            },
-            {
-              q: "Do you work with brands outside Rohtak?",
-              a: "Yes. Campaigns, SEO, and websites are run from the Rohtak studio for brands across India. Kickoffs and workshops can happen remotely or in person here.",
-            },
-          ]),
+          faqSchema(locationHubFaqs),
         ]}
       />
       <PageHero
         eyebrow="Office"
         title="Ads House studio in Rohtak"
-        description={`Ads House (adshouse.in) is headquartered in ${siteConfig.address.locality}, ${siteConfig.address.region}. One office. SEO, ads, brand, and engineering under one roof.`}
+        description={`Ads House is headquartered in ${siteConfig.address.locality}, ${siteConfig.address.region}. One office. SEO, ads, brand, and engineering under one roof.`}
         image="/images/about-team.png"
         imageAlt="Ads House studio in Rohtak, Haryana — digital marketing agency serving India"
       />
@@ -97,22 +79,7 @@ export default function LocationsPage() {
         <h2 className="mb-8 font-display text-3xl font-extrabold text-sky-dark">
           Looking for a local partner?
         </h2>
-        <FaqList
-          items={[
-            {
-              q: "Where is Ads House based?",
-              a: `Ads House is based in ${siteConfig.address.locality}, ${siteConfig.address.region}. That is our only office — the ads agency studio and the centre of SEO, ads, brand, and engineering at adshouse.in.`,
-            },
-            {
-              q: "Is Ads House an ads agency in Rohtak?",
-              a: "Yes. Ads House is an ads agency in Rohtak. Searches for Adshouse, ads house, Ads House agency, and adshouse.in all refer to this studio.",
-            },
-            {
-              q: "Do you work with brands outside Rohtak?",
-              a: "Yes. Campaigns, SEO, and websites are run from the Rohtak studio for brands across India. Kickoffs and workshops can happen remotely or in person here.",
-            },
-          ]}
-        />
+        <FaqList items={locationHubFaqs} />
       </section>
       <CtaBand />
     </>

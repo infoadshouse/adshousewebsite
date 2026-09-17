@@ -1,4 +1,4 @@
-import { siteConfig } from "./site";
+import { postalAddress, siteConfig } from "./site";
 
 export function brandSchema() {
   return {
@@ -27,6 +27,8 @@ export function organizationSchema() {
       "@type": "ImageObject",
       url: `${siteConfig.url}/logo.png`,
       contentUrl: `${siteConfig.url}/logo.png`,
+      width: 512,
+      height: 512,
       caption: "Ads House",
     },
     image: `${siteConfig.url}/images/hero-visual.png`,
@@ -51,13 +53,7 @@ export function organizationSchema() {
         containedInPlace: { "@type": "State", name: siteConfig.address.region },
       },
     ],
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: siteConfig.address.locality,
-      addressRegion: siteConfig.address.region,
-      postalCode: siteConfig.address.postalCode,
-      addressCountry: siteConfig.address.country,
-    },
+    address: postalAddress(),
     geo: {
       "@type": "GeoCoordinates",
       latitude: siteConfig.geo.latitude,
@@ -76,16 +72,13 @@ export function organizationSchema() {
     ],
     knowsAbout: [
       "Digital marketing",
-      "Ads agency",
-      "Advertising agency",
       "Search engine optimisation",
       "Google Ads",
       "Meta ads",
       "Performance marketing",
       "Brand strategy",
       "Web development",
-      "Custom software",
-      "Advertising campaigns",
+      "Influencer marketing",
     ],
     hasOfferCatalog: {
       "@type": "OfferCatalog",
@@ -98,6 +91,7 @@ export function organizationSchema() {
         "Web Development",
         "Custom Software",
         "Creative & Content",
+        "Influencer Marketplace",
       ].map((name) => ({
         "@type": "Offer",
         itemOffered: {
@@ -125,13 +119,7 @@ export function localBusinessSchema() {
     parentOrganization: { "@id": `${siteConfig.url}/#organization` },
     brand: { "@id": `${siteConfig.url}/#brand` },
     hasMap: `https://www.google.com/maps/search/?api=1&query=${siteConfig.geo.latitude},${siteConfig.geo.longitude}`,
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: siteConfig.address.locality,
-      addressRegion: siteConfig.address.region,
-      postalCode: siteConfig.address.postalCode,
-      addressCountry: siteConfig.address.country,
-    },
+    address: postalAddress(),
     geo: {
       "@type": "GeoCoordinates",
       latitude: siteConfig.geo.latitude,
@@ -150,6 +138,10 @@ export function localBusinessSchema() {
   };
 }
 
+export function businessEntities() {
+  return [brandSchema(), organizationSchema(), localBusinessSchema()];
+}
+
 export function websiteSchema() {
   return {
     "@context": "https://schema.org",
@@ -162,6 +154,14 @@ export function websiteSchema() {
     inLanguage: "en-IN",
     publisher: { "@id": `${siteConfig.url}/#organization` },
     about: { "@id": `${siteConfig.url}/#brand` },
+    potentialAction: {
+      "@type": "SearchAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: `${siteConfig.url}/marketplace/creators?q={search_term_string}`,
+      },
+      "query-input": "required name=search_term_string",
+    },
   };
 }
 
@@ -223,6 +223,7 @@ export function serviceSchema(input: {
   return {
     "@context": "https://schema.org",
     "@type": "Service",
+    "@id": `${siteConfig.url}${input.path}#service`,
     name: input.name,
     description: input.description,
     image: `${siteConfig.url}${input.image}`,
@@ -269,5 +270,38 @@ export function itemListSchema(input: { name: string; path: string; items: { nam
       name: item.name,
       url: `${siteConfig.url}${item.path}`,
     })),
+  };
+}
+
+export function profilePageSchema(input: {
+  name: string;
+  description: string;
+  path: string;
+  image?: string;
+  location?: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "@id": `${siteConfig.url}${input.path}#profile`,
+    url: `${siteConfig.url}${input.path}`,
+    name: input.name,
+    isPartOf: { "@id": `${siteConfig.url}/#website` },
+    mainEntity: {
+      "@type": "Person",
+      name: input.name,
+      description: input.description,
+      url: `${siteConfig.url}${input.path}`,
+      ...(input.image ? { image: input.image.startsWith("http") ? input.image : `${siteConfig.url}${input.image}` } : {}),
+      ...(input.location
+        ? {
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: input.location,
+              addressCountry: "IN",
+            },
+          }
+        : {}),
+    },
   };
 }

@@ -18,10 +18,12 @@ export async function generateMetadata({ params }: Props) {
   if (!connected) return createMetadata({ title: "Campaign not found", description: "This campaign is unavailable.", path: `/marketplace/campaigns/${id}`, noIndex: true });
   const campaign = await Campaign.findById(id).lean();
   if (!campaign) return createMetadata({ title: "Campaign not found", description: "This campaign is unavailable.", path: `/marketplace/campaigns/${id}`, noIndex: true });
+  const isOpen = campaign.status === "open";
   return createMetadata({
     title: campaign.title,
     description: campaign.description?.slice(0, 160) || campaign.title,
     path: `/marketplace/campaigns/${id}`,
+    noIndex: !isOpen,
   });
 }
 
@@ -31,6 +33,7 @@ export default async function CampaignDetailPage({ params }: Props) {
   if (!connected) notFound();
   const campaign = await Campaign.findById(id).lean();
   if (!campaign) notFound();
+  if (campaign.status === "draft") notFound();
   const client = campaign.agencyClientId ? await AgencyClient.findById(campaign.agencyClientId).lean() : null;
 
   return (

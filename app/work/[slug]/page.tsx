@@ -19,8 +19,8 @@ export async function generateMetadata({ params }: PageProps<"/work/[slug]">) {
   const item = getCaseStudy(slug);
   if (!item) return {};
   return createMetadata({
-    title: `${item.client} Case Study | ${item.metric} ${item.metricLabel}`,
-    description: `${item.challenge} ${item.result}`,
+    title: `${item.client} case study: ${item.metric} ${item.metricLabel}`,
+    description: item.result.slice(0, 155),
     path: `/work/${item.slug}`,
     image: item.image,
   });

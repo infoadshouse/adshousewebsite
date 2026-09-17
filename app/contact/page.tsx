@@ -1,25 +1,18 @@
 import { InquiryForm } from "@/components/InquiryForm";
 import { JsonLd } from "@/components/JsonLd";
 import { PageHero } from "@/components/PageHero";
-import { breadcrumbSchema, webPageSchema } from "@/lib/schema";
+import { breadcrumbSchema, businessEntities, webPageSchema } from "@/lib/schema";
 import { createMetadata } from "@/lib/seo";
-import { siteConfig } from "@/lib/site";
+import { officeAddressLines, siteConfig } from "@/lib/site";
 import Link from "next/link";
 
 export const metadata = createMetadata({
   title: "Contact Ads House | Ads Agency in Rohtak",
   description:
-    "Contact Ads House (adshouse.in), an ads agency in Rohtak, Haryana. Start a project for SEO, Google Ads, Meta ads, branding, websites, or Influencer Marketplace campaigns — we reply within one business day.",
+    "Talk to Ads House in Rohtak about SEO, Google Ads, Meta ads, branding, websites, or influencer campaigns. We reply within one business day.",
   path: "/contact",
   image: "/images/cta-studio.png",
-  keywords: [
-    "contact Ads House",
-    "ads agency in Rohtak contact",
-    "hire Ads House",
-    "adshouse.in contact",
-    "hire digital marketing agency India",
-    "influencer marketplace Rohtak",
-  ],
+  keywords: ["contact Ads House", "ads agency Rohtak", "hire digital marketing agency India"],
 });
 
 const mapSrc = `https://maps.google.com/maps?q=${siteConfig.geo.latitude},${siteConfig.geo.longitude}&z=12&output=embed`;
@@ -29,6 +22,7 @@ export default function ContactPage() {
     <>
       <JsonLd
         data={[
+          ...businessEntities(),
           breadcrumbSchema([
             { name: "Home", path: "/" },
             { name: "Contact", path: "/contact" },
@@ -43,8 +37,8 @@ export default function ContactPage() {
       />
       <PageHero
         eyebrow="Contact Ads House"
-        title="Contact Ads House, ads agency in Rohtak"
-        description="Share the brand, the market, and the number you want to move. A strategist at Ads House (adshouse.in) replies within one business day — usually sooner."
+        title="Start a project with the Rohtak studio"
+        description="Share the brand, the market, and the number you want to move. A strategist replies within one business day — usually sooner."
         image="/images/cta-studio.png"
         imageAlt="Ads House studio in Rohtak ready for a new campaign briefing"
       />
@@ -62,9 +56,11 @@ export default function ContactPage() {
             <p className="mt-3 text-muted">
               {siteConfig.name}
               <br />
-              {siteConfig.address.locality}, {siteConfig.address.region} {siteConfig.address.postalCode}
-              <br />
-              {siteConfig.address.countryName}
+              {officeAddressLines().map((line) => (
+                <span key={line} className="block">
+                  {line}
+                </span>
+              ))}
             </p>
             <p className="mt-3 text-sm text-muted">
               Mon–Sat {siteConfig.hours.opens}–{siteConfig.hours.closes} IST

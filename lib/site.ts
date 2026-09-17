@@ -13,16 +13,8 @@ export const siteConfig = {
   phoneHref: "tel:+918708892875",
   whatsapp: "https://wa.me/918708892875",
   foundingYear: 2026,
-  alternateNames: [
-    "Adshouse",
-    "AdsHouse",
-    "ads house",
-    "Ads House Agency",
-    "adshouse.in",
-    "Ads House Rohtak",
-    "Ads House ads agency",
-    "Ads House digital marketing",
-  ],
+  contentUpdated: "2026-09-17",
+  alternateNames: ["Adshouse", "adshouse.in"],
   address: {
     street: "",
     locality: "Rohtak",
@@ -70,6 +62,27 @@ export const siteConfig = {
 } as const;
 
 export const defaultTitle = "Ads House | Ads Agency in Rohtak | Digital Marketing";
+
+export function postalAddress() {
+  const { street, locality, region, postalCode, country } = siteConfig.address;
+  return {
+    "@type": "PostalAddress" as const,
+    ...(street ? { streetAddress: street } : {}),
+    addressLocality: locality,
+    addressRegion: region,
+    postalCode,
+    addressCountry: country,
+  };
+}
+
+export function officeAddressLines() {
+  const { street, locality, region, postalCode, countryName } = siteConfig.address;
+  return [
+    ...(street ? [street] : []),
+    `${locality}, ${region} ${postalCode}`,
+    countryName,
+  ];
+}
 
 export const navLinks = [
   { href: "/", label: "Home" },

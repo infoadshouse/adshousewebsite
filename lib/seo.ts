@@ -19,22 +19,23 @@ export function createMetadata({
   description,
   path = "/",
   image = "/images/hero-visual.png",
-  keywords = [...siteConfig.keywords],
+  keywords,
   noIndex = false,
   absolute = false,
   type = "website",
   publishedTime,
   modifiedTime,
 }: SeoInput): Metadata {
-  const url = new URL(path, siteConfig.url).toString();
+  const url = new URL(path, `${siteConfig.url}/`).toString();
   const imageUrl = image.startsWith("http")
     ? image
     : new URL(image, siteConfig.url).toString();
+  const useAbsolute = absolute || /ads house/i.test(title);
 
   return {
-    title: absolute ? { absolute: title } : title,
+    title: useAbsolute ? { absolute: title } : title,
     description,
-    keywords,
+    ...(keywords?.length ? { keywords } : {}),
     alternates: {
       canonical: url,
       languages: {
@@ -43,7 +44,7 @@ export function createMetadata({
       },
     },
     robots: noIndex
-      ? { index: false, follow: false }
+      ? { index: false, follow: true }
       : {
           index: true,
           follow: true,

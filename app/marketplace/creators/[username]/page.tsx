@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { JsonLd } from "@/components/JsonLd";
 import { Breadcrumbs } from "@/components/PageHero";
 import { Avatar } from "@/components/marketplace/CreatorCard";
 import { ButtonLink, SectionEyebrow } from "@/components/ui";
@@ -10,6 +11,7 @@ import {
   formatLocation,
   primarySocial,
 } from "@/lib/marketplace/constants";
+import { profilePageSchema } from "@/lib/schema";
 import { createMetadata } from "@/lib/seo";
 import { InfluencerProfile } from "@/models/InfluencerProfile";
 import { Review } from "@/models/Review";
@@ -43,6 +45,15 @@ export default async function CreatorProfilePage({ params }: Props) {
 
   return (
     <div className="pb-16">
+      <JsonLd
+        data={profilePageSchema({
+          name: creator.displayName,
+          description: creator.bio || `${creator.displayName} on Ads House Marketplace`,
+          path: `/marketplace/creators/${creator.username}`,
+          image: creator.photo || undefined,
+          location: formatLocation(creator.location) || undefined,
+        })}
+      />
       <Breadcrumbs
         items={[
           { name: "Home", href: "/" },

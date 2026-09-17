@@ -29,12 +29,7 @@ export async function generateMetadata({ params }: LocationParams) {
     keywords: [
       `ads agency in ${location.name}`,
       `digital marketing agency in ${location.name}`,
-      "Ads House",
-      "adshouse",
-      "ads house agency",
       `SEO agency ${location.name}`,
-      `Google Ads agency ${location.name}`,
-      `advertising agency ${location.state}`,
     ],
   });
 }
@@ -122,8 +117,8 @@ export default async function LocationDetailPage({ params }: LocationParams) {
             Ads House services in {location.name}
           </h2>
           <p className="mt-4 max-w-2xl text-muted">
-            The Ads House ads agency delivers SEO, Google Ads, Meta ads, branding, and websites as
-            one system for companies in {location.name} and across India.
+            The same team delivers SEO, Google Ads, Meta ads, branding, and websites as one system
+            for companies in {location.name} and across India.
           </p>
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {services.map((service) => (

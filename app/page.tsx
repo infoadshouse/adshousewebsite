@@ -15,29 +15,18 @@ import { TrustBar } from "@/components/sections/TrustBar";
 import { VisualStudio } from "@/components/sections/VisualStudio";
 import { SectionEyebrow } from "@/components/ui";
 import { faqs } from "@/lib/data";
-import { faqSchema, webPageSchema } from "@/lib/schema";
+import { businessEntities, faqSchema, webPageSchema } from "@/lib/schema";
 import { createMetadata } from "@/lib/seo";
 import { defaultTitle } from "@/lib/site";
 
 export const metadata = createMetadata({
   title: defaultTitle,
   description:
-    "Ads House (adshouse.in) is a digital marketing and ads agency in Rohtak, Haryana. Hire Ads House for SEO, Google Ads, Meta ads, branding, websites, and the Influencer Marketplace.",
+    "Ads House is a digital marketing and ads agency in Rohtak, Haryana. SEO, Google Ads, Meta ads, branding, websites, and a local influencer marketplace.",
   path: "/",
   image: "/images/hero-visual.png",
   absolute: true,
-  keywords: [
-    "Ads House",
-    "adshouse",
-    "ads house",
-    "adshouse.in",
-    "ads house agency",
-    "ads agency in Rohtak",
-    "adshouse ads agency",
-    "digital marketing ads house",
-    "digital marketing agency in Rohtak",
-    "influencer marketplace Rohtak",
-  ],
+  keywords: ["Ads House", "ads agency in Rohtak", "digital marketing agency Rohtak"],
 });
 
 export default function HomePage() {
@@ -45,6 +34,7 @@ export default function HomePage() {
     <>
       <JsonLd
         data={[
+          ...businessEntities(),
           webPageSchema({
             name: defaultTitle,
             description:
@@ -69,9 +59,9 @@ export default function HomePage() {
       <section className="mx-auto max-w-7xl px-5 pb-8 md:px-8">
         <SectionEyebrow>Questions</SectionEyebrow>
         <h2 className="mb-8 font-display text-4xl font-extrabold tracking-tight text-sky-dark md:text-5xl">
-          Ads House, ads agency, and Rohtak — answered.
+          Questions about working with Ads House
         </h2>
-        <FaqList />
+        <FaqList items={faqs} />
       </section>
       <CtaBand />
     </>

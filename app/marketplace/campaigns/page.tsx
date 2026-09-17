@@ -9,7 +9,7 @@ import { Campaign } from "@/models/Campaign";
 export const dynamic = "force-dynamic";
 
 export const metadata = createMetadata({
-  title: "Open influencer campaigns | Ads House Marketplace",
+  title: "Open influencer campaigns",
   description: "Browse open campaigns from businesses and agencies looking for local creators in Rohtak and across India.",
   path: "/marketplace/campaigns",
 });

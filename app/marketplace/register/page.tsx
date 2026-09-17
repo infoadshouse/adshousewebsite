@@ -7,7 +7,7 @@ import { createMetadata } from "@/lib/seo";
 export const dynamic = "force-dynamic";
 
 export const metadata = createMetadata({
-  title: "Join the marketplace | Ads House",
+  title: "Join the marketplace",
   description: "Create a creator, business, or agency account on Ads House Marketplace.",
   path: "/marketplace/register",
   noIndex: true,

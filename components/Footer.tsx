@@ -2,7 +2,7 @@ import Link from "next/link";
 import { BrandMark } from "@/components/BrandMark";
 import { services } from "@/lib/data";
 import { locations } from "@/lib/locations";
-import { navLinks, siteConfig } from "@/lib/site";
+import { navLinks, officeAddressLines, siteConfig } from "@/lib/site";
 
 export function Footer() {
   return (
@@ -15,7 +15,7 @@ export function Footer() {
             Google Ads, branding, websites, and a local Influencer Marketplace that turns attention into revenue.
           </p>
           <p className="mt-4 text-sm text-white">
-            {siteConfig.address.locality}, {siteConfig.address.region}, {siteConfig.address.countryName}
+            {officeAddressLines().join(", ")}
           </p>
         </div>
 
@@ -78,9 +78,11 @@ export function Footer() {
               </a>
             </li>
             <li>
-              {siteConfig.address.locality}, {siteConfig.address.region} {siteConfig.address.postalCode}
-              <br />
-              {siteConfig.address.countryName}
+              {officeAddressLines().map((line) => (
+                <span key={line} className="block">
+                  {line}
+                </span>
+              ))}
             </li>
           </ul>
           <div className="mt-5 flex flex-wrap gap-x-4 gap-y-2 text-sm">

@@ -72,7 +72,7 @@ export function Avatar({ photo, name, size = "md" }: { photo?: string; name: str
   if (photo) {
     return (
       // eslint-disable-next-line @next/next/no-img-element
-      <img src={photo} alt="" className={`${dim} shrink-0 rounded-2xl object-cover`} />
+      <img src={photo} alt={`${name} profile photo`} className={`${dim} shrink-0 rounded-2xl object-cover`} />
     );
   }
   return (

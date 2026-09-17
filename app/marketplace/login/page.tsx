@@ -7,7 +7,7 @@ import { LogoutAndStay } from "@/components/marketplace/LogoutAndStay";
 export const dynamic = "force-dynamic";
 
 export const metadata = createMetadata({
-  title: "Sign in | Ads House Marketplace",
+  title: "Sign in to the marketplace",
   description: "Sign in to Ads House Marketplace to manage your account, campaigns, and messages.",
   path: "/marketplace/login",
   noIndex: true,

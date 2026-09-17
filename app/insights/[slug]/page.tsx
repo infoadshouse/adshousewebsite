@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: PageProps<"/insights/[slug]">
     image: post.image,
     type: "article",
     publishedTime: post.date,
-    keywords: [post.category, "digital marketing India", "SEO India", siteConfig.name],
+    keywords: [post.category, "digital marketing India", "SEO India"],
   });
 }
 
@@ -32,7 +32,10 @@ export default async function InsightArticlePage({ params }: PageProps<"/insight
   const { slug } = await params;
   const post = getInsight(slug);
   if (!post) notFound();
-  const related = insights.filter((item) => item.slug !== post.slug).slice(0, 3);
+  const related = [
+    ...insights.filter((item) => item.slug !== post.slug && item.category === post.category),
+    ...insights.filter((item) => item.slug !== post.slug && item.category !== post.category),
+  ].slice(0, 3);
 
   return (
     <>

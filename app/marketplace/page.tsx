@@ -3,16 +3,11 @@ import { ButtonLink, SectionEyebrow } from "@/components/ui";
 import { createMetadata } from "@/lib/seo";
 
 export const metadata = createMetadata({
-  title: "Creator Marketplace | Find local influencers in Rohtak",
+  title: "Creator Marketplace | Local influencers in Rohtak",
   description:
     "Find the right influencer for the right business, in the right location. Ads House Marketplace connects creators, businesses, and agencies across India — starting in Rohtak.",
   path: "/marketplace",
-  keywords: [
-    "influencer marketplace India",
-    "local influencers Rohtak",
-    "find Instagram influencers Haryana",
-    "Ads House marketplace",
-  ],
+  keywords: ["influencer marketplace India", "local influencers Rohtak"],
 });
 
 export default function MarketplacePage() {

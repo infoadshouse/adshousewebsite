@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { insights } from "@/lib/data";
-import { siteConfig } from "@/lib/site";
+import { officeAddressLines, siteConfig } from "@/lib/site";
 
 export const dynamic = "force-static";
 
@@ -19,14 +19,14 @@ export function GET() {
 > ${siteConfig.description}
 
 - Website: ${siteConfig.url}
-- Also known as: Ads House, Adshouse, ads house, Ads House agency, adshouse.in
-- Studio: ${siteConfig.address.locality}, ${siteConfig.address.region}, India
+- Also known as: ${siteConfig.alternateNames.join(", ")}
+- Studio: ${officeAddressLines().join(", ")}
 - Founded: ${siteConfig.foundingYear}
 - Email: ${siteConfig.email}
 - Phone: ${siteConfig.phone}
 
 ## About
-Ads House is a digital marketing and ads agency in Rohtak, Haryana. Searches for adshouse, ads house, ads house agency, ads agency in Rohtak, adshouse ads agency, and digital marketing ads house all refer to this studio.
+Ads House is a digital marketing and ads agency in Rohtak, Haryana. We run SEO, Google Ads, Meta ads, branding, websites, and a local influencer marketplace from one studio.
 
 ## Services
 - Brand building: ${siteConfig.url}/services/brand-building
@@ -45,7 +45,7 @@ Ads House is a digital marketing and ads agency in Rohtak, Haryana. Searches for
 - Ads House agency on marketplace: ${siteConfig.url}/marketplace/agencies/ads-house
 
 ## Primary location
-- Digital marketing agency in Rohtak: ${siteConfig.url}/locations/rohtak
+- Studio in Rohtak: ${siteConfig.url}/locations/rohtak
 
 ## Insights
 ${items}

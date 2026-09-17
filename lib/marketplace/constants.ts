@@ -82,6 +82,7 @@ export const PRICE_RANGES = [
 ] as const;
 
 export const ROHTAK_GEO = { lat: 28.8955, lng: 76.6066 };
+export const DEFAULT_CREATOR_QUERY = "city=Rohtak";
 
 export function slugify(value: string) {
   return (

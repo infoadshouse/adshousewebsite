@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { BrandMark } from "@/components/BrandMark";
 import { HeaderAuth } from "@/components/marketplace/HeaderAuth";
+import { services } from "@/lib/data";
 import { navLinks, siteConfig } from "@/lib/site";
 
 export function Header() {
@@ -85,6 +86,39 @@ export function Header() {
 
           <nav className="hidden items-center gap-3 lg:flex xl:gap-6" aria-label="Primary">
             {navLinks.map((link) => {
+              if (link.href === "/services") {
+                const active = pathname === "/services" || pathname.startsWith("/services/");
+                return (
+                  <div key={link.href} className="relative group">
+                    <Link
+                      href="/services"
+                      className={`relative pb-1 text-[11px] font-medium uppercase tracking-[0.16em] transition-colors xl:text-[12px] xl:tracking-[0.18em] ${
+                        active ? "text-sky-dark" : "text-muted hover:text-sky"
+                      }`}
+                    >
+                      {link.label}
+                      {active ? <span className="absolute inset-x-0 -bottom-0.5 h-px bg-sky" /> : null}
+                    </Link>
+                    <div className="invisible absolute left-0 top-full z-50 pt-3 opacity-0 transition group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+                      <div className="min-w-[240px] rounded-2xl border border-line bg-white p-2 shadow-lg">
+                        {services.map((service) => (
+                          <Link
+                            key={service.slug}
+                            href={`/services/${service.slug}`}
+                            className={`block rounded-xl px-3 py-2 text-sm ${
+                              pathname === `/services/${service.slug}`
+                                ? "bg-surface font-semibold text-sky"
+                                : "text-sky-dark hover:bg-surface"
+                            }`}
+                          >
+                            {service.title}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                );
+              }
               const active =
                 link.href === "/marketplace" ? pathname.startsWith("/marketplace") : pathname === link.href;
               return (
@@ -146,15 +180,27 @@ export function Header() {
               const active =
                 link.href === "/marketplace" ? pathname.startsWith("/marketplace") : pathname === link.href;
               return (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className={`border-b border-line py-4 text-2xl font-semibold tracking-tight ${
-                    active ? "text-sky" : "text-sky-dark"
-                  }`}
-                >
-                  {link.label}
-                </Link>
+                <div key={link.href}>
+                  <Link
+                    href={link.href}
+                    className={`block border-b border-line py-4 text-2xl font-semibold tracking-tight ${
+                      active ? "text-sky" : "text-sky-dark"
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                  {link.href === "/services"
+                    ? services.map((service) => (
+                        <Link
+                          key={service.slug}
+                          href={`/services/${service.slug}`}
+                          className="block border-b border-line py-3 pl-4 text-base text-muted"
+                        >
+                          {service.title}
+                        </Link>
+                      ))
+                    : null}
+                </div>
               );
             })}
           </nav>

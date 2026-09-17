@@ -6,7 +6,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { Breadcrumbs } from "@/components/PageHero";
 import { CtaBand } from "@/components/sections/CtaBand";
 import { ArrowIcon, ButtonLink } from "@/components/ui";
-import { getService, methodology, services } from "@/lib/data";
+import { getService, services } from "@/lib/data";
 import { breadcrumbSchema, faqSchema, serviceSchema } from "@/lib/schema";
 import { createMetadata } from "@/lib/seo";
 import { serviceThemes } from "@/lib/service-themes";
@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: PageProps<"/services/[slug]">
     description: service.seoDescription,
     path: `/services/${service.slug}`,
     image: service.image,
-    keywords: [service.title, `${service.title} India`, `${service.title} Rohtak`, "digital marketing agency India"],
+    keywords: [service.title, `${service.title} India`, "digital marketing agency India"],
   });
 }
 
@@ -40,20 +40,6 @@ export default async function ServiceDetailPage({ params }: PageProps<"/services
           ["performance-marketing", "creative-content", "marketing-strategy"].includes(item.slug),
         )
       : services.filter((item) => item.slug !== service.slug).slice(0, 3);
-
-  const delivery = methodology.map((step) => ({
-    ...step,
-    body:
-      step.title === "Discover"
-        ? `We audit where ${service.title.toLowerCase()} can actually move leads, CAC, ROAS, or revenue — before we recommend spend.`
-        : step.title === "Build"
-          ? `${service.title} is built as part of the growth system, not a silo: offers, funnel, tracking, and brand language stay aligned.`
-          : step.title === "Launch"
-            ? `We put ${service.title.toLowerCase()} live with measurement from day one, so you can see what is working in Indian market conditions.`
-            : step.title === "Optimize"
-              ? `We keep what converts, kill what does not, and report in business language — not vanity metrics.`
-              : `When the engine works, we scale ${service.title.toLowerCase()} into new channels, markets, and product lines.`,
-  }));
 
   return (
     <>
@@ -158,11 +144,10 @@ export default async function ServiceDetailPage({ params }: PageProps<"/services
             Discover. Build. Launch. Optimize. Scale.
           </h2>
           <p className="mt-4 max-w-2xl text-muted">
-            Every {service.title.toLowerCase()} engagement runs through the same growth system, so the work
-            compounds instead of resetting every quarter.
+            This engagement follows a service-specific path so the work compounds instead of resetting every quarter.
           </p>
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
-            {delivery.map((item) => (
+            {service.delivery.map((item) => (
               <article
                 key={item.step}
                 className="rounded-2xl border border-line bg-white p-5 shadow-[0_12px_32px_rgba(15,23,42,0.06)]"

@@ -9,7 +9,7 @@ import { AgencyProfile } from "@/models/AgencyProfile";
 export const dynamic = "force-dynamic";
 
 export const metadata = createMetadata({
-  title: "Ads House on the Marketplace | Run influencer campaigns",
+  title: "Run influencer campaigns on Ads House Marketplace",
   description:
     "Ads House manages influencer campaigns for businesses that don't want to brief, shortlist, and coordinate creators themselves.",
   path: "/marketplace/agencies/ads-house",

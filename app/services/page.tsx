@@ -5,26 +5,19 @@ import { CtaBand } from "@/components/sections/CtaBand";
 import { Methodology } from "@/components/sections/Methodology";
 import { ServicesGrid } from "@/components/sections/ServicesGrid";
 import { ArrowIcon } from "@/components/ui";
-import { faqs, services, teamPrinciples } from "@/lib/data";
+import { serviceHubFaqs, services, teamPrinciples } from "@/lib/data";
 import { breadcrumbSchema, faqSchema, itemListSchema } from "@/lib/schema";
 import { createMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site";
 import Link from "next/link";
 
 export const metadata = createMetadata({
-  title: "Ads House Services | Digital Marketing & Ads Agency",
+  title: "Digital Marketing Services | SEO, Ads, Brand, Web",
   description:
-    "Ads House ads agency services in Rohtak: SEO, Google Ads, Meta ads, brand building, websites, custom software, creative, and the Influencer Marketplace for local creator ads.",
+    "Ads House services from Rohtak: SEO, Google Ads, Meta ads, brand building, websites, custom software, creative, and a local influencer marketplace.",
   path: "/services",
   image: "/images/service-performance.png",
-  keywords: [
-    "Ads House services",
-    "ads agency in Rohtak",
-    "digital marketing services India",
-    "Google Ads agency Rohtak",
-    "advertising services Rohtak",
-    "influencer marketplace Rohtak",
-  ],
+  keywords: ["digital marketing services India", "SEO agency Rohtak", "Google Ads agency Haryana"],
 });
 
 const engagement = [
@@ -54,7 +47,7 @@ export default function ServicesPage() {
             { name: "Home", path: "/" },
             { name: "Services", path: "/services" },
           ]),
-          faqSchema(faqs),
+          faqSchema(serviceHubFaqs),
           itemListSchema({
             name: "Digital marketing services",
             path: "/services",
@@ -67,8 +60,8 @@ export default function ServicesPage() {
       />
       <PageHero
         eyebrow="Services"
-        title="Ads House digital marketing services"
-        description="SEO, ads, brand, web, software, and the Influencer Marketplace — eight capabilities, one growth engine. Ads House, the ads agency in Rohtak, assembles the stack around the number you need to move."
+        title="Eight capabilities. One growth engine."
+        description="SEO, ads, brand, web, software, and the Influencer Marketplace — assembled around the number you need to move, not a menu of packages."
       />
 
       <ServicesGrid />
@@ -133,7 +126,7 @@ export default function ServicesPage() {
         <h2 className="mb-8 font-display text-4xl font-extrabold tracking-tight text-sky-dark md:text-5xl">
           Services, pricing, and how we start.
         </h2>
-        <FaqList />
+        <FaqList items={serviceHubFaqs} />
       </section>
 
       <CtaBand />

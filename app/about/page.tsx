@@ -11,18 +11,10 @@ import { siteConfig } from "@/lib/site";
 export const metadata = createMetadata({
   title: "About Ads House | Ads Agency in Rohtak",
   description:
-    "About Ads House (adshouse.in): a Rohtak ads agency and digital marketing studio. Branding, SEO, Google Ads, websites, and the Influencer Marketplace for local creator ads.",
+    "Ads House is a Rohtak ads agency and digital marketing studio: branding, SEO, Google Ads, websites, and a local influencer marketplace.",
   path: "/about",
   image: "/images/about-team.png",
-  keywords: [
-    "about Ads House",
-    "adshouse",
-    "ads house agency",
-    "advertising agency Rohtak",
-    "ads agency in Rohtak",
-    "digital marketing company India",
-    "influencer marketplace Rohtak",
-  ],
+  keywords: ["about Ads House", "ads agency Rohtak", "digital marketing company India"],
 });
 
 export default function AboutPage() {
@@ -44,8 +36,8 @@ export default function AboutPage() {
       />
       <PageHero
         eyebrow="About Ads House"
-        title="Ads House — ads agency in Rohtak, Haryana"
-        description="Ads House (adshouse.in) is a digital marketing and ads agency based in Rohtak. We exist to make ambitious Indian brands impossible to ignore — and easy to buy from."
+        title="A growth studio based in Rohtak, Haryana"
+        description="Ads House exists to make ambitious Indian brands impossible to ignore — and easy to buy from."
         image="/images/about-team.png"
         imageAlt="Ads House team collaborating in the studio"
       />
@@ -56,9 +48,8 @@ export default function AboutPage() {
           <p className="mt-4 leading-relaxed text-muted">
             We are strategists, designers, media operators, engineers, and filmmakers who refuse to
             treat those jobs as separate companies. Founded in {siteConfig.foundingYear}, Ads House
-            (also searched as Adshouse and ads house) grew from campaign work into a full growth
-            stack because clients kept asking us to fix the website, the funnel, and the product
-            after the ads started working.
+            grew from campaign work into a full growth stack because clients kept asking us to fix
+            the website, the funnel, and the product after the ads started working.
           </p>
           <p className="mt-4 leading-relaxed text-muted">
             Today we serve brands from our Rohtak studio — nationwide campaigns, and the Influencer
