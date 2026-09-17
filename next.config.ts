@@ -43,6 +43,13 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       {
+        source: "/google23e6444971272bf3.html",
+        headers: [
+          { key: "Content-Type", value: "text/html; charset=utf-8" },
+          { key: "X-Robots-Tag", value: "noindex" },
+        ],
+      },
+      {
         source: "/:path*",
         headers: [
           { key: "X-Content-Type-Options", value: "nosniff" },
