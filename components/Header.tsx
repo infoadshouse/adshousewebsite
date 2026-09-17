@@ -272,7 +272,7 @@ function SocialLink({
       href={href}
       aria-label={label}
       target="_blank"
-      rel="noreferrer"
+      rel="me noreferrer"
       className="inline-flex h-9 w-9 items-center justify-center text-sky transition hover:text-sky-dark"
     >
       {children}

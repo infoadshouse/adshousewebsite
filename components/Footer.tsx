@@ -86,17 +86,20 @@ export function Footer() {
             </li>
           </ul>
           <div className="mt-5 flex flex-wrap gap-x-4 gap-y-2 text-sm">
-            <a href={siteConfig.social.instagram} className="text-white/80 hover:text-white" rel="noreferrer" target="_blank">
+            <a href={siteConfig.social.instagram} className="text-white/80 hover:text-white" rel="me noreferrer" target="_blank">
               Instagram
             </a>
-            <a href={siteConfig.social.linkedin} className="text-white/80 hover:text-white" rel="noreferrer" target="_blank">
+            <a href={siteConfig.social.linkedin} className="text-white/80 hover:text-white" rel="me noreferrer" target="_blank">
               LinkedIn
             </a>
-            <a href={siteConfig.social.x} className="text-white/80 hover:text-white" rel="noreferrer" target="_blank">
+            <a href={siteConfig.social.x} className="text-white/80 hover:text-white" rel="me noreferrer" target="_blank">
               X
             </a>
-            <a href={siteConfig.social.threads} className="text-white/80 hover:text-white" rel="noreferrer" target="_blank">
+            <a href={siteConfig.social.threads} className="text-white/80 hover:text-white" rel="me noreferrer" target="_blank">
               Threads
+            </a>
+            <a href={siteConfig.social.youtube} className="text-white/80 hover:text-white" rel="me noreferrer" target="_blank">
+              YouTube
             </a>
           </div>
         </div>

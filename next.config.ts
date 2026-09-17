@@ -50,6 +50,18 @@ const nextConfig: NextConfig = {
         ],
       },
       {
+        source: "/dashboard/:path*",
+        headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }],
+      },
+      {
+        source: "/marketplace/login",
+        headers: [{ key: "X-Robots-Tag", value: "noindex, follow" }],
+      },
+      {
+        source: "/marketplace/register",
+        headers: [{ key: "X-Robots-Tag", value: "noindex, follow" }],
+      },
+      {
         source: "/:path*",
         headers: [
           { key: "X-Content-Type-Options", value: "nosniff" },

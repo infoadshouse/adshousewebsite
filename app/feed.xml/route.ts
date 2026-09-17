@@ -1,5 +1,5 @@
 import { insights } from "@/lib/data";
-import { siteConfig } from "@/lib/site";
+import { canonicalUrl, siteConfig } from "@/lib/site";
 
 export const dynamic = "force-static";
 
@@ -14,7 +14,7 @@ function escapeXml(value: string) {
 export function GET() {
   const items = insights
     .map((post) => {
-      const url = `${siteConfig.url}/insights/${post.slug}`;
+      const url = canonicalUrl(`/insights/${post.slug}`);
       return `    <item>
       <title>${escapeXml(post.title)}</title>
       <link>${url}</link>
@@ -29,8 +29,8 @@ export function GET() {
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>${escapeXml(siteConfig.name)} Insights</title>
-    <link>${siteConfig.url}/insights</link>
-    <atom:link href="${siteConfig.url}/feed.xml" rel="self" type="application/rss+xml"/>
+    <link>${canonicalUrl("/insights")}</link>
+    <atom:link href="${canonicalUrl("/feed.xml")}" rel="self" type="application/rss+xml"/>
     <description>${escapeXml("Digital marketing, SEO, and performance thinking for Indian brands.")}</description>
     <language>en-in</language>
     <lastBuildDate>${new Date(siteConfig.contentUpdated).toUTCString()}</lastBuildDate>
