@@ -21,13 +21,12 @@ export function AboutTeaser() {
           <div>
             <SectionEyebrow>The agency</SectionEyebrow>
             <h2 className="font-display text-4xl font-extrabold tracking-tight text-sky-dark md:text-5xl">
-              Ads House: built in Rohtak. Obsessed with growth.
+              Built in Rohtak. Hired across India.
             </h2>
             <p className="mt-5 text-lg leading-relaxed text-muted">
-              Ads House exists because most agencies sell activity. We sell outcomes. We started as
-              a Rohtak ads agency for brands that were tired of pretty campaigns with no commercial
-              spine — and grew into a pan-India growth partner covering brand, media, web, and
-              product.
+              Ads House exists because most agencies sell activity. We sell outcomes. We work with
+              Indian brands nationwide — brand, media, web, and product as one team — from a single
+              studio in Rohtak, Haryana.
             </p>
             <p className="mt-4 text-lg leading-relaxed text-muted">
               We believe attention is rented. Preference is owned. Technology is how you scale both.

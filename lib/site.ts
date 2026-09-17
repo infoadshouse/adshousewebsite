@@ -3,7 +3,7 @@ export const siteConfig = {
   legalName: "Ads House",
   tagline: "Growth. By Design.",
   description:
-    "Ads House (adshouse.in) is a digital marketing and ads agency in Rohtak, Haryana. SEO, Google Ads, Meta ads, branding, websites, software, and an Influencer Marketplace for Indian brands.",
+    "Ads House is a digital marketing and ads agency in India. SEO, Google Ads, Meta ads, branding, websites, software, and an Influencer Marketplace — from our studio in Rohtak, Haryana.",
   url: "https://www.adshouse.in",
   domain: "adshouse.in",
   locale: "en_IN",
@@ -44,24 +44,15 @@ export const siteConfig = {
   cities: ["Rohtak"],
   keywords: [
     "Ads House",
-    "adshouse",
-    "ads house",
-    "adshouse.in",
-    "ads house agency",
-    "ads agency in Rohtak",
-    "adshouse ads agency",
-    "digital marketing ads house",
-    "digital marketing agency in Rohtak",
-    "advertising agency Rohtak",
-    "SEO agency Rohtak",
-    "Google Ads agency Rohtak",
-    "Meta ads agency Rohtak",
-    "digital marketing company Haryana",
+    "ads agency in India",
+    "digital marketing agency in India",
     "performance marketing agency India",
+    "SEO agency India",
+    "Google Ads agency India",
   ],
 } as const;
 
-export const defaultTitle = "Ads House | Ads Agency in Rohtak | Digital Marketing";
+export const defaultTitle = "Ads House | Ads Agency in India | Digital Marketing";
 
 export function postalAddress() {
   const { street, locality, region, postalCode, country } = siteConfig.address;

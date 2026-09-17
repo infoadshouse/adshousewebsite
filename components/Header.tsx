@@ -80,7 +80,7 @@ export function Header() {
         </div>
 
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-3 px-4 md:h-20 md:px-8">
-          <Link href="/" className="relative z-50 min-w-0" aria-label="Ads House home — ads agency in Rohtak">
+          <Link href="/" className="relative z-50 min-w-0" aria-label="Ads House home — ads agency in India">
             <BrandMark priority />
           </Link>
 

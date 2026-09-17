@@ -8,13 +8,13 @@ export function Hero() {
       <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-10 px-5 pb-10 md:px-8 md:pb-16 lg:grid-cols-[1.05fr_0.95fr] lg:gap-8 lg:pb-20">
         <div>
           <p className="mb-4 text-[11px] font-bold uppercase tracking-[0.18em] text-sky">
-            Digital marketing studio · Rohtak, India
+            Studio in Rohtak · Work across India
           </p>
           <p className="mb-4 font-display text-xl font-extrabold tracking-[0.16em] text-sky-dark sm:text-2xl lg:text-3xl">
             Ads House
           </p>
           <h1 className="font-display text-[2.15rem] font-extrabold leading-[1.08] tracking-tight text-sky-dark sm:text-5xl lg:text-[4.25rem]">
-            Ads agency in Rohtak
+            Digital marketing & ads agency in India
           </h1>
           <p className="mt-5 font-display text-2xl font-extrabold leading-tight tracking-tight text-sky-dark sm:text-3xl lg:text-4xl">
             We Build <span className="text-gradient">Brands.</span>
@@ -45,7 +45,8 @@ export function Hero() {
           </p>
           <p className="mt-7 max-w-xl text-base leading-relaxed text-sky-dark md:text-lg">
             We run SEO, Google Ads, Meta ads, branding, and high-performance websites for Indian
-            businesses — from local Haryana companies to brands across India.
+            brands nationwide. The team sits in Rohtak, Haryana — in-person when you want it, metro-grade
+            work everywhere else.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
             <ButtonLink href="/contact" className="w-full sm:w-auto">
@@ -94,7 +95,7 @@ export function Hero() {
         {/* <div className="relative mx-auto w-full max-w-[560px] lg:max-w-none">
           <Image
             src="/images/heroimage.png"
-            alt="Ads House ads agency in Rohtak — brand strategy, SEO, Google Ads, and websites"
+            alt="Ads House ads agency in India — brand strategy, SEO, Google Ads, and websites"
             width={1200}
             height={1200}
             priority

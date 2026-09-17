@@ -2,6 +2,10 @@
 
 import { useEffect, useRef, useState } from "react";
 
+function formatValue(value: number, decimals: number) {
+  return value.toFixed(decimals);
+}
+
 export function AnimatedCounter({
   value,
   prefix = "",
@@ -13,12 +17,18 @@ export function AnimatedCounter({
   suffix?: string;
   decimals?: number;
 }) {
+  const formatted = formatValue(value, decimals);
   const ref = useRef<HTMLSpanElement>(null);
-  const [display, setDisplay] = useState("0");
+  const [display, setDisplay] = useState(formatted);
 
   useEffect(() => {
     const node = ref.current;
     if (!node) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setDisplay(formatted);
+      return;
+    }
+
     let frame = 0;
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -29,8 +39,7 @@ export function AnimatedCounter({
         const tick = (now: number) => {
           const t = Math.min((now - start) / duration, 1);
           const eased = 1 - Math.pow(1 - t, 3);
-          const current = value * eased;
-          setDisplay(current.toFixed(decimals));
+          setDisplay(formatValue(value * eased, decimals));
           if (t < 1) frame = requestAnimationFrame(tick);
         };
         frame = requestAnimationFrame(tick);
@@ -42,7 +51,7 @@ export function AnimatedCounter({
       observer.disconnect();
       cancelAnimationFrame(frame);
     };
-  }, [value, decimals]);
+  }, [value, decimals, formatted]);
 
   return (
     <span ref={ref}>

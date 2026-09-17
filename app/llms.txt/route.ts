@@ -26,7 +26,7 @@ export function GET() {
 - Phone: ${siteConfig.phone}
 
 ## About
-Ads House is a digital marketing and ads agency in Rohtak, Haryana. We run SEO, Google Ads, Meta ads, branding, websites, and a local influencer marketplace from one studio.
+Ads House is a digital marketing and ads agency in India. We run SEO, Google Ads, Meta ads, branding, websites, and an influencer marketplace. The studio is in Rohtak, Haryana; clients are nationwide.
 
 ## Services
 - Brand building: ${siteConfig.url}/services/brand-building

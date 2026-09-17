@@ -9,12 +9,12 @@ import { createMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site";
 
 export const metadata = createMetadata({
-  title: "About Ads House | Ads Agency in Rohtak",
+  title: "About Ads House | Ads Agency in India",
   description:
-    "Ads House is a Rohtak ads agency and digital marketing studio: branding, SEO, Google Ads, websites, and a local influencer marketplace.",
+    "Ads House is a digital marketing and ads agency in India: branding, SEO, Google Ads, websites, and an influencer marketplace. Studio in Rohtak, Haryana.",
   path: "/about",
   image: "/images/about-team.png",
-  keywords: ["about Ads House", "ads agency Rohtak", "digital marketing company India"],
+  keywords: ["about Ads House", "ads agency in India", "digital marketing company India"],
 });
 
 export default function AboutPage() {
@@ -28,7 +28,7 @@ export default function AboutPage() {
           ]),
           webPageSchema({
             name: "About Ads House",
-            description: "Ads House is an ads agency and digital marketing studio in Rohtak, Haryana.",
+            description: "Ads House is an ads agency and digital marketing studio in India, based in Rohtak, Haryana.",
             path: "/about",
             type: "AboutPage",
           }),
@@ -36,7 +36,7 @@ export default function AboutPage() {
       />
       <PageHero
         eyebrow="About Ads House"
-        title="A growth studio based in Rohtak, Haryana"
+        title="A pan-India growth studio. Office in Rohtak."
         description="Ads House exists to make ambitious Indian brands impossible to ignore — and easy to buy from."
         image="/images/about-team.png"
         imageAlt="Ads House team collaborating in the studio"
@@ -105,8 +105,8 @@ export default function AboutPage() {
       <section className="mx-auto max-w-7xl px-5 pb-20 md:px-8">
         <h2 className="font-display text-3xl font-bold text-sky-dark md:text-4xl">Where we work</h2>
           <p className="mt-4 max-w-2xl text-muted">
-            Rohtak is our only office. Explore the studio where Ads House runs digital marketing, SEO,
-            advertising programmes, and the creator marketplace.
+            Clients are across India. The only office is in Rohtak — the studio that runs SEO, ads,
+            brand, and the creator marketplace.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link

@@ -179,17 +179,17 @@ export const services: Service[] = [
     h1: "Ads Agency for Google Ads & Meta in India",
     seoTitle: "Google Ads & Meta Ads Agency in India",
     seoDescription:
-      "Google Ads, Meta ads, and conversion campaigns from our Rohtak studio — planned around CAC, ROAS, and revenue.",
+      "Google Ads, Meta ads, and social media campaigns for Indian brands — planned around CAC, ROAS, and revenue.",
     intro:
-      "India is one of the most competitive paid-media markets in the world. Cheap traffic is easy. Profitable traffic is a craft. We plan, buy, and creative-test campaigns around unit economics — CAC, ROAS, LTV — so every rupee has a job.",
+      "India is one of the most competitive paid-media markets in the world. Cheap traffic is easy. Profitable traffic is a craft. We plan, buy, and creative-test Google Ads, Meta ads, and social campaigns around unit economics — CAC, ROAS, LTV — so every rupee has a job.",
     points: [
       {
         title: "Google Ads & Performance Max",
         body: "Search, Shopping, YouTube, and Demand Gen built around high-intent Indian queries and clean conversion tracking.",
       },
       {
-        title: "Meta & quick-commerce ads",
-        body: "Creative-led acquisition on Instagram, Facebook, and emerging commerce placements — tested weekly, not quarterly.",
+        title: "Meta ads & social media marketing",
+        body: "Instagram, Facebook, and Reels acquisition plus always-on social creative — tested weekly, not a posting package. This is the social media marketing work Indian brands usually mean when they ask for SMM.",
       },
       {
         title: "Funnel & landing pages",
@@ -212,6 +212,10 @@ export const services: Service[] = [
       {
         q: "Do you also rebuild landing pages?",
         a: "Yes. Weak pages waste media. Funnel and landing-page work sits inside the same engagement as the ads.",
+      },
+      {
+        q: "Do you run social media marketing, or only Google Ads?",
+        a: "Both. Meta ads, Instagram/Facebook creative, and social campaigns sit in the same performance programme as Google Ads. We do not sell a 30-posts package with no conversion job.",
       },
     ],
     delivery: [
@@ -874,11 +878,15 @@ export const insights: Insight[] = [
 export const faqs = [
   {
     q: "What is Ads House?",
-    a: "Ads House is a digital marketing and ads agency in Rohtak, Haryana. We run SEO, Google Ads, Meta ads, branding, websites, and a local influencer marketplace from one studio.",
+    a: "Ads House is a digital marketing and ads agency in India. We run SEO, Google Ads, Meta ads, branding, websites, and an influencer marketplace. The studio is in Rohtak, Haryana.",
   },
   {
     q: "What services do you offer?",
     a: "Brand building, SEO, performance marketing, marketing strategy, website development, custom software, creative & content, and the Influencer Marketplace. We operate as an end-to-end growth partner, not a single-channel vendor.",
+  },
+  {
+    q: "Who do you work with?",
+    a: "Indian brands nationwide — D2C, services, startups, and founder-led companies. In-person briefings happen in Rohtak when useful; campaigns run across India.",
   },
   {
     q: "What is the Influencer Marketplace?",
@@ -890,15 +898,15 @@ export const faqs = [
   },
   {
     q: "Do you work with startups and D2C brands?",
-    a: "Yes. A large share of our work is D2C, fintech, edtech, and founder-led companies — including national campaigns run from Rohtak.",
+    a: "Yes. A large share of our work is D2C, fintech, edtech, and founder-led companies — including national campaigns.",
   },
   {
     q: "Can you build an SEO-optimised website?",
     a: "Yes. We build Next.js websites with server-side rendering, schema markup, Core Web Vitals, and content models designed to rank on Google India.",
   },
   {
-    q: "Which cities do you serve?",
-    a: "Our office is in Rohtak, Haryana. From this studio we run campaigns for local businesses and for brands across India.",
+    q: "Where are you based?",
+    a: "The office is in Rohtak, Haryana. From this studio we run work for brands across India.",
   },
   {
     q: "How soon can we start a project?",

@@ -22,11 +22,11 @@ import { defaultTitle } from "@/lib/site";
 export const metadata = createMetadata({
   title: defaultTitle,
   description:
-    "Ads House is a digital marketing and ads agency in Rohtak, Haryana. SEO, Google Ads, Meta ads, branding, websites, and a local influencer marketplace.",
+    "Ads House is a digital marketing and ads agency in India. SEO, Google Ads, Meta ads, branding, websites, and an influencer marketplace — from our studio in Rohtak.",
   path: "/",
   image: "/images/hero-visual.png",
   absolute: true,
-  keywords: ["Ads House", "ads agency in Rohtak", "digital marketing agency Rohtak"],
+  keywords: ["Ads House", "ads agency in India", "digital marketing agency in India"],
 });
 
 export default function HomePage() {
@@ -38,7 +38,7 @@ export default function HomePage() {
           webPageSchema({
             name: defaultTitle,
             description:
-              "Ads House is a digital marketing and ads agency in Rohtak, Haryana — SEO, Google Ads, branding, websites, and a local Influencer Marketplace.",
+              "Ads House is a digital marketing and ads agency in India — SEO, Google Ads, branding, websites, and an Influencer Marketplace. Studio in Rohtak, Haryana.",
             path: "/",
           }),
           faqSchema(faqs),
@@ -46,6 +46,13 @@ export default function HomePage() {
       />
       <Hero />
       <TrustBar />
+      <section className="mx-auto max-w-7xl px-5 pb-4 md:px-8">
+        <p className="max-w-3xl text-base leading-relaxed text-muted md:text-lg">
+          <span className="font-semibold text-sky-dark">Who we serve.</span> Indian brands
+          nationwide — D2C, services, and founder-led companies. In-person from our Rohtak studio
+          when you want the team in the room.
+        </p>
+      </section>
       <ServicesGrid />
       <FeaturedWork />
       <Methodology />

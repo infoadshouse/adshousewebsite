@@ -7,12 +7,12 @@ import { officeAddressLines, siteConfig } from "@/lib/site";
 import Link from "next/link";
 
 export const metadata = createMetadata({
-  title: "Contact Ads House | Ads Agency in Rohtak",
+  title: "Contact Ads House | Ads Agency in India",
   description:
-    "Talk to Ads House in Rohtak about SEO, Google Ads, Meta ads, branding, websites, or influencer campaigns. We reply within one business day.",
+    "Talk to Ads House about SEO, Google Ads, Meta ads, branding, websites, or influencer campaigns for Indian brands. Studio in Rohtak — we reply within one business day.",
   path: "/contact",
   image: "/images/cta-studio.png",
-  keywords: ["contact Ads House", "ads agency Rohtak", "hire digital marketing agency India"],
+  keywords: ["contact Ads House", "hire digital marketing agency India"],
 });
 
 const mapSrc = `https://maps.google.com/maps?q=${siteConfig.geo.latitude},${siteConfig.geo.longitude}&z=12&output=embed`;
@@ -29,7 +29,7 @@ export default function ContactPage() {
           ]),
           webPageSchema({
             name: "Contact Ads House",
-            description: "Contact Ads House, the ads agency and digital marketing studio in Rohtak, Haryana.",
+            description: "Contact Ads House, a digital marketing and ads agency in India. Studio in Rohtak, Haryana.",
             path: "/contact",
             type: "ContactPage",
           }),
@@ -37,8 +37,8 @@ export default function ContactPage() {
       />
       <PageHero
         eyebrow="Contact Ads House"
-        title="Start a project with the Rohtak studio"
-        description="Share the brand, the market, and the number you want to move. A strategist replies within one business day — usually sooner."
+        title="Start a project with Ads House"
+        description="Share the brand, the market, and the number you want to move — anywhere in India. A strategist replies within one business day."
         image="/images/cta-studio.png"
         imageAlt="Ads House studio in Rohtak ready for a new campaign briefing"
       />

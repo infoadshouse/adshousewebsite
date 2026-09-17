@@ -11,8 +11,8 @@ export function Footer() {
         <div>
           <BrandMark variant="light" />
           <p className="mt-5 max-w-xs text-sm leading-relaxed text-white/80">
-            Ads House (adshouse.in) is a digital marketing and ads agency in Rohtak, Haryana. SEO,
-            Google Ads, branding, websites, and a local Influencer Marketplace that turns attention into revenue.
+            Ads House is a digital marketing and ads agency in India. SEO, Google Ads, branding,
+            websites, and an Influencer Marketplace — from our studio in Rohtak, Haryana.
           </p>
           <p className="mt-4 text-sm text-white">
             {officeAddressLines().join(", ")}
