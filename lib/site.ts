@@ -65,6 +65,12 @@ export function canonicalUrl(path = "/"): string {
   return `${origin}${path.startsWith("/") ? path : `/${path}`}`;
 }
 
+export function absoluteMediaUrl(path: string) {
+  if (!path) return `${siteConfig.url}/images/hero-visual.png`;
+  if (path.startsWith("http://") || path.startsWith("https://")) return path;
+  return canonicalUrl(path);
+}
+
 export function googleMapsSearchUrl() {
   return `https://www.google.com/maps/search/?api=1&query=${siteConfig.geo.latitude},${siteConfig.geo.longitude}`;
 }

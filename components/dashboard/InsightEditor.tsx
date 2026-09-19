@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { CmsImageField } from "@/components/dashboard/CmsImageField";
+import { CmsMediaField } from "@/components/dashboard/CmsImageField";
 import { api } from "@/lib/marketplace/client";
 
 type InsightForm = {
@@ -72,7 +72,7 @@ export function InsightEditor({ initial }: { initial?: InsightForm | null }) {
       <Field label="Read time" value={form.readTime} onChange={(readTime) => setForm({ ...form, readTime })} placeholder="7 min" />
       <Area label="Excerpt" value={form.excerpt} onChange={(excerpt) => setForm({ ...form, excerpt })} />
       <Area label="SEO description" value={form.seoDescription} onChange={(seoDescription) => setForm({ ...form, seoDescription })} />
-      <CmsImageField label="Cover image" value={form.image} onChange={(image) => setForm({ ...form, image })} onError={setError} />
+      <CmsMediaField label="Cover image or video" value={form.image} onChange={(image) => setForm({ ...form, image })} onError={setError} />
       <Area
         label="Body (blank line between paragraphs)"
         value={form.content}

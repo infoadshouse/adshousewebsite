@@ -1,6 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
 import { Reveal } from "@/components/Reveal";
+import { MediaCover } from "@/components/MediaCover";
 import { ButtonLink, SectionEyebrow } from "@/components/ui";
 import { listCaseStudies } from "@/lib/content";
 import { siteConfig } from "@/lib/site";
@@ -36,12 +36,10 @@ export async function FeaturedWork({ limit = 3 }: { limit?: number }) {
                 }`}
               >
                 <div className={`img-zoom relative min-h-[220px] ${index === 0 ? "lg:min-h-[520px]" : "lg:min-h-[380px]"}`}>
-                  <Image
+                  <MediaCover
                     src={item.image}
                     alt={`${item.client} campaign by Ads House — ${item.industry} brand in ${item.location}`}
-                    fill
                     sizes="(max-width: 1024px) 100vw, 60vw"
-                    className="object-cover"
                   />
                 </div>
                 <div className="flex flex-col justify-center p-5 sm:p-8 md:p-12">

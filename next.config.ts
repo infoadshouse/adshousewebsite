@@ -8,6 +8,16 @@ const nextConfig: NextConfig = {
     formats: ["image/avif", "image/webp"],
     deviceSizes: [640, 768, 1024, 1280, 1536, 1920],
     imageSizes: [64, 96, 128, 256, 384],
+    remotePatterns: [
+      { protocol: "https", hostname: "images.unsplash.com", pathname: "/**" },
+      { protocol: "https", hostname: "plus.unsplash.com", pathname: "/**" },
+      { protocol: "https", hostname: "*.s3.amazonaws.com", pathname: "/**" },
+      { protocol: "https", hostname: "*.s3.*.amazonaws.com", pathname: "/**" },
+      { protocol: "https", hostname: "s3.*.amazonaws.com", pathname: "/**" },
+      ...(process.env.S3_PUBLIC_HOST
+        ? [{ protocol: "https" as const, hostname: process.env.S3_PUBLIC_HOST, pathname: "/**" }]
+        : []),
+    ],
   },
   async redirects() {
     const retiredOffices = [

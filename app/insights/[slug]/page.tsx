@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { MediaCover } from "@/components/MediaCover";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { JsonLd } from "@/components/JsonLd";
@@ -76,7 +76,7 @@ export default async function InsightArticlePage({ params }: PageProps<"/insight
           </p>
         </header>
         <div className="img-zoom relative mt-10 h-[280px] overflow-hidden rounded-[1.8rem] border border-line shadow-sm md:h-[400px]">
-          <Image src={post.image} alt={post.title} fill priority className="object-cover" sizes="100vw" />
+          <MediaCover src={post.image} alt={post.title} sizes="100vw" priority />
         </div>
         <div className="mt-12 space-y-6 text-lg leading-relaxed text-muted">
           {post.content.map((paragraph) => (

@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { MediaCover } from "@/components/MediaCover";
 import Link from "next/link";
 import { JsonLd } from "@/components/JsonLd";
 import { PageHero } from "@/components/PageHero";
@@ -54,7 +54,7 @@ export default async function InsightsPage() {
             className="group overflow-hidden rounded-[1.6rem] border border-line bg-card shadow-sm"
           >
             <div className="img-zoom relative h-56">
-              <Image src={post.image} alt={post.title} fill className="object-cover" sizes="(max-width: 1024px) 100vw, 33vw" />
+              <MediaCover src={post.image} alt={post.title} sizes="(max-width: 1024px) 100vw, 33vw" />
             </div>
             <div className="p-6">
               <p className="text-xs uppercase tracking-[0.2em] text-sky">

@@ -1,4 +1,4 @@
-import { canonicalUrl, googleMapsSearchUrl, postalAddress, siteConfig } from "./site";
+import { canonicalUrl, googleMapsSearchUrl, postalAddress, siteConfig, absoluteMediaUrl } from "./site";
 
 export function brandSchema() {
   return {
@@ -226,7 +226,7 @@ export function serviceSchema(input: {
     "@id": `${canonicalUrl(input.path)}#service`,
     name: input.name,
     description: input.description,
-    image: `${siteConfig.url}${input.image}`,
+    image: absoluteMediaUrl(input.image),
     url: canonicalUrl(input.path),
     provider: { "@id": `${siteConfig.url}/#organization` },
     areaServed: { "@type": "Country", name: "India" },
@@ -247,7 +247,7 @@ export function articleSchema(input: {
     "@type": "BlogPosting",
     headline: input.title,
     description: input.description,
-    image: `${siteConfig.url}${input.image}`,
+    image: absoluteMediaUrl(input.image),
     datePublished: input.date,
     dateModified: input.modified || input.date,
     author: {

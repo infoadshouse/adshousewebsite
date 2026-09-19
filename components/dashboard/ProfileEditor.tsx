@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { api } from "@/lib/marketplace/client";
+import { uploadMedia } from "@/lib/marketplace/upload";
 import {
   AVAILABILITY,
   BUSINESS_CATEGORIES,
@@ -39,13 +40,9 @@ export function ProfileEditor({ role }: { role: Role }) {
   }, [endpoint]);
 
   async function upload(file: File) {
-    const body = new FormData();
-    body.append("file", file);
-    const res = await fetch("/api/marketplace/upload", { method: "POST", body });
-    const data = await res.json();
-    if (!data.ok) throw new Error(data.error || "Upload failed");
-    setPhoto(data.url);
-    setForm((prev) => ({ ...prev, photo: data.url }));
+    const url = await uploadMedia(file);
+    setPhoto(url);
+    setForm((prev) => ({ ...prev, photo: url }));
   }
 
   async function save(e: React.FormEvent) {

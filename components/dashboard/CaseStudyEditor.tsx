@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { CmsImageField } from "@/components/dashboard/CmsImageField";
+import { CmsMediaField } from "@/components/dashboard/CmsImageField";
 import { api } from "@/lib/marketplace/client";
 
 type CaseForm = {
@@ -92,7 +92,7 @@ export function CaseStudyEditor({ initial }: { initial?: CaseForm | null }) {
       <Area label="Result" value={form.result} onChange={(result) => setForm({ ...form, result })} />
       <Field label="Services (comma separated)" value={form.services} onChange={(services) => setForm({ ...form, services })} placeholder="Brand Building, SEO" />
       <Area label="Stats (one per line: Label|Value)" value={form.stats} onChange={(stats) => setForm({ ...form, stats })} />
-      <CmsImageField label="Cover image" value={form.image} onChange={(image) => setForm({ ...form, image })} onError={setError} />
+      <CmsMediaField label="Cover image or video" value={form.image} onChange={(image) => setForm({ ...form, image })} onError={setError} />
       <Area label="Story (blank line between paragraphs)" value={form.story} onChange={(story) => setForm({ ...form, story })} rows={10} />
       <label className="flex items-center gap-2 text-sm">
         <input type="checkbox" checked={form.published} onChange={(e) => setForm({ ...form, published: e.target.checked })} />

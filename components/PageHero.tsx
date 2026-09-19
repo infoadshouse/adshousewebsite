@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import { MediaCover } from "@/components/MediaCover";
 
 export function PageHero({
   eyebrow,
@@ -28,7 +28,7 @@ export function PageHero({
         <p className="mt-5 max-w-2xl text-lg leading-relaxed text-muted">{description}</p>
         {image ? (
           <div className="img-zoom relative mt-10 h-[240px] overflow-hidden rounded-[2rem] border border-line shadow-lg md:h-[420px]">
-            <Image src={image} alt={imageAlt || title} fill priority className="object-cover" sizes="100vw" />
+            <MediaCover src={image} alt={imageAlt || title} sizes="100vw" priority />
           </div>
         ) : null}
       </div>

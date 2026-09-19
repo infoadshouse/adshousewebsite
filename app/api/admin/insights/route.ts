@@ -6,6 +6,7 @@ import {
   paragraphsFromText,
   uniqueContentSlug,
 } from "@/lib/content";
+import { MEDIA_URL_MAX } from "@/lib/media";
 import { asString, isAuthUser, jsonError } from "@/lib/marketplace/api";
 import { Insight } from "@/models/Insight";
 
@@ -41,7 +42,7 @@ export async function POST(request: Request) {
     date: asString(data.date, 12) || new Date().toISOString().slice(0, 10),
     readTime: asString(data.readTime, 20) || estimateReadTime(content),
     category: asString(data.category, 40) || "Insights",
-    image: asString(data.image, 300) || "/images/insight-seo.png",
+    image: asString(data.image, MEDIA_URL_MAX) || "/images/insight-seo.png",
     content,
     published: data.published !== false,
   });

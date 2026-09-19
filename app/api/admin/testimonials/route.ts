@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { requireAdminApi } from "@/lib/admin";
 import { listTestimonials } from "@/lib/content";
+import { MEDIA_URL_MAX } from "@/lib/media";
 import { asNumber, asString, isAuthUser, jsonError } from "@/lib/marketplace/api";
 import { Testimonial } from "@/models/Testimonial";
 
@@ -29,7 +30,7 @@ export async function POST(request: Request) {
     location: asString(data.location, 80),
     quote,
     result: asString(data.result, 80),
-    image: asString(data.image, 300) || "/images/testimonial-1.png",
+    image: asString(data.image, MEDIA_URL_MAX) || "/images/testimonial-1.png",
     sortOrder: asNumber(data.sortOrder, 0),
     published: data.published !== false,
   });

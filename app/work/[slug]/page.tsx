@@ -1,6 +1,6 @@
-import Image from "next/image";
 import { notFound } from "next/navigation";
 import { JsonLd } from "@/components/JsonLd";
+import { MediaCover } from "@/components/MediaCover";
 import { Breadcrumbs } from "@/components/PageHero";
 import { CtaBand } from "@/components/sections/CtaBand";
 import Link from "next/link";
@@ -9,7 +9,7 @@ import { getCaseStudyBySlug } from "@/lib/content";
 import { services } from "@/lib/data";
 import { breadcrumbSchema } from "@/lib/schema";
 import { createMetadata } from "@/lib/seo";
-import { siteConfig } from "@/lib/site";
+import { absoluteMediaUrl, siteConfig } from "@/lib/site";
 
 export const dynamic = "force-dynamic";
 
@@ -44,7 +44,7 @@ export default async function CaseStudyPage({ params }: PageProps<"/work/[slug]"
             "@type": "CreativeWork",
             name: item.title,
             about: item.client,
-            image: `${siteConfig.url}${item.image}`,
+            image: absoluteMediaUrl(item.image),
             url: `${siteConfig.url}/work/${item.slug}`,
             creator: { "@id": `${siteConfig.url}/#organization` },
           },
@@ -73,13 +73,11 @@ export default async function CaseStudyPage({ params }: PageProps<"/work/[slug]"
         </header>
 
         <div className="img-zoom relative mt-10 h-[280px] overflow-hidden rounded-[2rem] border border-line shadow-sm md:h-[520px]">
-          <Image
+          <MediaCover
             src={item.image}
             alt={`${item.client} campaign visual produced by Ads House`}
-            fill
-            priority
-            className="object-cover"
             sizes="100vw"
+            priority
           />
         </div>
 

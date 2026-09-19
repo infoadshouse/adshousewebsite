@@ -1,3 +1,5 @@
+import { unsplashPortraits, unsplashWork } from "@/lib/unsplash";
+
 export type Service = {
   slug: string;
   title: string;
@@ -578,7 +580,7 @@ export const caseStudies: CaseStudy[] = [
     result: "Store appointments more than doubled in 90 days without adding a second outlet.",
     metric: "2.1x",
     metricLabel: "store appointments",
-    image: "/images/work-fashion.png",
+    image: unsplashWork.fashion,
     year: "2026",
     services: ["Brand Building", "Web Development", "Performance Marketing"],
     stats: [
@@ -605,7 +607,7 @@ export const caseStudies: CaseStudy[] = [
     result: "New-patient enquiries up 64% with a landing page the receptionist could actually use.",
     metric: "+64%",
     metricLabel: "new-patient enquiries",
-    image: "/images/work-skincare.png",
+    image: unsplashWork.dental,
     year: "2026",
     services: ["Web Development", "Performance Marketing", "Marketing Strategy"],
     stats: [
@@ -632,7 +634,7 @@ export const caseStudies: CaseStudy[] = [
     result: "Repeat orders reached 38% while discount days dropped.",
     metric: "38%",
     metricLabel: "repeat order rate",
-    image: "/images/work-food.png",
+    image: unsplashWork.kitchen,
     year: "2025",
     services: ["Performance Marketing", "Creative & Content", "Brand Building"],
     stats: [
@@ -659,7 +661,7 @@ export const caseStudies: CaseStudy[] = [
     result: "About 41 qualified site visits a month from search and local ads.",
     metric: "41",
     metricLabel: "site visits / month",
-    image: "/images/work-fintech.png",
+    image: unsplashWork.building,
     year: "2026",
     services: ["Web Development", "Performance Marketing", "Marketing Strategy"],
     stats: [
@@ -686,7 +688,7 @@ export const caseStudies: CaseStudy[] = [
     result: "Counselling form fills up 72% in the peak window without doubling spend.",
     metric: "+72%",
     metricLabel: "counselling form fills",
-    image: "/images/work-edtech.png",
+    image: unsplashWork.coaching,
     year: "2025",
     services: ["Performance Marketing", "Web Development", "Creative & Content"],
     stats: [
@@ -713,7 +715,7 @@ export const caseStudies: CaseStudy[] = [
     result: "Weekend covers up 29% with creator posts only when the pass could take them.",
     metric: "+29%",
     metricLabel: "weekend covers",
-    image: "/images/work-food.png",
+    image: unsplashWork.restaurant,
     year: "2026",
     services: ["Creative & Content", "Performance Marketing", "Marketing Strategy"],
     stats: [
@@ -740,7 +742,7 @@ export const caseStudies: CaseStudy[] = [
     result: "Monthly revenue up 54% with fewer discount days.",
     metric: "+54%",
     metricLabel: "monthly revenue",
-    image: "/images/work-skincare.png",
+    image: unsplashWork.skincare,
     year: "2025",
     services: ["Brand Building", "Performance Marketing", "Creative & Content"],
     stats: [
@@ -767,7 +769,7 @@ export const caseStudies: CaseStudy[] = [
     result: "About 18 extra test-drives a month from search and listings.",
     metric: "18",
     metricLabel: "extra test-drives / month",
-    image: "/images/work-fintech.png",
+    image: unsplashWork.cars,
     year: "2026",
     services: ["Web Development", "Performance Marketing", "Creative & Content"],
     stats: [
@@ -794,7 +796,7 @@ export const caseStudies: CaseStudy[] = [
     result: "3.8x blended ROAS on Meta after the funnel stopped leaking.",
     metric: "3.8x",
     metricLabel: "blended Meta ROAS",
-    image: "/images/work-edtech.png",
+    image: unsplashWork.stationery,
     year: "2025",
     services: ["Performance Marketing", "Web Development", "Creative & Content"],
     stats: [
@@ -821,7 +823,7 @@ export const caseStudies: CaseStudy[] = [
     result: "47 trial bookings in the first month of local ads.",
     metric: "47",
     metricLabel: "trial bookings in month one",
-    image: "/images/work-skincare.png",
+    image: unsplashWork.gym,
     year: "2026",
     services: ["Performance Marketing", "Web Development", "Marketing Strategy"],
     stats: [
@@ -848,7 +850,7 @@ export const caseStudies: CaseStudy[] = [
     result: "Nine inbound project briefs a quarter from people who already understood the style.",
     metric: "9",
     metricLabel: "inbound briefs / quarter",
-    image: "/images/work-fashion.png",
+    image: unsplashWork.interior,
     year: "2025",
     services: ["Brand Building", "Web Development", "Marketing Strategy"],
     stats: [
@@ -875,7 +877,7 @@ export const caseStudies: CaseStudy[] = [
     result: "14 sales-ready RFQs in 60 days.",
     metric: "14",
     metricLabel: "sales-ready RFQs in 60 days",
-    image: "/images/work-fintech.png",
+    image: unsplashWork.freight,
     year: "2026",
     services: ["Marketing Strategy", "Web Development", "Performance Marketing"],
     stats: [
@@ -902,7 +904,7 @@ export const caseStudies: CaseStudy[] = [
     result: "First-time checkout rate up 81% with fewer returns from wrong sizes.",
     metric: "+81%",
     metricLabel: "first-time checkout rate",
-    image: "/images/work-fashion.png",
+    image: unsplashWork.kidswear,
     year: "2025",
     services: ["Creative & Content", "Performance Marketing", "Web Development"],
     stats: [
@@ -929,7 +931,7 @@ export const caseStudies: CaseStudy[] = [
     result: "Retained client enquiries up 33%, with callers who already knew the service.",
     metric: "+33%",
     metricLabel: "retained client enquiries",
-    image: "/images/work-edtech.png",
+    image: unsplashWork.office,
     year: "2026",
     services: ["Web Development", "Performance Marketing", "Brand Building"],
     stats: [
@@ -956,7 +958,7 @@ export const caseStudies: CaseStudy[] = [
     result: "22 new retail counters in four months without a national blitz.",
     metric: "22",
     metricLabel: "new retail counters in 4 months",
-    image: "/images/work-food.png",
+    image: unsplashWork.drinks,
     year: "2025",
     services: ["Brand Building", "Performance Marketing", "Creative & Content"],
     stats: [
@@ -981,7 +983,7 @@ export const testimonials: Testimonial[] = [
     quote:
       "We were posting pretty pictures and hoping walk-ins would follow. Ads House rebuilt the Google Business profile, ran search ads on the collections that actually had stock, and the boutique started getting appointment bookings instead of random DMs.",
     result: "2.1x store appointments in 90 days",
-    image: "/images/testimonial-1.png",
+    image: unsplashPortraits.kirti,
   },
   {
     name: "Deepak Malik",
@@ -991,7 +993,7 @@ export const testimonials: Testimonial[] = [
     quote:
       "Patients used to find us through a neighbour. Now the clinic ranks for the treatments we want, the landing page answers fee questions, and the front desk gets WhatsApp enquiries we can actually convert.",
     result: "+64% new-patient enquiries",
-    image: "/images/testimonial-2.png",
+    image: unsplashPortraits.deepak,
   },
   {
     name: "Neha Bansal",
@@ -1001,7 +1003,7 @@ export const testimonials: Testimonial[] = [
     quote:
       "D2C food is unforgiving on CAC. They killed the broad ads, rebuilt the offer around trial packs, and we finally saw repeat orders instead of one-time coupon hunters.",
     result: "38% repeat order rate",
-    image: "/images/testimonial-3.png",
+    image: unsplashPortraits.neha,
   },
   {
     name: "Arjun Yadav",
@@ -1011,7 +1013,7 @@ export const testimonials: Testimonial[] = [
     quote:
       "Our site looked like a PDF. Ads House turned project pages into lead engines — location pages, walk-in campaigns, and a form that our sales team actually follows up. Site visits from ads are no longer a guess.",
     result: "41 qualified site visits / month",
-    image: "/images/testimonial-1.png",
+    image: unsplashPortraits.arjun,
   },
   {
     name: "Pooja Saini",
@@ -1021,7 +1023,7 @@ export const testimonials: Testimonial[] = [
     quote:
       "Parents search in a panic before board exams. They wrote pages for each course, tightened Google Ads around exam dates, and our counsellor calendar filled without us buying every competitor keyword.",
     result: "+72% counselling form fills",
-    image: "/images/testimonial-2.png",
+    image: unsplashPortraits.pooja,
   },
   {
     name: "Imran Qureshi",
@@ -1031,7 +1033,7 @@ export const testimonials: Testimonial[] = [
     quote:
       "Weekend covers were luck. Maps, menu photos, and a simple offer calendar did more than a food influencer blast. We still do creator posts — but only when the kitchen can take the load.",
     result: "+29% weekend covers",
-    image: "/images/testimonial-3.png",
+    image: unsplashPortraits.imran,
   },
 ];
 

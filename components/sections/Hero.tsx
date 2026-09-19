@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { MediaCover } from "@/components/MediaCover";
 import Link from "next/link";
 import { ArrowIcon, ButtonLink } from "@/components/ui";
 import { listTestimonials } from "@/lib/content";
@@ -77,13 +77,7 @@ export async function Hero() {
                   key={person.name}
                   className="relative h-11 w-11 overflow-hidden rounded-full border-2 border-white shadow-sm"
                 >
-                  <Image
-                    src={person.image}
-                    alt={person.name}
-                    fill
-                    sizes="44px"
-                    className="object-cover"
-                  />
+                  <MediaCover src={person.image} alt={person.name} sizes="44px" />
                 </span>
               ))}
               <span className="relative flex h-11 w-11 items-center justify-center rounded-full border-2 border-white bg-sky text-[10px] font-bold text-white shadow-sm">

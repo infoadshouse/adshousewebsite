@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import { useMemo, useState } from "react";
+import { MediaCover } from "@/components/MediaCover";
 import type { Testimonial } from "@/lib/data";
 
 export function TestimonialBoard({ items }: { items: Testimonial[] }) {
@@ -44,11 +44,9 @@ export function TestimonialBoard({ items }: { items: Testimonial[] }) {
           >
             <div className="flex items-start gap-3">
               <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-full border border-line">
-                <Image
+                <MediaCover
                   src={item.image}
                   alt={`${item.name}, ${item.role} at ${item.company}`}
-                  fill
-                  className="object-cover"
                   sizes="56px"
                 />
               </div>

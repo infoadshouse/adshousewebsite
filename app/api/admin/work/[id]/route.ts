@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { requireAdminApi } from "@/lib/admin";
 import { paragraphsFromText, uniqueContentSlug } from "@/lib/content";
+import { MEDIA_URL_MAX } from "@/lib/media";
 import { asString, asStringArray, isAuthUser, jsonError, oid } from "@/lib/marketplace/api";
 import { CaseStudy } from "@/models/CaseStudy";
 
@@ -50,7 +51,7 @@ export async function PATCH(request: Request, { params }: Params) {
   if (typeof data.result === "string") current.result = asString(data.result, 2000);
   if (typeof data.metric === "string") current.metric = asString(data.metric, 40);
   if (typeof data.metricLabel === "string") current.metricLabel = asString(data.metricLabel, 80);
-  if (typeof data.image === "string") current.image = asString(data.image, 300) || current.image;
+  if (typeof data.image === "string") current.image = asString(data.image, MEDIA_URL_MAX) || current.image;
   if (typeof data.year === "string") current.year = asString(data.year, 8);
   if (typeof data.published === "boolean") current.published = data.published;
   if (data.services !== undefined) {

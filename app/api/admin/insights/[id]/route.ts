@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { requireAdminApi } from "@/lib/admin";
 import { estimateReadTime, paragraphsFromText, uniqueContentSlug } from "@/lib/content";
+import { MEDIA_URL_MAX } from "@/lib/media";
 import { asString, isAuthUser, jsonError, oid } from "@/lib/marketplace/api";
 import { Insight } from "@/models/Insight";
 
@@ -25,7 +26,7 @@ export async function PATCH(request: Request, { params }: Params) {
   if (typeof data.seoDescription === "string") current.seoDescription = asString(data.seoDescription, 220);
   if (typeof data.date === "string") current.date = asString(data.date, 12) || current.date;
   if (typeof data.category === "string") current.category = asString(data.category, 40) || current.category;
-  if (typeof data.image === "string") current.image = asString(data.image, 300) || current.image;
+  if (typeof data.image === "string") current.image = asString(data.image, MEDIA_URL_MAX) || current.image;
   if (typeof data.published === "boolean") current.published = data.published;
   if (typeof data.content === "string") current.content = paragraphsFromText(data.content);
   if (Array.isArray(data.content)) {

@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { requireAdminApi } from "@/lib/admin";
 import { listCaseStudies, paragraphsFromText, uniqueContentSlug } from "@/lib/content";
+import { MEDIA_URL_MAX } from "@/lib/media";
 import { asString, asStringArray, isAuthUser, jsonError } from "@/lib/marketplace/api";
 import { CaseStudy } from "@/models/CaseStudy";
 
@@ -61,7 +62,7 @@ export async function POST(request: Request) {
     result: asString(data.result, 2000),
     metric: asString(data.metric, 40),
     metricLabel: asString(data.metricLabel, 80),
-    image: asString(data.image, 300) || "/images/work-fashion.png",
+    image: asString(data.image, MEDIA_URL_MAX) || "/images/work-fashion.png",
     year: asString(data.year, 8) || String(new Date().getFullYear()),
     services: asStringArray(typeof data.services === "string" ? String(data.services).split(",") : data.services, 12),
     stats: parseStats(data.stats),

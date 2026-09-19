@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { requireAdminApi } from "@/lib/admin";
+import { MEDIA_URL_MAX } from "@/lib/media";
 import { asNumber, asString, isAuthUser, jsonError, oid } from "@/lib/marketplace/api";
 import { Testimonial } from "@/models/Testimonial";
 
@@ -25,7 +26,7 @@ export async function PATCH(request: Request, { params }: Params) {
   if (typeof data.location === "string") current.location = asString(data.location, 80);
   if (typeof data.quote === "string") current.quote = asString(data.quote, 800) || current.quote;
   if (typeof data.result === "string") current.result = asString(data.result, 80);
-  if (typeof data.image === "string") current.image = asString(data.image, 300) || current.image;
+  if (typeof data.image === "string") current.image = asString(data.image, MEDIA_URL_MAX) || current.image;
   if (data.sortOrder !== undefined) current.sortOrder = asNumber(data.sortOrder, current.sortOrder);
   if (typeof data.published === "boolean") current.published = data.published;
   await current.save();

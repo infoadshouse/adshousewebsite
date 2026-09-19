@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { MediaCover } from "@/components/MediaCover";
 import Link from "next/link";
 import { Reveal } from "@/components/Reveal";
 import { SectionEyebrow } from "@/components/ui";
@@ -20,13 +20,7 @@ export async function InsightsTeaser() {
           <Reveal key={post.slug} delay={index * 70}>
             <Link href={`/insights/${post.slug}`} className="group block overflow-hidden rounded-[1.6rem] border border-line bg-card shadow-sm">
               <div className="img-zoom relative h-52">
-                <Image
-                  src={post.image}
-                  alt={post.title}
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 33vw"
-                  className="object-cover"
-                />
+                <MediaCover src={post.image} alt={post.title} sizes="(max-width: 1024px) 100vw, 33vw" />
               </div>
               <div className="p-6">
                 <p className="text-xs uppercase tracking-[0.2em] text-sky">

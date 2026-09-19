@@ -1,4 +1,5 @@
-import Image from "next/image";
+import { unsplashWork } from "@/lib/unsplash";
+import { MediaCover } from "@/components/MediaCover";
 import Link from "next/link";
 import { JsonLd } from "@/components/JsonLd";
 import { PageHero } from "@/components/PageHero";
@@ -15,7 +16,7 @@ export const metadata = createMetadata({
   description:
     "Ads House work for local brands around Delhi NCR — Rohtak, Gurugram, Noida, Faridabad, Ghaziabad, and nearby towns. Leads, visits, ROAS, and repeat orders.",
   path: "/work",
-  image: "/images/work-fashion.png",
+  image: unsplashWork.fashion,
   keywords: ["digital marketing case studies NCR", "ads agency Rohtak work"],
 });
 
@@ -43,7 +44,7 @@ export default async function WorkPage() {
         eyebrow="Work"
         title="Fifteen local stories from around Delhi NCR"
         description="Boutiques, clinics, kitchens, coaching centres, and yards in Rohtak, Gurugram, Noida, Faridabad, and nearby towns — not metro brand names."
-        image="/images/work-fashion.png"
+        image={unsplashWork.fashion}
         imageAlt="Local fashion campaign produced by Ads House near Delhi NCR"
       />
       <section className="mx-auto max-w-7xl px-5 pb-10 md:px-8">
@@ -62,12 +63,10 @@ export default async function WorkPage() {
             className="group grid overflow-hidden rounded-3xl border border-line bg-card shadow-sm"
           >
             <div className="img-zoom relative min-h-[200px]">
-              <Image
+              <MediaCover
                 src={item.image}
                 alt={`${item.client} ${item.industry} case study by Ads House`}
-                fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover"
               />
             </div>
             <div className="flex flex-col justify-center p-6 md:p-8">
