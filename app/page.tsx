@@ -21,6 +21,8 @@ import { createMetadata } from "@/lib/seo";
 import { defaultTitle } from "@/lib/site";
 import Link from "next/link";
 
+export const dynamic = "force-dynamic";
+
 export const metadata = createMetadata({
   title: defaultTitle,
   description:

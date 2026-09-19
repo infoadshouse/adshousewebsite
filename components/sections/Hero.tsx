@@ -1,9 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowIcon, ButtonLink } from "@/components/ui";
-import { testimonials } from "@/lib/data";
+import { listTestimonials } from "@/lib/content";
 
-export function Hero() {
+export async function Hero() {
+  const testimonials = await listTestimonials();
   return (
     <section className="relative overflow-hidden pt-24 md:pt-40">
       <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-10 px-5 pb-10 md:px-8 md:pb-16 lg:grid-cols-[1.05fr_0.95fr] lg:gap-8 lg:pb-20">

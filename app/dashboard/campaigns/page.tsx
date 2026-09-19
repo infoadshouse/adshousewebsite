@@ -23,7 +23,7 @@ export default async function CampaignsDashboardPage() {
         <h1 className="font-display text-3xl font-extrabold text-sky-dark">
           {user.role === "creator" ? "Open campaigns" : user.role === "admin" ? "All campaigns" : "Campaigns"}
         </h1>
-        {user.role !== "creator" && user.role !== "admin" ? (
+        {user.role !== "creator" ? (
           <Link href="/dashboard/campaigns/new" className="btn-primary rounded-full px-4 py-2 text-sm font-semibold">
             New campaign
           </Link>

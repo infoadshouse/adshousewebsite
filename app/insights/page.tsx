@@ -3,10 +3,12 @@ import Link from "next/link";
 import { JsonLd } from "@/components/JsonLd";
 import { PageHero } from "@/components/PageHero";
 import { CtaBand } from "@/components/sections/CtaBand";
-import { insights } from "@/lib/data";
+import { listInsights } from "@/lib/content";
 import { breadcrumbSchema, itemListSchema } from "@/lib/schema";
 import { createMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site";
+
+export const dynamic = "force-dynamic";
 
 export const metadata = createMetadata({
   title: "Digital Marketing Insights for Indian Brands",
@@ -17,7 +19,8 @@ export const metadata = createMetadata({
   keywords: ["digital marketing blog India", "SEO India", "D2C marketing insights"],
 });
 
-export default function InsightsPage() {
+export default async function InsightsPage() {
+  const insights = await listInsights();
   return (
     <>
       <JsonLd
@@ -65,6 +68,7 @@ export default function InsightsPage() {
             </div>
           </Link>
         ))}
+        {insights.length === 0 ? <p className="text-muted">New insights will appear here.</p> : null}
       </section>
       <CtaBand />
     </>

@@ -1,10 +1,11 @@
 import { NextResponse } from "next/server";
-import { insights } from "@/lib/data";
+import { listInsights } from "@/lib/content";
 import { officeAddressLines, siteConfig } from "@/lib/site";
 
-export const dynamic = "force-static";
+export const dynamic = "force-dynamic";
 
-export function GET() {
+export async function GET() {
+  const insights = await listInsights();
   const items = insights
     .map(
       (post) => `## [${post.title}](${siteConfig.url}/insights/${post.slug})

@@ -2,10 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { Reveal } from "@/components/Reveal";
 import { SectionEyebrow } from "@/components/ui";
-import { insights } from "@/lib/data";
+import { listInsights } from "@/lib/content";
 import { siteConfig } from "@/lib/site";
 
-export function InsightsTeaser() {
+export async function InsightsTeaser() {
+  const insights = (await listInsights()).slice(0, 3);
   return (
     <section className="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-28">
       <div className="mb-12 max-w-2xl">
@@ -15,7 +16,7 @@ export function InsightsTeaser() {
         </h2>
       </div>
       <div className="grid gap-6 lg:grid-cols-3">
-        {insights.slice(0, 3).map((post, index) => (
+        {insights.map((post, index) => (
           <Reveal key={post.slug} delay={index * 70}>
             <Link href={`/insights/${post.slug}`} className="group block overflow-hidden rounded-[1.6rem] border border-line bg-card shadow-sm">
               <div className="img-zoom relative h-52">

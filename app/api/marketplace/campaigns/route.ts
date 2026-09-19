@@ -68,7 +68,7 @@ export async function POST(request: Request) {
     const business = await getBusinessByUser(user.id);
     if (!business) return jsonError("Complete your business profile first", 400);
     businessId = business._id;
-  } else {
+  } else if (user.role === "agency") {
     const agency = await getAgencyByUser(user.id);
     if (!agency) return jsonError("Complete your agency profile first", 400);
     agencyId = agency._id;
@@ -77,6 +77,14 @@ export async function POST(request: Request) {
       const client = await AgencyClient.findOne({ _id: clientId, agencyUserId: user.id });
       if (!client) return jsonError("Client not found", 404);
       agencyClientId = client._id;
+    }
+  } else if (user.role === "admin") {
+    const clientId = asString(data.agencyClientId, 40);
+    if (clientId) {
+      const client = await AgencyClient.findById(clientId);
+      if (!client) return jsonError("Client not found", 404);
+      agencyClientId = client._id;
+      agencyId = client.agencyId;
     }
   }
 

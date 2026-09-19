@@ -3,10 +3,12 @@ import Link from "next/link";
 import { JsonLd } from "@/components/JsonLd";
 import { PageHero } from "@/components/PageHero";
 import { CtaBand } from "@/components/sections/CtaBand";
-import { caseStudies } from "@/lib/data";
+import { listCaseStudies } from "@/lib/content";
 import { breadcrumbSchema, itemListSchema } from "@/lib/schema";
 import { createMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site";
+
+export const dynamic = "force-dynamic";
 
 export const metadata = createMetadata({
   title: "Digital Marketing Case Studies in India",
@@ -17,7 +19,8 @@ export const metadata = createMetadata({
   keywords: ["digital marketing case studies India", "performance marketing results"],
 });
 
-export default function WorkPage() {
+export default async function WorkPage() {
+  const caseStudies = await listCaseStudies();
   return (
     <>
       <JsonLd
@@ -51,6 +54,7 @@ export default function WorkPage() {
         </p>
       </section>
       <section className="mx-auto grid max-w-7xl gap-8 px-5 pb-20 md:px-8">
+        {caseStudies.length === 0 ? <p className="text-muted">New case studies will appear here.</p> : null}
         {caseStudies.map((item) => (
           <Link
             key={item.slug}

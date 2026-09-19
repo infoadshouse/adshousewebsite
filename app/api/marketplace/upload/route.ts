@@ -14,7 +14,7 @@ export async function POST(request: Request) {
   const file = form?.get("file");
   if (!(file instanceof File)) return jsonError("Choose an image file");
   if (!ALLOWED.has(file.type)) return jsonError("Use JPG, PNG, WEBP, or GIF");
-  if (file.size > 2 * 1024 * 1024) return jsonError("Image must be under 2MB");
+  if (file.size > 4 * 1024 * 1024) return jsonError("Image must be under 4MB");
 
   const ext = file.type.split("/")[1] === "jpeg" ? "jpg" : file.type.split("/")[1];
   const filename = `${user.id}-${Date.now()}.${ext}`;

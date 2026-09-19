@@ -4,18 +4,16 @@ import { notFound } from "next/navigation";
 import { JsonLd } from "@/components/JsonLd";
 import { Breadcrumbs } from "@/components/PageHero";
 import { CtaBand } from "@/components/sections/CtaBand";
-import { getInsight, insights } from "@/lib/data";
+import { getInsightBySlug, listInsights } from "@/lib/content";
 import { articleSchema, breadcrumbSchema } from "@/lib/schema";
 import { createMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site";
 
-export function generateStaticParams() {
-  return insights.map((item) => ({ slug: item.slug }));
-}
+export const dynamic = "force-dynamic";
 
 export async function generateMetadata({ params }: PageProps<"/insights/[slug]">) {
   const { slug } = await params;
-  const post = getInsight(slug);
+  const post = await getInsightBySlug(slug);
   if (!post) return {};
   return createMetadata({
     title: post.title,
@@ -30,8 +28,9 @@ export async function generateMetadata({ params }: PageProps<"/insights/[slug]">
 
 export default async function InsightArticlePage({ params }: PageProps<"/insights/[slug]">) {
   const { slug } = await params;
-  const post = getInsight(slug);
+  const post = await getInsightBySlug(slug);
   if (!post) notFound();
+  const insights = await listInsights();
   const related = [
     ...insights.filter((item) => item.slug !== post.slug && item.category === post.category),
     ...insights.filter((item) => item.slug !== post.slug && item.category !== post.category),
@@ -101,9 +100,6 @@ export default async function InsightArticlePage({ params }: PageProps<"/insight
             </Link>
             <Link href="/services/performance-marketing" className="text-sky hover:underline">
               Google Ads & social media marketing
-            </Link>
-            <Link href="/insights/digital-marketing-agency-in-india" className="text-sky hover:underline">
-              Hire an agency in India
             </Link>
             <Link href="/locations/rohtak" className="text-sky hover:underline">
               Agency in Rohtak

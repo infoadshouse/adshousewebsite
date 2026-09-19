@@ -55,9 +55,20 @@ export default async function DashboardHomePage() {
       </div>
       <div className="mt-8 flex flex-wrap gap-3">
         {user.role === "admin" ? (
-          <Link href="/dashboard/users" className="btn-primary rounded-full px-5 py-2.5 text-sm font-semibold">
-            Manage users
-          </Link>
+          <>
+            <Link href="/dashboard/insights" className="btn-primary rounded-full px-5 py-2.5 text-sm font-semibold">
+              Manage blogs
+            </Link>
+            <Link href="/dashboard/work" className="rounded-full border border-line px-5 py-2.5 text-sm font-semibold">
+              Manage case studies
+            </Link>
+            <Link href="/dashboard/testimonials" className="rounded-full border border-line px-5 py-2.5 text-sm font-semibold">
+              Manage testimonials
+            </Link>
+            <Link href="/dashboard/campaigns/new" className="rounded-full border border-line px-5 py-2.5 text-sm font-semibold">
+              Post a campaign
+            </Link>
+          </>
         ) : (
           <Link href="/dashboard/profile" className="rounded-full border border-line px-5 py-2.5 text-sm font-semibold">
             Manage profile

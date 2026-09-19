@@ -1,10 +1,13 @@
 import type { MetadataRoute } from "next";
-import { caseStudies, insights, services } from "@/lib/data";
+import { services } from "@/lib/data";
 import { locations } from "@/lib/locations";
 import { tryConnectDb } from "@/lib/db";
+import { listCaseStudies, listInsights } from "@/lib/content";
 import { canonicalUrl, siteConfig } from "@/lib/site";
 import { Campaign } from "@/models/Campaign";
 import { InfluencerProfile } from "@/models/InfluencerProfile";
+
+export const dynamic = "force-dynamic";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const updated = new Date(siteConfig.contentUpdated);
@@ -38,16 +41,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: item.isHq ? 0.9 : 0.8,
   }));
 
-  const workRoutes = caseStudies.map((item) => ({
+  const [publishedWork, publishedInsights] = await Promise.all([listCaseStudies(), listInsights()]);
+
+  const workRoutes = publishedWork.map((item) => ({
     url: canonicalUrl(`/work/${item.slug}`),
     lastModified: updated,
     changeFrequency: "monthly" as const,
     priority: 0.8,
   }));
 
-  const insightRoutes = insights.map((item) => ({
+  const insightRoutes = publishedInsights.map((item) => ({
     url: canonicalUrl(`/insights/${item.slug}`),
-    lastModified: new Date(item.date),
+    lastModified: item.date ? new Date(item.date) : updated,
     changeFrequency: "monthly" as const,
     priority: 0.75,
   }));

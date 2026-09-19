@@ -1,7 +1,7 @@
-import { insights } from "@/lib/data";
+import { listInsights } from "@/lib/content";
 import { canonicalUrl, siteConfig } from "@/lib/site";
 
-export const dynamic = "force-static";
+export const dynamic = "force-dynamic";
 
 function escapeXml(value: string) {
   return value
@@ -11,7 +11,8 @@ function escapeXml(value: string) {
     .replaceAll('"', "&quot;");
 }
 
-export function GET() {
+export async function GET() {
+  const insights = await listInsights();
   const items = insights
     .map((post) => {
       const url = canonicalUrl(`/insights/${post.slug}`);
@@ -41,7 +42,7 @@ ${items}
   return new Response(xml, {
     headers: {
       "Content-Type": "application/rss+xml; charset=utf-8",
-      "Cache-Control": "public, max-age=3600, s-maxage=86400",
+      "Cache-Control": "public, max-age=300, s-maxage=1800",
     },
   });
 }

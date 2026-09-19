@@ -5,18 +5,17 @@ import { Breadcrumbs } from "@/components/PageHero";
 import { CtaBand } from "@/components/sections/CtaBand";
 import Link from "next/link";
 import { ButtonLink } from "@/components/ui";
-import { caseStudies, getCaseStudy, services } from "@/lib/data";
+import { getCaseStudyBySlug } from "@/lib/content";
+import { services } from "@/lib/data";
 import { breadcrumbSchema } from "@/lib/schema";
 import { createMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site";
 
-export function generateStaticParams() {
-  return caseStudies.map((item) => ({ slug: item.slug }));
-}
+export const dynamic = "force-dynamic";
 
 export async function generateMetadata({ params }: PageProps<"/work/[slug]">) {
   const { slug } = await params;
-  const item = getCaseStudy(slug);
+  const item = await getCaseStudyBySlug(slug);
   if (!item) return {};
   return createMetadata({
     title: `${item.client} case study: ${item.metric} ${item.metricLabel}`,
@@ -28,7 +27,7 @@ export async function generateMetadata({ params }: PageProps<"/work/[slug]">) {
 
 export default async function CaseStudyPage({ params }: PageProps<"/work/[slug]">) {
   const { slug } = await params;
-  const item = getCaseStudy(slug);
+  const item = await getCaseStudyBySlug(slug);
   if (!item) notFound();
 
   return (

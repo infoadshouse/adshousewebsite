@@ -2,11 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { Reveal } from "@/components/Reveal";
 import { ButtonLink, SectionEyebrow } from "@/components/ui";
-import { caseStudies } from "@/lib/data";
+import { listCaseStudies } from "@/lib/content";
 import { siteConfig } from "@/lib/site";
 
-export function FeaturedWork({ limit = 3 }: { limit?: number }) {
-  const items = caseStudies.slice(0, limit);
+export async function FeaturedWork({ limit = 3 }: { limit?: number }) {
+  const items = (await listCaseStudies()).slice(0, limit);
 
   return (
     <section className="bg-surface py-20 md:py-28" id="work">

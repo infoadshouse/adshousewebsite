@@ -13,7 +13,14 @@ export function DashboardShell({ user, children }: { user: AuthUser; children: R
   const links = [
     { href: "/dashboard", label: "Home" },
     { href: "/dashboard/profile", label: "Account" },
-    ...(user.role === "admin" ? [{ href: "/dashboard/users", label: "Users" }] : []),
+    ...(user.role === "admin"
+      ? [
+          { href: "/dashboard/users", label: "Users" },
+          { href: "/dashboard/insights", label: "Blogs" },
+          { href: "/dashboard/work", label: "Case studies" },
+          { href: "/dashboard/testimonials", label: "Testimonials" },
+        ]
+      : []),
     { href: "/dashboard/campaigns", label: "Campaigns" },
     { href: "/dashboard/applications", label: "Applications" },
     { href: "/dashboard/collaborations", label: "Collaborations" },
