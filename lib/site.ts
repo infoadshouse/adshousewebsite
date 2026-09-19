@@ -58,10 +58,14 @@ export const siteConfig = {
 
 export const defaultTitle = "Ads House | Ads Agency in India | Digital Marketing";
 
-/** Absolute URL with no trailing slash on the homepage (matches Next metadata canonical). */
+/**
+ * Absolute URL for canonicals, schema, and the XML sitemap.
+ * Homepage uses a trailing slash so it matches Google Search Console
+ * (property + URL Inspection are https://www.adshouse.in/) and browser-resolved `/` links.
+ */
 export function canonicalUrl(path = "/"): string {
   const origin = siteConfig.url.replace(/\/$/, "");
-  if (!path || path === "/") return origin;
+  if (!path || path === "/") return `${origin}/`;
   return `${origin}${path.startsWith("/") ? path : `/${path}`}`;
 }
 
