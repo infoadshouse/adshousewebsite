@@ -72,7 +72,7 @@ export async function Hero() {
           </div>
           <div className="mt-9 flex flex-wrap items-center gap-4">
             <div className="flex -space-x-3">
-              {testimonials.map((person) => (
+              {testimonials.slice(0, 5).map((person) => (
                 <span
                   key={person.name}
                   className="relative h-11 w-11 overflow-hidden rounded-full border-2 border-white shadow-sm"

@@ -15,7 +15,7 @@ export async function Testimonials() {
       </div>
       <div className="mt-12 grid gap-6 lg:grid-cols-3">
         {testimonials.map((item, index) => (
-          <Reveal key={item.name} delay={index * 80}>
+          <Reveal key={`${item.name}-${item.company}`} delay={Math.min(index * 40, 240)}>
             <article className="flex h-full flex-col rounded-[1.8rem] border border-line bg-card p-7 shadow-[0_16px_40px_rgba(15,23,42,0.06)]">
               <div className="flex items-center gap-4">
                 <div className="relative h-16 w-16 overflow-hidden rounded-full border border-line">
