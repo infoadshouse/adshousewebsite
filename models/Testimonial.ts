@@ -5,6 +5,7 @@ const testimonialSchema = new Schema(
     name: { type: String, required: true, trim: true },
     role: { type: String, default: "", trim: true },
     company: { type: String, default: "", trim: true },
+    location: { type: String, default: "", trim: true },
     quote: { type: String, required: true, trim: true },
     result: { type: String, default: "" },
     image: { type: String, default: "/images/testimonial-1.png" },

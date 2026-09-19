@@ -26,6 +26,7 @@ export async function POST(request: Request) {
     name,
     role: asString(data.role, 80),
     company: asString(data.company, 80),
+    location: asString(data.location, 80),
     quote,
     result: asString(data.result, 80),
     image: asString(data.image, 300) || "/images/testimonial-1.png",

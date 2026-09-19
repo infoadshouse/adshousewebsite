@@ -37,6 +37,7 @@ export type Testimonial = {
   name: string;
   role: string;
   company: string;
+  location: string;
   quote: string;
   result: string;
   image: string;
@@ -706,6 +707,7 @@ export const testimonials: Testimonial[] = [
     name: "Kirti Aggarwal",
     role: "Founder",
     company: "House of Aari",
+    location: "Rohtak",
     quote:
       "We were posting pretty pictures and hoping walk-ins would follow. Ads House rebuilt the Google Business profile, ran search ads on the collections that actually had stock, and the boutique started getting appointment bookings instead of random DMs.",
     result: "2.1x store appointments in 90 days",
@@ -715,6 +717,7 @@ export const testimonials: Testimonial[] = [
     name: "Deepak Malik",
     role: "Owner",
     company: "Malik Dental Care",
+    location: "Sonipat",
     quote:
       "Patients used to find us through a neighbour. Now the clinic ranks for the treatments we want, the landing page answers fee questions, and the front desk gets WhatsApp enquiries we can actually convert.",
     result: "+64% new-patient enquiries",
@@ -724,6 +727,7 @@ export const testimonials: Testimonial[] = [
     name: "Neha Bansal",
     role: "Co-founder",
     company: "Grain & Glow Kitchen",
+    location: "Gurugram",
     quote:
       "D2C food is unforgiving on CAC. They killed the broad ads, rebuilt the offer around trial packs, and we finally saw repeat orders instead of one-time coupon hunters.",
     result: "38% repeat order rate",
@@ -733,6 +737,7 @@ export const testimonials: Testimonial[] = [
     name: "Arjun Yadav",
     role: "Director",
     company: "Yadav Buildtech",
+    location: "Faridabad",
     quote:
       "Our site looked like a PDF. Ads House turned project pages into lead engines — location pages, walk-in campaigns, and a form that our sales team actually follows up. Site visits from ads are no longer a guess.",
     result: "41 qualified site visits / month",
@@ -742,6 +747,7 @@ export const testimonials: Testimonial[] = [
     name: "Pooja Saini",
     role: "Centre head",
     company: "BrightPath Coaching",
+    location: "Panipat",
     quote:
       "Parents search in a panic before board exams. They wrote pages for each course, tightened Google Ads around exam dates, and our counsellor calendar filled without us buying every competitor keyword.",
     result: "+72% counselling form fills",
@@ -751,6 +757,7 @@ export const testimonials: Testimonial[] = [
     name: "Imran Qureshi",
     role: "Owner",
     company: "Oven & Oak",
+    location: "Ghaziabad",
     quote:
       "Weekend covers were luck. Maps, menu photos, and a simple offer calendar did more than a food influencer blast. We still do creator posts — but only when the kitchen can take the load.",
     result: "+29% weekend covers",
@@ -760,6 +767,7 @@ export const testimonials: Testimonial[] = [
     name: "Kavita Jain",
     role: "Founder",
     company: "Niva Botanics",
+    location: "Noida",
     quote:
       "We were discounting our way into a hole. They rebuilt the brand story, moved spend to search plus a clean PDP, and revenue grew without another 40% off sale.",
     result: "+54% monthly revenue, fewer discount days",
@@ -769,6 +777,7 @@ export const testimonials: Testimonial[] = [
     name: "Sandeep Hooda",
     role: "Owner",
     company: "Hooda Autohaus",
+    location: "Bahadurgarh",
     quote:
       "Car buyers compare three yards before they call. Listings, service-camp ads, and a faster website meant test-drive bookings showed up with a name and a model, not 'price?' on WhatsApp.",
     result: "18 extra test-drives a month",
@@ -778,6 +787,7 @@ export const testimonials: Testimonial[] = [
     name: "Rhea Khurana",
     role: "Marketing lead",
     company: "Papertrail Co.",
+    location: "Greater Noida",
     quote:
       "Stationery looks easy until you look at ROAS. They split brand campaigns from catalogue ads, fixed the slow collection pages, and we stopped paying for clicks that bounced on mobile.",
     result: "3.8x blended ROAS on Meta",
@@ -787,6 +797,7 @@ export const testimonials: Testimonial[] = [
     name: "Mohit Goyal",
     role: "Founder",
     company: "FitLane Studio",
+    location: "Jhajjar",
     quote:
       "A gym does not need a viral reel. It needs trial bookings in a 4 km radius. Local ads, a simple landing page, and WhatsApp follow-up scripts did that. Memberships followed the trials.",
     result: "47 trial bookings in the first month",
@@ -796,6 +807,7 @@ export const testimonials: Testimonial[] = [
     name: "Anjali Dahiya",
     role: "Principal designer",
     company: "Dahiya Atelier",
+    location: "Rewari",
     quote:
       "Interior leads used to be relatives of relatives. SEO on project stories plus a proper portfolio site brought homeowners who had already seen the work. Close rates went up because the brief was clearer.",
     result: "9 inbound project briefs / quarter",
@@ -805,6 +817,7 @@ export const testimonials: Testimonial[] = [
     name: "Vikram Solanki",
     role: "Founder",
     company: "RoutePack Freight",
+    location: "Palwal",
     quote:
       "B2B search is boring until a fleet is idle. They targeted shippers by lane, wrote pages a procurement manager would trust, and LinkedIn plus Google finally sent RFQs instead of student resumes.",
     result: "14 sales-ready RFQs in 60 days",
@@ -814,6 +827,7 @@ export const testimonials: Testimonial[] = [
     name: "Meera Chopra",
     role: "Founder",
     company: "Little Loom",
+    location: "Meerut",
     quote:
       "Kidswear photos were fine; the funnel was not. Size guides, retargeting that did not nag, and creator seeding with local parents — not celebrity accounts — moved first orders we could fulfil.",
     result: "+81% first-time checkout rate",
@@ -823,6 +837,7 @@ export const testimonials: Testimonial[] = [
     name: "Rajesh Verma",
     role: "Partner",
     company: "Verma Associates",
+    location: "Bhiwadi",
     quote:
       "A CA firm should not look like a visiting card. The new site, GST and startup service pages, and quiet search ads brought founders who already knew what they needed. We stopped explaining the basics on every call.",
     result: "+33% retained client enquiries",
@@ -832,6 +847,7 @@ export const testimonials: Testimonial[] = [
     name: "Tanvi Ahlawat",
     role: "Founder",
     company: "SipStreet",
+    location: "Manesar",
     quote:
       "A beverage brand dies in distributor decks. Ads House gave us a story retailers could repeat, a website that took wholesale enquiries, and city-wise ads that filled tasting counters before we scaled spend.",
     result: "22 new retail counters in 4 months",

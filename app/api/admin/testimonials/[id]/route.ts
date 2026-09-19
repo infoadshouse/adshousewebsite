@@ -22,6 +22,7 @@ export async function PATCH(request: Request, { params }: Params) {
   if (typeof data.name === "string") current.name = asString(data.name, 80) || current.name;
   if (typeof data.role === "string") current.role = asString(data.role, 80);
   if (typeof data.company === "string") current.company = asString(data.company, 80);
+  if (typeof data.location === "string") current.location = asString(data.location, 80);
   if (typeof data.quote === "string") current.quote = asString(data.quote, 800) || current.quote;
   if (typeof data.result === "string") current.result = asString(data.result, 80);
   if (typeof data.image === "string") current.image = asString(data.image, 300) || current.image;

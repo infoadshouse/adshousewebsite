@@ -12,7 +12,7 @@ export default async function AdminTestimonialsPage() {
       <div className="mb-6 flex items-center justify-between gap-3">
         <div>
           <h1 className="font-display text-3xl font-extrabold text-sky-dark">Testimonials</h1>
-          <p className="mt-1 text-sm text-muted">Quotes on the homepage hero and testimonials section.</p>
+          <p className="mt-1 text-sm text-muted">Published quotes on /testimonials and the homepage.</p>
         </div>
         <Link href="/dashboard/testimonials/new" className="btn-primary rounded-full px-4 py-2 text-sm font-semibold">
           New testimonial
@@ -28,7 +28,8 @@ export default async function AdminTestimonialsPage() {
               <div>
                 <p className="font-semibold text-sky-dark">{item.name}</p>
                 <p className="text-sm text-muted">
-                  {item.published ? "Published" : "Draft"} · {item.company} · {item.result}
+                  {item.published ? "Published" : "Draft"} · {item.location ? `${item.location} · ` : ""}
+                  {item.company} · {item.result}
                 </p>
               </div>
               <span className="text-sm text-sky">Edit</span>

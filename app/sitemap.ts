@@ -18,6 +18,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: canonicalUrl("/locations"), lastModified: updated, changeFrequency: "weekly", priority: 0.9 },
     { url: canonicalUrl("/about"), lastModified: updated, changeFrequency: "monthly", priority: 0.7 },
     { url: canonicalUrl("/insights"), lastModified: updated, changeFrequency: "weekly", priority: 0.8 },
+    { url: canonicalUrl("/testimonials"), lastModified: updated, changeFrequency: "monthly", priority: 0.7 },
     { url: canonicalUrl("/contact"), lastModified: updated, changeFrequency: "monthly", priority: 0.8 },
     { url: canonicalUrl("/marketplace"), lastModified: updated, changeFrequency: "weekly", priority: 0.85 },
     { url: canonicalUrl("/marketplace/creators"), lastModified: updated, changeFrequency: "daily", priority: 0.8 },

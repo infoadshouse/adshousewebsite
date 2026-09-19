@@ -67,6 +67,7 @@ function asTestimonial(doc: Record<string, unknown>): Testimonial & {
     name: String(doc.name ?? ""),
     role: String(doc.role ?? ""),
     company: String(doc.company ?? ""),
+    location: String(doc.location ?? ""),
     quote: String(doc.quote ?? ""),
     result: String(doc.result ?? ""),
     image: String(doc.image || "/images/testimonial-1.png"),

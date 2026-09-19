@@ -29,6 +29,11 @@ export function Footer() {
                 </Link>
               </li>
             ))}
+            <li>
+              <Link href="/testimonials" className="text-sm text-white/80 hover:text-white">
+                Testimonials
+              </Link>
+            </li>
           </ul>
         </div>
 

@@ -10,6 +10,7 @@ type Item = {
   name: string;
   role: string;
   company: string;
+  location?: string;
   quote: string;
   result: string;
   image: string;
@@ -25,6 +26,7 @@ export function TestimonialEditor({ initial }: { initial?: Item | null }) {
     name: initial?.name ?? "",
     role: initial?.role ?? "",
     company: initial?.company ?? "",
+    location: initial?.location ?? "",
     quote: initial?.quote ?? "",
     result: initial?.result ?? "",
     image: initial?.image ?? "/images/testimonial-1.png",
@@ -67,6 +69,10 @@ export function TestimonialEditor({ initial }: { initial?: Item | null }) {
           <span className="mb-1 block text-xs font-semibold uppercase text-muted">Company</span>
           <input className="w-full rounded-xl border border-line px-3 py-2" value={form.company} onChange={(e) => setForm({ ...form, company: e.target.value })} />
         </label>
+        <label className="block text-sm">
+          <span className="mb-1 block text-xs font-semibold uppercase text-muted">Location (NCR / nearby)</span>
+          <input className="w-full rounded-xl border border-line px-3 py-2" value={form.location} onChange={(e) => setForm({ ...form, location: e.target.value })} placeholder="Gurugram" />
+        </label>
       </div>
       <label className="block text-sm">
         <span className="mb-1 block text-xs font-semibold uppercase text-muted">Quote</span>
@@ -83,7 +89,7 @@ export function TestimonialEditor({ initial }: { initial?: Item | null }) {
       <CmsImageField label="Photo" value={form.image} onChange={(image) => setForm({ ...form, image })} onError={setError} />
       <label className="flex items-center gap-2 text-sm">
         <input type="checkbox" checked={form.published} onChange={(e) => setForm({ ...form, published: e.target.checked })} />
-        Published on homepage
+        Published on /testimonials
       </label>
       {error ? <p className="text-sm text-pink">{error}</p> : null}
       <button type="submit" disabled={pending} className="btn-primary rounded-full px-5 py-2.5 text-sm font-semibold">
