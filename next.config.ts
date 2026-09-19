@@ -38,6 +38,11 @@ const nextConfig: NextConfig = {
         destination: "/locations/rohtak",
         permanent: true,
       })),
+      { source: "/work/velora-fashion", destination: "/work/house-of-aari", permanent: true },
+      { source: "/work/nexpay-fintech", destination: "/work/verma-associates", permanent: true },
+      { source: "/work/lumora-skincare", destination: "/work/niva-botanics", permanent: true },
+      { source: "/work/bitekart-food", destination: "/work/oven-and-oak", permanent: true },
+      { source: "/work/learnly-edtech", destination: "/work/brightpath-coaching", permanent: true },
     ];
   },
   async headers() {

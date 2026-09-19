@@ -18,11 +18,11 @@ export async function FeaturedWork({ limit = 3 }: { limit?: number }) {
               Proof over promises.
             </h2>
             <p className="mt-4 text-lg text-muted">
-              Client. Challenge. Solution. Result. The only case study format that matters.
+            Client. Challenge. Solution. Result — for independent businesses around Delhi NCR.
             </p>
           </div>
           <ButtonLink href="/work" variant="ghost">
-            All case studies
+          All 15 case studies
           </ButtonLink>
         </div>
 

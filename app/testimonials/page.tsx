@@ -49,8 +49,7 @@ export default async function TestimonialsPage() {
           Brands around Delhi NCR, in their words
         </h1>
         <p className="mt-4 max-w-2xl text-lg leading-relaxed text-muted">
-          Fifteen client stories from Rohtak, Gurugram, Noida, Faridabad, and nearby NCR towns. Filter by city or
-          read the full set below.
+            Client stories from around Delhi NCR. Filter by city or read all six below.
         </p>
       </section>
       <section className="mx-auto max-w-7xl px-5 pb-20 md:px-8">
