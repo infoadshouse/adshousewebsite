@@ -30,7 +30,7 @@ export function ButtonLink({
   const styles =
     variant === "primary"
       ? "btn-primary"
-      : "border border-line bg-white text-sky-dark hover:border-sky hover:text-sky";
+      : "border border-line bg-white/0 text-sky-dark backdrop-blur-sm hover:border-sky hover:text-sky";
 
   return (
     <Link href={href} className={`${base} ${styles} ${className}`}>
@@ -41,7 +41,7 @@ export function ButtonLink({
 
 export function SectionEyebrow({ children }: { children: React.ReactNode }) {
   return (
-    <p className="mb-3 text-xs font-semibold uppercase tracking-[0.28em] text-sky">
+    <p className="mb-3 text-xs font-medium uppercase tracking-[0.28em] text-sky">
       {children}
     </p>
   );

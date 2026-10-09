@@ -36,8 +36,10 @@ export function Header() {
   return (
     <>
       <header
-        className={`fixed inset-x-0 top-0 z-50 bg-white text-sky-dark transition-shadow duration-300 ${
-          scrolled || open ? "border-b border-line shadow-sm" : "border-b border-transparent"
+        className={`fixed inset-x-0 top-0 z-50 text-[var(--text)] backdrop-blur-xl transition-shadow duration-300 ${
+          scrolled || open
+            ? "border-b border-line bg-[#080808]/82 shadow-[0_12px_40px_rgba(0,0,0,0.45)]"
+            : "border-b border-transparent bg-[#080808]/50"
         }`}
       >
         <div className="hidden border-b border-line bg-surface md:block">
@@ -100,7 +102,7 @@ export function Header() {
                       {active ? <span className="absolute inset-x-0 -bottom-0.5 h-px bg-sky" /> : null}
                     </Link>
                     <div className="invisible absolute left-0 top-full z-50 pt-3 opacity-0 transition group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
-                      <div className="min-w-[240px] rounded-2xl border border-line bg-white p-2 shadow-lg">
+                      <div className="min-w-[240px] rounded-2xl border border-line bg-[#141210] p-2 shadow-[0_18px_40px_rgba(0,0,0,0.45)]">
                         {services.map((service) => (
                           <Link
                             key={service.slug}
@@ -150,7 +152,7 @@ export function Header() {
 
           <button
             type="button"
-            className="relative z-50 flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-line bg-white lg:hidden"
+            className="relative z-50 flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-line bg-[#141210] lg:hidden"
             aria-expanded={open}
             aria-controls="mobile-nav"
             aria-label={open ? "Close menu" : "Open menu"}
@@ -173,7 +175,7 @@ export function Header() {
       {open ? (
         <div
           id="mobile-nav"
-          className="fixed inset-0 z-40 overflow-y-auto bg-white px-5 pb-10 pt-20 md:pt-36 lg:hidden"
+          className="fixed inset-0 z-40 overflow-y-auto bg-[#080808] px-5 pb-10 pt-20 md:pt-36 lg:hidden"
         >
           <nav className="flex flex-col" aria-label="Mobile">
             {navLinks.map((link) => {
@@ -273,7 +275,7 @@ function SocialLink({
       aria-label={label}
       target="_blank"
       rel="me noreferrer"
-      className="inline-flex h-9 w-9 items-center justify-center text-sky transition hover:text-sky-dark"
+      className="inline-flex h-9 w-9 items-center justify-center text-sky transition hover:text-[#f6e7c1]"
     >
       {children}
     </a>

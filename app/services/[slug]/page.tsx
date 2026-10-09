@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import { MediaCover } from "@/components/MediaCover";
 import { notFound } from "next/navigation";
 import { FaqList } from "@/components/FaqList";
 import { JsonLd } from "@/components/JsonLd";
@@ -114,13 +114,11 @@ export default async function ServiceDetailPage({ params }: PageProps<"/services
             </div>
           </div>
           <div className="img-zoom relative h-[320px] overflow-hidden rounded-[2rem] border border-line shadow-sm md:h-[460px]">
-            <Image
+            <MediaCover
               src={service.image}
               alt={`${service.title} services by Ads House digital marketing agency India`}
-              fill
-              priority
-              className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"
+              priority
             />
           </div>
         </div>

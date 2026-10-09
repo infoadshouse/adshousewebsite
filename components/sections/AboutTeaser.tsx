@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { MediaCover } from "@/components/MediaCover";
 import { Reveal } from "@/components/Reveal";
 import { ButtonLink, SectionEyebrow } from "@/components/ui";
 
@@ -8,12 +8,10 @@ export function AboutTeaser() {
       <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 md:grid-cols-2 md:px-8">
         <Reveal>
           <div className="img-zoom relative min-h-[380px] overflow-hidden rounded-[2rem] border border-line shadow-sm lg:min-h-[520px]">
-            <Image
+            <MediaCover
               src="/images/about-team.png"
               alt="Ads House team in Rohtak, Haryana — digital marketing agency serving India"
-              fill
               sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-cover"
             />
           </div>
         </Reveal>

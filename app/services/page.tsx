@@ -71,7 +71,7 @@ export default function ServicesPage() {
 
       <Methodology />
 
-      <section className="bg-white py-20 md:py-28">
+      <section className="py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <p className="mb-3 text-xs font-bold uppercase tracking-[0.28em] text-sky">How an engagement starts</p>
           <h2 className="max-w-3xl font-display text-4xl font-extrabold tracking-tight text-sky-dark md:text-5xl">

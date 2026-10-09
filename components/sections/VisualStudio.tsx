@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { MediaCover } from "@/components/MediaCover";
 import { Reveal } from "@/components/Reveal";
 import { SectionEyebrow } from "@/components/ui";
 
@@ -28,7 +28,7 @@ export function VisualStudio() {
         {frames.map((frame, index) => (
           <Reveal key={frame.src} delay={index * 40} className={frame.className}>
             <div className={`img-zoom relative h-full min-h-[220px] overflow-hidden rounded-[1.6rem] border border-line ${frame.className}`}>
-              <Image src={frame.src} alt={frame.alt} fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
+              <MediaCover src={frame.src} alt={frame.alt} sizes="(max-width: 768px) 100vw, 50vw" />
             </div>
           </Reveal>
         ))}

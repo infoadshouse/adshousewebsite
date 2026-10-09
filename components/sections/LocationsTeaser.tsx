@@ -3,7 +3,7 @@ import { SectionEyebrow } from "@/components/ui";
 
 export function LocationsTeaser() {
   return (
-    <section className="bg-white py-20 md:py-28">
+    <section className="py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <SectionEyebrow>Rohtak studio</SectionEyebrow>
         <h2 className="max-w-3xl font-display text-4xl font-extrabold tracking-tight text-sky-dark md:text-5xl">

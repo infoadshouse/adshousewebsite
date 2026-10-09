@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import { MediaCover } from "@/components/MediaCover";
 import { JsonLd } from "@/components/JsonLd";
 import { PageHero } from "@/components/PageHero";
 import { CtaBand } from "@/components/sections/CtaBand";
@@ -83,11 +83,9 @@ export default function AboutPage() {
 
       <section className="mx-auto grid max-w-7xl items-center gap-10 px-5 py-20 md:grid-cols-2 md:px-8">
         <div className="img-zoom relative h-[360px] overflow-hidden rounded-[2rem] border border-line shadow-sm">
-          <Image
+          <MediaCover
             src="/images/cta-studio.png"
             alt="Night view of the Ads House studio LED wall"
-            fill
-            className="object-cover"
             sizes="(max-width: 768px) 100vw, 50vw"
           />
         </div>

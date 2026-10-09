@@ -15,14 +15,14 @@ export function PageHero({
   imageAlt?: string;
 }) {
   return (
-    <section className="relative overflow-hidden bg-white pt-24 md:pt-40">
-      <div className="hero-blob -left-16 top-10 h-64 w-64 bg-sky/15" />
-      <div className="hero-blob right-0 top-24 h-72 w-72 bg-purple/10" />
+    <section className="relative overflow-hidden pt-24 md:pt-40">
+      <div className="hero-blob -left-16 top-10 h-64 w-64 bg-sky/20" />
+      <div className="hero-blob right-0 top-24 h-72 w-72 bg-sky/10" />
       <div className="relative mx-auto max-w-7xl px-5 pb-12 md:px-8 md:pb-16">
         <p className="inline-flex rounded-full bg-sky/10 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.18em] text-sky">
           {eyebrow}
         </p>
-        <h1 className="mt-4 max-w-4xl font-display text-[1.85rem] font-extrabold tracking-tight text-sky-dark sm:text-4xl md:text-6xl">
+        <h1 className="mt-4 max-w-4xl font-display text-[2.4rem] leading-[1.02] text-[var(--text)] sm:text-5xl md:text-7xl">
           {title}
         </h1>
         <p className="mt-5 max-w-2xl text-lg leading-relaxed text-muted">{description}</p>

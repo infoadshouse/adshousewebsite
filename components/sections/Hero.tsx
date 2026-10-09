@@ -6,19 +6,34 @@ import { listTestimonials } from "@/lib/content";
 export async function Hero() {
   const testimonials = await listTestimonials();
   return (
-    <section className="relative overflow-hidden pt-24 md:pt-40">
-      <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-10 px-5 pb-10 md:px-8 md:pb-16 lg:grid-cols-[1.05fr_0.95fr] lg:gap-8 lg:pb-20">
-        <div>
-          <p className="mb-4 text-[11px] font-bold uppercase tracking-[0.18em] text-sky">
+    <section className="relative isolate overflow-hidden pt-28 md:pt-40">
+      <video
+        className="pointer-events-none absolute inset-0 h-full w-full object-cover brightness-[0.42] contrast-125 saturate-[0.35] sepia-[0.55]"
+        autoPlay
+        muted
+        loop
+        playsInline
+        aria-hidden
+      >
+        <source src="/herovedio.mp4" type="video/mp4" />
+      </video>
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#080808]/92 via-[#080808]/80 to-[#080808]/58 md:via-[#080808]/64 md:to-[#080808]/24" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#080808]/50 via-transparent to-[#080808]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_48%_40%_at_88%_36%,rgba(212,175,55,0.24),transparent_62%)]" />
+      <div className="hero-blob -left-16 top-24 h-72 w-72 bg-sky/20" />
+
+      <div className="relative z-10 mx-auto max-w-7xl px-5 pb-16 md:px-8 md:pb-24">
+        <div className="max-w-3xl">
+          <p className="mb-4 text-[11px] font-medium uppercase tracking-[0.28em] text-sky">
             Studio in Rohtak · Work across India
           </p>
-          <p className="mb-4 font-display text-xl font-extrabold tracking-[0.16em] text-sky-dark sm:text-2xl lg:text-3xl">
+          <p className="mb-4 font-display text-3xl tracking-[0.18em] text-[#e8d5a3] sm:text-4xl lg:text-5xl">
             Ads House
           </p>
-          <h1 className="font-display text-[2.15rem] font-extrabold leading-[1.08] tracking-tight text-sky-dark sm:text-5xl lg:text-[4.25rem]">
+          <h1 className="font-display text-[2.6rem] leading-[0.95] text-[var(--text)] sm:text-6xl lg:text-[5.2rem]">
             Digital marketing & ads agency in India
           </h1>
-          <p className="mt-5 font-display text-2xl font-extrabold leading-tight tracking-tight text-sky-dark sm:text-3xl lg:text-4xl">
+          <p className="mt-5 font-display text-3xl leading-tight text-[var(--text)] sm:text-4xl lg:text-5xl">
             We Build <span className="text-gradient">Brands.</span>
             <br />
             <span className="relative inline-block">
@@ -31,9 +46,9 @@ export async function Hero() {
               >
                 <defs>
                   <linearGradient id="wave" x1="0" x2="320" y1="0" y2="0" gradientUnits="userSpaceOnUse">
-                    <stop stopColor="#f97316" />
-                    <stop offset="0.45" stopColor="#7c3aed" />
-                    <stop offset="1" stopColor="#2563eb" />
+                    <stop stopColor="#f6e7c1" />
+                    <stop offset="0.5" stopColor="#d4af37" />
+                    <stop offset="1" stopColor="#8d6b1f" />
                   </linearGradient>
                 </defs>
                 <path
@@ -45,7 +60,7 @@ export async function Hero() {
               </svg>
             </span>
           </p>
-          <p className="mt-7 max-w-xl text-base leading-relaxed text-sky-dark md:text-lg">
+          <p className="mt-7 max-w-xl text-base leading-relaxed text-[var(--text)]/80 md:text-lg">
             We run SEO, Google Ads, Meta ads, branding, and high-performance websites for Indian
             brands nationwide. The team sits in Rohtak, Haryana — in-person when you want it, metro-grade
             work everywhere else.
@@ -54,7 +69,7 @@ export async function Hero() {
             <Link href="/locations/rohtak" className="font-semibold text-sky hover:underline">
               Ads agency in Rohtak
             </Link>
-            <span className="text-sky-dark"> — our only office.</span>
+            <span className="text-[var(--text)]/70"> — our only office.</span>
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
             <ButtonLink href="/contact" className="w-full sm:w-auto">
@@ -62,7 +77,7 @@ export async function Hero() {
               <ArrowIcon />
             </ButtonLink>
             <ButtonLink href="/work" variant="ghost" className="w-full sm:w-auto">
-              <span className="flex h-7 w-7 items-center justify-center rounded-full border border-sky/30 text-sky">
+              <span className="flex h-7 w-7 items-center justify-center rounded-full border border-sky/40 text-sky">
                 <svg className="h-3 w-3" viewBox="0 0 12 12" fill="currentColor" aria-hidden>
                   <path d="M3.2 1.6v8.8L10.4 6 3.2 1.6Z" />
                 </svg>
@@ -75,47 +90,25 @@ export async function Hero() {
               {testimonials.slice(0, 5).map((person) => (
                 <span
                   key={person.name}
-                  className="relative h-11 w-11 overflow-hidden rounded-full border-2 border-white shadow-sm"
+                  className="relative h-11 w-11 overflow-hidden rounded-full border-2 border-[#d4af37]/70 shadow-sm"
                 >
                   <MediaCover src={person.image} alt={person.name} sizes="44px" />
                 </span>
               ))}
-              <span className="relative flex h-11 w-11 items-center justify-center rounded-full border-2 border-white bg-sky text-[10px] font-bold text-white shadow-sm">
+              <span className="relative flex h-11 w-11 items-center justify-center rounded-full border-2 border-[#d4af37]/70 bg-sky text-[10px] font-bold shadow-sm">
                 50+
               </span>
             </div>
             <div>
-              <p className="text-sm font-bold text-sky-dark md:text-white">50+ Brands Trust Us</p>
-              <p className="mt-0.5 flex items-center gap-1.5 text-sm text-muted md:text-white/80">
-                <span className="tracking-tight text-orange">★★★★★</span>
-                <span className="font-semibold text-sky-dark md:text-white">4.9/5</span>
+              <p className="text-sm font-semibold text-[var(--text)]">50+ Brands Trust Us</p>
+              <p className="mt-0.5 flex items-center gap-1.5 text-sm text-muted">
+                <span className="tracking-tight text-sky">★★★★★</span>
+                <span className="font-semibold text-[var(--text)]">4.9/5</span>
               </p>
             </div>
           </div>
         </div>
-
-        {/* <div className="relative mx-auto w-full max-w-[560px] lg:max-w-none">
-          <Image
-            src="/images/heroimage.png"
-            alt="Ads House ads agency in India — brand strategy, SEO, Google Ads, and websites"
-            width={1200}
-            height={1200}
-            priority
-            className="h-auto w-full object-contain"
-          />
-        </div> */}
       </div>
-
-      <video
-        className="relative w-full md:pointer-events-none md:absolute md:inset-0 md:h-full md:object-cover"
-        autoPlay
-        muted
-        loop
-        playsInline
-        aria-hidden
-      >
-        <source src="/herovedio.mp4" type="video/mp4" />
-      </video>
     </section>
   );
 }

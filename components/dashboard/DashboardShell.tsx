@@ -36,7 +36,7 @@ export function DashboardShell({ user, children }: { user: AuthUser; children: R
   }
 
   return (
-    <div className="min-h-screen bg-surface">
+    <div className="theme-light min-h-screen bg-surface">
       <div className="mx-auto grid max-w-7xl gap-6 px-4 py-6 md:grid-cols-[220px_1fr] md:px-6">
         <aside className="h-fit rounded-3xl border border-line bg-white p-4">
           <Link href="/marketplace" className="mb-4 block px-2">

@@ -6,7 +6,7 @@ import { navLinks, officeAddressLines, siteConfig } from "@/lib/site";
 
 export function Footer() {
   return (
-    <footer className="relative mt-8 bg-navy pb-24 text-white md:pb-0">
+    <footer className="relative mt-8 border-t border-line bg-navy pb-24 text-[var(--text)] md:pb-10">
       <div className="mx-auto grid max-w-7xl gap-12 px-5 py-16 md:grid-cols-2 lg:grid-cols-5 md:px-8">
         <div>
           <BrandMark variant="light" />
@@ -20,7 +20,7 @@ export function Footer() {
         </div>
 
         <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-white/60">Explore</p>
+          <p className="text-xs font-medium uppercase tracking-[0.22em] text-sky">Explore</p>
           <ul className="mt-4 space-y-2">
             {navLinks.map((link) => (
               <li key={link.href}>
@@ -38,7 +38,7 @@ export function Footer() {
         </div>
 
         <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-white/60">Services</p>
+          <p className="text-xs font-medium uppercase tracking-[0.22em] text-sky">Services</p>
           <ul className="mt-4 space-y-2">
             {services.map((service) => (
               <li key={service.slug}>
@@ -54,7 +54,7 @@ export function Footer() {
         </div>
 
         <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-white/60">Office</p>
+          <p className="text-xs font-medium uppercase tracking-[0.22em] text-sky">Office</p>
           <ul className="mt-4 space-y-2">
             {locations.map((location) => (
               <li key={location.slug}>
@@ -70,7 +70,7 @@ export function Footer() {
         </div>
 
         <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-white/60">Contact</p>
+          <p className="text-xs font-medium uppercase tracking-[0.22em] text-sky">Contact</p>
           <ul className="mt-4 space-y-2 text-sm text-white/80">
             <li>
               <a href={`mailto:${siteConfig.email}`} className="break-all hover:text-white">
@@ -109,7 +109,7 @@ export function Footer() {
           </div>
         </div>
       </div>
-      <div className="border-t border-white/15">
+      <div className="border-t border-line">
         <div className="mx-auto flex max-w-7xl flex-col gap-2 px-5 py-6 text-xs text-white/70 md:flex-row md:items-center md:justify-between md:px-8">
           <p>© {new Date().getFullYear()} Ads House. All rights reserved. Made in India.</p>
           <p className="flex flex-wrap gap-x-4 gap-y-1">

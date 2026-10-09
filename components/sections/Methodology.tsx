@@ -3,41 +3,41 @@ import { methodology } from "@/lib/data";
 
 const themes = [
   {
-    value: "text-[#2563eb]",
-    panel: "bg-[#dbeafe]",
-    rule: "bg-[#2563eb]",
+    value: "text-[#e8d5a3]",
+    panel: "bg-[#1c1810]",
+    rule: "bg-[#d4af37]",
     art: <DiscoverArt />,
   },
   {
-    value: "text-[#7c3aed]",
-    panel: "bg-[#efe6ff]",
-    rule: "bg-[#7c3aed]",
+    value: "text-[#e8d5a3]",
+    panel: "bg-[#1c1810]",
+    rule: "bg-[#d4af37]",
     art: <BuildArt />,
   },
   {
-    value: "text-[#e11d48]",
-    panel: "bg-[#ffe4e6]",
-    rule: "bg-[#e11d48]",
+    value: "text-[#e8d5a3]",
+    panel: "bg-[#1c1810]",
+    rule: "bg-[#d4af37]",
     art: <LaunchArt />,
   },
   {
-    value: "text-[#0d9488]",
-    panel: "bg-[#d1faf4]",
-    rule: "bg-[#0d9488]",
+    value: "text-[#e8d5a3]",
+    panel: "bg-[#1c1810]",
+    rule: "bg-[#d4af37]",
     art: <OptimizeArt />,
   },
   {
-    value: "text-[#ca8a04]",
-    panel: "bg-[#fef3c7]",
-    rule: "bg-[#eab308]",
+    value: "text-[#e8d5a3]",
+    panel: "bg-[#1c1810]",
+    rule: "bg-[#d4af37]",
     art: <ScaleArt />,
   },
 ];
 
 export function Methodology() {
   return (
-    <section className="relative overflow-hidden bg-white py-20 md:py-28">
-      <div className="pointer-events-none absolute -right-10 top-0 h-80 w-80 rounded-full bg-purple/15 blur-3xl" />
+    <section className="relative overflow-hidden py-20 md:py-28">
+      <div className="pointer-events-none absolute -right-10 top-0 h-80 w-80 rounded-full bg-sky/15 blur-3xl" />
       <div className="pointer-events-none absolute right-32 top-8 h-56 w-56 rounded-full bg-sky/10 blur-3xl" />
 
       <div className="relative mx-auto max-w-7xl px-5 md:px-8">
@@ -53,7 +53,7 @@ export function Methodology() {
             We do not sell isolated services. We install a growth system that keeps compounding after
             the first campaign.
           </p>
-          <span className="mt-5 block h-[3px] w-24 rounded-full bg-gradient-to-r from-sky to-purple" />
+          <span className="mt-5 block h-[3px] w-24 rounded-full bg-gradient-to-r from-[#f6e7c1] to-[#8d6b1f]" />
         </div>
 
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
@@ -63,7 +63,7 @@ export function Methodology() {
               <Reveal key={item.step} delay={index * 80} className="relative h-full">
                 {index < methodology.length - 1 ? (
                   <span
-                    className="pointer-events-none absolute top-19 -right-6 z-20 hidden h-7 w-7 items-center justify-center rounded-full border border-line bg-white text-slate-300 shadow-sm lg:flex"
+                    className="pointer-events-none absolute top-19 -right-6 z-20 hidden h-7 w-7 items-center justify-center rounded-full border border-line bg-[#141210] text-[#e8d5a3] lg:flex"
                     aria-hidden
                   >
                     <svg className="h-3 w-3" viewBox="0 0 12 12" fill="none">

@@ -2,23 +2,16 @@ import { AnimatedCounter } from "@/components/AnimatedCounter";
 import { Reveal } from "@/components/Reveal";
 import { stats, trustedBrands } from "@/lib/data";
 
+const goldTone = {
+  value: "text-[#e8d5a3]",
+  iconWrap: "border border-[#d4af37]/35 bg-[#1c1810] text-[#e8d5a3]",
+} as const;
+
 const tones = {
-  rocket: {
-    value: "text-[#7c3aed]",
-    iconWrap: "bg-[#f3e8ff] text-[#7c3aed]",
-  },
-  chart: {
-    value: "text-sky",
-    iconWrap: "bg-[#dbeafe] text-sky",
-  },
-  people: {
-    value: "text-[#7c3aed]",
-    iconWrap: "bg-[#f3e8ff] text-[#7c3aed]",
-  },
-  trophy: {
-    value: "text-orange",
-    iconWrap: "bg-[#ffedd5] text-orange",
-  },
+  rocket: goldTone,
+  chart: goldTone,
+  people: goldTone,
+  trophy: goldTone,
 } as const;
 
 const icons = {
@@ -55,11 +48,11 @@ const icons = {
 
 export function TrustBar() {
   return (
-    <section className="bg-white py-10 md:py-14" aria-label="Proof">
+    <section className="py-10 md:py-14" aria-label="Proof">
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <div className="flex flex-col gap-5 rounded-2xl border border-line bg-white px-5 py-5 shadow-[0_8px_30px_rgba(15,23,42,0.04)] md:flex-row md:items-center md:gap-8 md:px-7">
           <div className="shrink-0 md:border-r md:border-line md:pr-8">
-            <p className="text-[11px] font-bold uppercase leading-tight tracking-[0.18em] text-slate-500">
+            <p className="text-[11px] font-medium uppercase leading-tight tracking-[0.18em] text-sky">
               Trusted by
               <br />
               growing brands
@@ -69,7 +62,7 @@ export function TrustBar() {
             {trustedBrands.map((brand) => (
               <span
                 key={brand.name}
-                className={`text-[1.15rem] text-slate-700 md:text-[1.35rem] ${brand.className}`}
+                className={`text-[1.15rem] text-[var(--text)]/80 md:text-[1.35rem] ${brand.className}`}
               >
                 {brand.name}
               </span>

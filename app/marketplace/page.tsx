@@ -19,7 +19,7 @@ export default function MarketplacePage() {
           { name: "Marketplace", href: "/marketplace" },
         ]}
       />
-      <section className="relative overflow-hidden bg-white pb-16">
+      <section className="relative overflow-hidden pb-16">
         <div className="hero-blob -left-16 top-10 h-64 w-64 bg-sky/15" />
         <div className="hero-blob right-0 top-24 h-72 w-72 bg-purple/10" />
         <div className="relative mx-auto max-w-7xl px-5 md:px-8">

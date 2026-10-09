@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Plus_Jakarta_Sans } from "next/font/google";
+import { Cormorant_Garamond, Manrope } from "next/font/google";
 import { Analytics } from "@/components/Analytics";
 import { FooterGate } from "@/components/FooterGate";
 import { Header } from "@/components/Header";
@@ -9,14 +9,21 @@ import { websiteSchema } from "@/lib/schema";
 import { defaultTitle, siteConfig } from "@/lib/site";
 import "./globals.css";
 
-const jakarta = Plus_Jakarta_Sans({
+const sans = Manrope({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-jakarta",
+  variable: "--font-manrope",
+});
+
+const display = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["500", "600", "700"],
+  display: "swap",
+  variable: "--font-cormorant",
 });
 
 export const viewport: Viewport = {
-  themeColor: "#2563eb",
+  themeColor: "#080808",
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover",
@@ -76,8 +83,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang={siteConfig.language} className={`${jakarta.variable} ${jakarta.className} h-full antialiased`}>
-      <body className="min-h-full flex flex-col bg-bg text-[var(--text)]">
+    <html lang={siteConfig.language} className={`${sans.variable} ${display.variable} ${sans.className} h-full antialiased`}>
+      <body className="site min-h-full flex flex-col bg-bg text-[var(--text)]">
         <JsonLd data={websiteSchema()} />
         <a
           href="#main-content"

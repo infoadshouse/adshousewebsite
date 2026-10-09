@@ -9,6 +9,7 @@ import {
 } from "@/lib/data";
 import { slugify } from "@/lib/marketplace/constants";
 import { tryConnectDb } from "@/lib/db";
+import { unsplash } from "@/lib/unsplash";
 import { CaseStudy as CaseStudyModel } from "@/models/CaseStudy";
 import { Insight as InsightModel } from "@/models/Insight";
 import { Testimonial as TestimonialModel } from "@/models/Testimonial";
